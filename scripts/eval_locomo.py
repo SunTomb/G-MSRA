@@ -246,15 +246,33 @@ def main(args):
 
                 # Temporarily suppress DEBUG logs for bulk ingestion
                 mem_logger.setLevel(logging.WARNING)
+                use_agent = getattr(args, "use_agent_step", False)
                 for event in events:
                     text = _extract_event_text(event)
                     if text and len(text) > 3:
-                        agent.memory_store.add(
-                            text,
-                            env_reward=0.5,
-                            tags=["eval_event"],
-                            source=f"eval_{idx}",
-                        )
+                        if use_agent:
+                            # Use RL-trained policy: decide() + execute()
+                            try:
+                                op_str, _ = agent.memory_manager.decide(
+                                    text, task_context=question
+                                )
+                                agent.memory_manager.execute_operation(
+                                    op_str, text, env_reward=0.5
+                                )
+                            except Exception:
+                                # Fallback to raw ADD on error
+                                agent.memory_store.add(
+                                    text, env_reward=0.5,
+                                    tags=["eval_event"],
+                                    source=f"eval_{idx}",
+                                )
+                        else:
+                            # Default: raw ADD (fast, no LLM call)
+                            agent.memory_store.add(
+                                text, env_reward=0.5,
+                                tags=["eval_event"],
+                                source=f"eval_{idx}",
+                            )
                         n_ingested += 1
                 mem_logger.setLevel(original_level)
 
@@ -422,5 +440,9 @@ Examples:
                         help="v6: Only use checkpoint memories for QA, DO NOT ingest "
                              "per-example events. This reveals the true value of "
                              "the trained memory policy vs empty baseline.")
+    parser.add_argument("--use_agent_step", action="store_true",
+                        help="v11: Use RL-trained memory manager decide() + execute() "
+                             "for event processing instead of raw store.add(). "
+                             "SLOW: requires LLM inference per event.")
     args = parser.parse_args()
     main(args)
