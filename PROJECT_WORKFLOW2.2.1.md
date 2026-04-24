@@ -1,7 +1,7 @@
-# PROJECT_WORKFLOW 10.1 — 评测诊断 → LoRA 蒸馏修复
+# PROJECT_WORKFLOW 2.2.1 — 评测诊断 → LoRA 蒸馏修复
 
 > 创建时间：2026-04-22 09:44  
-> 前序：WORKFLOW 10.0 (Phase 3 v11 完成 + 评测计划)  
+> 前序：WORKFLOW 2.2.0 (Phase 3 v11 完成 + 评测计划)  
 > 状态：**评测完成 ❌ → 根因定位 ✅ → 方案 B 验证中**
 
 ---

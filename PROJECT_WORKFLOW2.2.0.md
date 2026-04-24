@@ -1,7 +1,7 @@
-# PROJECT_WORKFLOW 10.0 — Phase 3 v11 训练完成 → 评测 → 论文
+# PROJECT_WORKFLOW 2.2.0 — Phase 3 v11 训练完成 → 评测 → 论文
 
 > 创建时间：2026-04-22 01:46  
-> 前序：WORKFLOW 9.0 (v6 BUG 修复), 9.1 (v7 训练), 9.2 (v8-v11 迭代)  
+> 前序：WORKFLOW 2.1.0 (v6 BUG 修复), 9.1 (v7 训练), 9.2 (v8-v11 迭代)  
 > 状态：**Phase 3 v11 训练完成 ✅，待评测**
 
 ---
@@ -314,9 +314,9 @@ done
 
 | 文件 | 内容 |
 |------|------|
-| `PROJECT_WORKFLOW9.0.md` | v6 BUG 修复总结 |
-| `PROJECT_WORKFLOW9.2.md` | v8→v11 迭代记录 |
-| `PROJECT_WORKFLOW10.0.md` | 本文档：最终状态 + 评测指南 |
+| `PROJECT_WORKFLOW2.1.0.md` | v6 BUG 修复总结 |
+| `PROJECT_WORKFLOW2.1.2.md` | v8→v11 迭代记录 |
+| `PROJECT_WORKFLOW2.2.0.md` | 本文档：最终状态 + 评测指南 |
 
 ---
 

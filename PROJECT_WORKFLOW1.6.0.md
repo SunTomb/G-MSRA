@@ -2,7 +2,7 @@
 
 > **Closing the Loop: Environment-Grounded Self-Reward for Autonomous Memory Management in Lifelong LLM Agents**
 >
-> 更新日期：2026 年 4 月 1 日 · 基于 [v5.1](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW5.1.md) 更新
+> 更新日期：2026 年 4 月 1 日 · 基于 [v5.1](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.5.1.md) 更新
 
 ---
 
@@ -11,11 +11,11 @@
 | 版本 | 侧重 | 状态 |
 |------|------|------|
 | [v1.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW.md) | 研究问题 + 排期规划 + 代码骨架 | ✅ 背景资料 |
-| [v2.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW2.0.md) | 训练脚本补全（Phase 0-3 + 消融 + 数据准备） | ✅ 背景资料 |
-| [v3.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW3.0.md) | Baseline 复现（5 个 Agent + 评测框架） | ✅ 背景资料 |
-| [v4.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW4.0.md) | 合成数据验证完成 → 全量数据实验执行指南 | ✅ 背景资料 |
-| [v5.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW5.0.md) | Phase 1 RL 训练完成 → Phase 2-3 执行指南 | ✅ 背景资料 |
-| [v5.1](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW5.1.md) | Baseline 评测性能优化 (`--fast_mode`) | ✅ 背景资料 |
+| [v2.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.2.0.md) | 训练脚本补全（Phase 0-3 + 消融 + 数据准备） | ✅ 背景资料 |
+| [v3.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.3.0.md) | Baseline 复现（5 个 Agent + 评测框架） | ✅ 背景资料 |
+| [v4.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.4.0.md) | 合成数据验证完成 → 全量数据实验执行指南 | ✅ 背景资料 |
+| [v5.0](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.5.0.md) | Phase 1 RL 训练完成 → Phase 2-3 执行指南 | ✅ 背景资料 |
+| [v5.1](file:///d:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.5.1.md) | Baseline 评测性能优化 (`--fast_mode`) | ✅ 背景资料 |
 | **v6.0（本文档）** | **Phase 2 + RL Baseline 完成，全面总结 + 下一步** | ✅ 当前版本 |
 
 ---

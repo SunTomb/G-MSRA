@@ -2,7 +2,7 @@
 
 > **Closing the Loop: Environment-Grounded Self-Reward for Autonomous Memory Management in Lifelong LLM Agents**
 >
-> 更新日期：2026 年 3 月 16 日 · 基于 [PROJECT_WORKFLOW2.0.md](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW2.0.md) 更新
+> 更新日期：2026 年 3 月 16 日 · 基于 [PROJECT_WORKFLOW1.2.0.md](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.2.0.md) 更新
 
 ---
 
@@ -11,7 +11,7 @@
 | 版本 | 覆盖范围 | 状态 |
 |------|---------|------|
 | [v1.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW.md) | 研究问题、代码骨架、排期规划 | ✅ 仍然有效 |
-| [v2.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW2.0.md) | 训练脚本补全（Phase 0-3 + 消融 + 数据准备） | ✅ 仍然有效 |
+| [v2.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.2.0.md) | 训练脚本补全（Phase 0-3 + 消融 + 数据准备） | ✅ 仍然有效 |
 | **v3.0（本文档）** | **Baseline 复现**（5 个对照方法 + 统一评测框架） | ✅ 当前版本 |
 
 本文档侧重于：

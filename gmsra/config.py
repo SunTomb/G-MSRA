@@ -92,6 +92,22 @@ class TriggerConfig:
 
 
 @dataclass
+class CompactionConfig:
+    """LLM-based memory compaction configuration (v2: replaces LoRA distillation).
+
+    Instead of distilling memories into LoRA parameters, v2 compacts
+    the memory store itself by clustering similar entries and merging
+    them via LLM summarization. This preserves model weights intact.
+    """
+    similarity_threshold: float = 0.80   # Cosine sim threshold for clustering
+    min_cluster_size: int = 2            # Minimum entries to form a cluster
+    max_cluster_size: int = 10           # Max entries per compaction batch
+    summary_max_tokens: int = 128        # Max tokens for LLM summary output
+    trigger_interval: int = 50           # Compact every N events
+    trigger_memory_threshold: int = 100  # Only compact when store > N entries
+
+
+@dataclass
 class GMSRAConfig:
     """Top-level G-MSRA configuration."""
     model: ModelConfig = field(default_factory=ModelConfig)
@@ -100,6 +116,7 @@ class GMSRAConfig:
     rl: RLConfig = field(default_factory=RLConfig)
     lora: LoRAConfig = field(default_factory=LoRAConfig)
     trigger: TriggerConfig = field(default_factory=TriggerConfig)
+    compaction: CompactionConfig = field(default_factory=CompactionConfig)
 
     # Paths
     output_dir: str = "outputs"
@@ -125,6 +142,7 @@ class GMSRAConfig:
             rl=RLConfig(**data.get("rl", {})),
             lora=LoRAConfig(**data.get("lora", {})),
             trigger=TriggerConfig(**data.get("trigger", {})),
+            compaction=CompactionConfig(**data.get("compaction", {})),
             **{k: v for k, v in data.items()
-               if k not in ("model", "memory", "reward", "rl", "lora", "trigger")},
+               if k not in ("model", "memory", "reward", "rl", "lora", "trigger", "compaction")},
         )

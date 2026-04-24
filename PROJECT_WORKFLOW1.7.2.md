@@ -2,7 +2,7 @@
 
 > **Closing the Loop: Environment-Grounded Self-Reward for Autonomous Memory Management in Lifelong LLM Agents**
 >
-> 更新日期：2026 年 4 月 15 日 18:25 · 基于 [v7.1](PROJECT_WORKFLOW7.1.md) 更新
+> 更新日期：2026 年 4 月 15 日 18:25 · 基于 [v7.1](PROJECT_WORKFLOW1.7.1.md) 更新
 
 ---
 
@@ -11,10 +11,10 @@
 | 版本 | 侧重 | 状态 |
 |------|------|------|
 | v1.0 ~ v5.1 | 项目搭建 → Phase 1 RL → Baseline 评测 | ✅ 背景资料 |
-| [v6.0](PROJECT_WORKFLOW6.0.md) | Phase 2 + RL Baseline 完成，全面总结 | ✅ 已归档 |
-| [v6.1](PROJECT_WORKFLOW6.1.md) | Phase 3 首轮诊断 + 代码修复 + 重训指南 | ✅ 已归档 |
-| [v7.0](PROJECT_WORKFLOW7.0.md) | 全三阶段训练完成，进入评测与论文阶段 | ✅ 已归档 |
-| [v7.1](PROJECT_WORKFLOW7.1.md) | 评测进展跟踪 + Bug 修复 + 剩余任务收尾 | ✅ 已归档 |
+| [v6.0](PROJECT_WORKFLOW1.6.0.md) | Phase 2 + RL Baseline 完成，全面总结 | ✅ 已归档 |
+| [v6.1](PROJECT_WORKFLOW1.6.1.md) | Phase 3 首轮诊断 + 代码修复 + 重训指南 | ✅ 已归档 |
+| [v7.0](PROJECT_WORKFLOW1.7.0.md) | 全三阶段训练完成，进入评测与论文阶段 | ✅ 已归档 |
+| [v7.1](PROJECT_WORKFLOW1.7.1.md) | 评测进展跟踪 + Bug 修复 + 剩余任务收尾 | ✅ 已归档 |
 | **v7.2（本文档）** | **实验分析·补充实验·论文写作指南** | 🔄 当前版本 |
 
 ---

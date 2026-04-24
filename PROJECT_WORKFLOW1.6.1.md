@@ -2,7 +2,7 @@
 
 > **Closing the Loop: Environment-Grounded Self-Reward for Autonomous Memory Management in Lifelong LLM Agents**
 >
-> 更新日期：2026 年 4 月 5 日 · 基于 [v6.0](PROJECT_WORKFLOW6.0.md) 更新
+> 更新日期：2026 年 4 月 5 日 · 基于 [v6.0](PROJECT_WORKFLOW1.6.0.md) 更新
 
 ---
 
@@ -11,7 +11,7 @@
 | 版本 | 侧重 | 状态 |
 |------|------|------|
 | v1.0 ~ v5.1 | 项目搭建 → Phase 1 RL → Baseline 评测 | ✅ 背景资料 |
-| [v6.0](PROJECT_WORKFLOW6.0.md) | Phase 2 + RL Baseline 完成，全面总结 | ✅ 已被本文档取代 |
+| [v6.0](PROJECT_WORKFLOW1.6.0.md) | Phase 2 + RL Baseline 完成，全面总结 | ✅ 已被本文档取代 |
 | **v6.1（本文档）** | **Phase 3 首轮训练诊断 + 代码修复 + 重训指南** | ✅ 当前版本 |
 
 ---

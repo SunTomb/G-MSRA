@@ -1,7 +1,7 @@
-# PROJECT_WORKFLOW 9.0 — v6 BUG 修复 & 重训计划
+# PROJECT_WORKFLOW 2.1.0 — v6 BUG 修复 & 重训计划
 
 > 创建时间：2026-04-17 01:00  
-> 前序：WORKFLOW 8.0  
+> 前序：WORKFLOW 1.8.0  
 > 状态：**Phase 0 代码修复已完成，等待 Phase 1-3 重训**
 
 ---

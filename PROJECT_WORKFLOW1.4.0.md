@@ -2,7 +2,7 @@
 
 > **Closing the Loop: Environment-Grounded Self-Reward for Autonomous Memory Management in Lifelong LLM Agents**
 >
-> 更新日期：2026 年 3 月 17 日 · 基于 [v3.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW3.0.md) 更新
+> 更新日期：2026 年 3 月 17 日 · 基于 [v3.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.3.0.md) 更新
 
 ---
 
@@ -11,8 +11,8 @@
 | 版本 | 侧重 | 状态 |
 |------|------|------|
 | [v1.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW.md) | 研究问题 + 排期规划 + 代码骨架 | ✅ 背景资料 |
-| [v2.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW2.0.md) | 训练脚本补全（Phase 0-3 + 消融 + 数据准备） | ✅ 背景资料 |
-| [v3.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW3.0.md) | Baseline 复现（5 个 Agent + 评测框架） | ✅ 背景资料 |
+| [v2.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.2.0.md) | 训练脚本补全（Phase 0-3 + 消融 + 数据准备） | ✅ 背景资料 |
+| [v3.0](file:///f:/USTC/2026Winter/G-MSRA/PROJECT_WORKFLOW1.3.0.md) | Baseline 复现（5 个 Agent + 评测框架） | ✅ 背景资料 |
 | **v4.0（本文档）** | **合成数据验证完成 → 全量数据实验执行指南** | ✅ 当前版本 |
 
 ---

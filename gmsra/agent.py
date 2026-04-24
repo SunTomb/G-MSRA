@@ -34,6 +34,7 @@ from gmsra.reward.env_signals import (
 )
 from gmsra.consolidation.trigger import ConsolidationTrigger
 from gmsra.consolidation.distiller import SemanticDistiller
+from gmsra.consolidation.compaction import MemoryCompactor
 
 
 class GMSRAAgent:
@@ -54,8 +55,9 @@ class GMSRAAgent:
             result = agent.step(event, task_context, env_kwargs)
     """
 
-    def __init__(self, config: Optional[GMSRAConfig] = None):
+    def __init__(self, config: Optional[GMSRAConfig] = None, use_v2: bool = True):
         self.config = config or GMSRAConfig()
+        self.use_v2 = use_v2  # v2: LLM compaction; v1: LoRA distillation
         self.step_count = 0
         self.episode_count = 0
 
@@ -64,7 +66,8 @@ class GMSRAAgent:
         self.memory_manager: Optional[MemoryManager] = None
         self.reward_generator: Optional[GroundedRewardGenerator] = None
         self.trigger: Optional[ConsolidationTrigger] = None
-        self.distiller: Optional[SemanticDistiller] = None
+        self.distiller: Optional[SemanticDistiller] = None  # v1 legacy
+        self.compactor: Optional[MemoryCompactor] = None    # v2
         self.env_extractor: Optional[EnvironmentSignalExtractor] = None
 
     def initialize(self, model, tokenizer,
@@ -118,16 +121,21 @@ class GMSRAAgent:
             reward_generator=self.reward_generator,
         )
 
-        # 6. Semantic Distiller
-        self.distiller = SemanticDistiller(
-            base_model=model,
-            tokenizer=tokenizer,
-            config=self.config.lora,
-        )
+        # 6. Consolidation module (v1 or v2)
+        if self.use_v2:
+            self.compactor = MemoryCompactor(config=self.config.compaction)
+            logger.info("Using v2 LLM-based memory compaction (no LoRA distillation)")
+        else:
+            self.distiller = SemanticDistiller(
+                base_model=model,
+                tokenizer=tokenizer,
+                config=self.config.lora,
+            )
+            logger.info("Using v1 LoRA-based semantic distillation")
 
         logger.info(
             f"G-MSRA Agent initialized: env_type={env_type}, "
-            f"model={self.config.model.model_name}"
+            f"model={self.config.model.model_name}, v2={self.use_v2}"
         )
 
     # ---- Online Phase ----
@@ -208,15 +216,28 @@ class GMSRAAgent:
     # ---- Offline Phase ----
 
     def _run_consolidation(self) -> dict:
-        """Execute offline parametric consolidation (sleep-time)."""
+        """Execute offline consolidation (sleep-time).
+
+        v2: LLM-based compaction (cluster + summarize, no weight changes)
+        v1 (legacy): LoRA-based semantic distillation
+        """
         logger.info("=" * 50)
-        logger.info("OFFLINE CONSOLIDATION PHASE")
+        logger.info(f"OFFLINE CONSOLIDATION PHASE ({'v2 compaction' if self.use_v2 else 'v1 distillation'})")
         logger.info("=" * 50)
 
         # Recalibrate memory confidence before selection
         self.memory_store.recalibrate_confidence()
 
-        # Run semantic distillation
+        if self.use_v2:
+            # ---- v2: LLM Compaction ----
+            stats = self.compactor.run(
+                store=self.memory_store,
+                model=self.memory_manager.model,
+                tokenizer=self.memory_manager.tokenizer,
+            )
+            return stats
+
+        # ---- v1 (legacy): LoRA Distillation ----
         stats = self.distiller.consolidate(
             memory_store=self.memory_store,
             llm_model=self.memory_manager.model,

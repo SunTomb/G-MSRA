@@ -1,7 +1,7 @@
-# PROJECT_WORKFLOW 9.1 — v7 RL 信号链根因修复 & Phase 2 重训
+# PROJECT_WORKFLOW 2.1.1 — v7 RL 信号链根因修复 & Phase 2 重训
 
 > 创建时间：2026-04-18 04:00  
-> 前序：WORKFLOW 9.0  
+> 前序：WORKFLOW 2.1.0  
 > 状态：**代码修复已完成，等待上传集群并启动 Phase 2 v7 重训**
 
 ---
