@@ -405,11 +405,11 @@ bash cluster/run_tang.sh phase0
 bash cluster/run_song.sh phase0
 
 # 预期输出：
-# outputs/phase0/best/  ← LoRA 权重
+# outputs_v1/phase0/best/  ← LoRA 权重
 # 训练日志中 avg_loss 应逐 epoch 下降
 ```
 
-**验证**：训练完成后，检查 `outputs/phase0/best/` 是否包含 `adapter_model.safetensors`。
+**验证**：训练完成后，检查 `outputs_v1/phase0/best/` 是否包含 `adapter_model.safetensors`。
 
 ### 3.3 Phase 1: RL + 外部奖励（最关键步骤）
 
@@ -477,7 +477,7 @@ bash cluster/run_song.sh phase3
 # 预计 3-5 天（10000 episodes）
 
 # 监控：
-tail -f outputs/phase3/metrics.json
+tail -f outputs_v1/phase3/metrics.json
 # 看 success_rate 是否稳定上升
 # 看 consolidation_count 是否在增长
 ```
@@ -489,16 +489,16 @@ bash cluster/run_song.sh eval
 # 自动运行 eval_locomo.py + eval_agent_tasks.py
 
 # 手动运行单个评测：
-python scripts/eval_locomo.py --checkpoint outputs/phase3/best --benchmark locomo
-python scripts/eval_locomo.py --checkpoint outputs/phase3/best --benchmark longmemeval
-python scripts/eval_agent_tasks.py --checkpoint outputs/phase3/best --env alfworld
+python scripts/eval_locomo.py --checkpoint outputs_v1/phase3/best --benchmark locomo
+python scripts/eval_locomo.py --checkpoint outputs_v1/phase3/best --benchmark longmemeval
+python scripts/eval_agent_tasks.py --checkpoint outputs_v1/phase3/best --env alfworld
 ```
 
 ### 3.7 消融实验
 
 ```bash
 # 运行全部 7 组消融（按优先级排序）：
-python scripts/run_ablations.py --base_checkpoint outputs/phase1/best --num_episodes 1000
+python scripts/run_ablations.py --base_checkpoint outputs_v1/phase1/best --num_episodes 1000
 
 # 只运行特定消融：
 python scripts/run_ablations.py --ablations A1_no_env_anchor,A6_no_consolidation

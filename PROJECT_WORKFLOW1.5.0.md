@@ -80,7 +80,7 @@
 ### 2.4 输出文件
 
 ```
-outputs/phase1/
+outputs_v1/phase1/
 ├── best/                          # 最终模型
 │   ├── adapter_model.safetensors  # LoRA 权重 (20 MB)
 │   ├── adapter_config.json
@@ -158,17 +158,17 @@ CUDA_VISIBLE_DEVICES=1,2,4,5,6,7 accelerate launch \
     --num_processes 6 \
     scripts/train_phase2_transition.py \
     --model_name Qwen/Qwen2.5-7B-Instruct \
-    --checkpoint outputs/phase1/best \
-    --output_dir outputs/phase2 \
+    --checkpoint outputs_v1/phase1/best \
+    --output_dir outputs_v1/phase2 \
     --anneal_steps 3000 \
     --no_qlora --gpu_preset a40 \
     --per_device_batch_size 6 \
     --num_generations 6 \
     --no_wandb \
-    2>&1 | tee logs/phase2_tang.log
+    2>&1 | tee logs_v1/phase2_tang.log
 
 # 脱离 tmux: Ctrl+B → D
-# 预期输出: outputs/phase2/best/ + calibration.json
+# 预期输出: outputs_v1/phase2/best/ + calibration.json
 # 预估耗时: ~1-2 天
 ```
 
@@ -186,16 +186,16 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,6,7 accelerate launch \
     --num_processes 6 \
     scripts/train_phase3_full.py \
     --model_name Qwen/Qwen2.5-7B-Instruct \
-    --checkpoint outputs/phase2/best \
-    --output_dir outputs/phase3 \
+    --checkpoint outputs_v1/phase2/best \
+    --output_dir outputs_v1/phase3 \
     --num_episodes 10000 \
     --no_qlora --gpu_preset a40 \
     --per_device_batch_size 6 \
     --num_generations 6 \
     --no_wandb \
-    2>&1 | tee logs/phase3_tang.log
+    2>&1 | tee logs_v1/phase3_tang.log
 
-# 预期输出: outputs/phase3/best/ + metrics.json + diagnostics.json
+# 预期输出: outputs_v1/phase3/best/ + metrics.json + diagnostics.json
 # 预估耗时: ~3-5 天
 ```
 
@@ -204,7 +204,7 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,6,7 accelerate launch \
 ```bash
 # G-MSRA 评测
 CUDA_VISIBLE_DEVICES=7 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3/best --benchmark locomo
+    --checkpoint outputs_v1/phase3/best --benchmark locomo
 
 # Baseline 评测（可与训练并行，用别的 GPU）
 CUDA_VISIBLE_DEVICES=7 python baselines/eval_baselines.py \
@@ -225,7 +225,7 @@ CUDA_VISIBLE_DEVICES=7 python baselines/train_and_eval_rl_baselines.py \
 
 ```bash
 CUDA_VISIBLE_DEVICES=7 python scripts/run_ablations.py \
-    --base_checkpoint outputs/phase1/best \
+    --base_checkpoint outputs_v1/phase1/best \
     --num_episodes 1000
 ```
 
@@ -262,7 +262,7 @@ CUDA_VISIBLE_DEVICES=7 python scripts/run_ablations.py \
 
 ```bash
 # 1. 查看现有 checkpoint
-ls outputs/phase1/  # 例如看到 checkpoint-1200
+ls outputs_v1/phase1/  # 例如看到 checkpoint-1200
 
 # 2. 从 checkpoint 恢复
 CUDA_VISIBLE_DEVICES=1,2,3,4,6,7 accelerate launch \
@@ -270,7 +270,7 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,6,7 accelerate launch \
     --num_processes 6 \
     scripts/train_phase1_rl.py \
     ... (原参数) \
-    --resume_from_checkpoint outputs/phase1/checkpoint-1200
+    --resume_from_checkpoint outputs_v1/phase1/checkpoint-1200
 ```
 
 当前 `save_steps=100`，约每 1.5 小时自动保存一次 checkpoint（最多保留 3 个）。
@@ -279,13 +279,13 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,6,7 accelerate launch \
 
 ## 八、结果收集 → 论文填充
 
-所有结果汇总到 `results/` 目录后，填入 `paper/main.tex`：
+所有结果汇总到 `results_v1/` 目录后，填入 `paper/main.tex`：
 
 | 论文表格 | 数据来源 | 状态 |
 |----------|---------|:----:|
-| Table 1 (主表) | `results/baselines/` + G-MSRA eval | ☐ |
+| Table 1 (主表) | `results_v1/baselines/` + G-MSRA eval | ☐ |
 | Table 2 (ALFWorld) | ALFWorld 评测结果 | ☐ |
-| Table 3 (消融) | `results/ablations/` | ☐ |
+| Table 3 (消融) | `results_v1/ablations/` | ☐ |
 | Fig 3 (Reward Drift) | Phase 2 `calibration.json` | ☐ |
 | Fig 4 (Trigger 3D) | Phase 3 `diagnostics.json` | ☐ |
 
@@ -312,10 +312,10 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,6,7 accelerate launch \
 
 | 路径 | 内容 |
 |------|------|
-| `outputs/phase0/best/` | Phase 0 SFT 模型 |
-| `outputs/phase1/best/` | Phase 1 RL LoRA adapter (20MB) |
-| `outputs/phase1/checkpoint-{1200,1300,1322}/` | 训练中间 checkpoints |
-| `logs/phase1_tang.log` | Phase 1 完整训练日志 (4.3MB, 34403 行) |
+| `outputs_v1/phase0/best/` | Phase 0 SFT 模型 |
+| `outputs_v1/phase1/best/` | Phase 1 RL LoRA adapter (20MB) |
+| `outputs_v1/phase1/checkpoint-{1200,1300,1322}/` | 训练中间 checkpoints |
+| `logs_v1/phase1_tang.log` | Phase 1 完整训练日志 (4.3MB, 34403 行) |
 
 ---
 

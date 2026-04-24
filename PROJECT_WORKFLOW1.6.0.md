@@ -26,9 +26,9 @@
 
 | 阶段 | 状态 | 关键成果 | 时间 |
 |------|:----:|---------|------|
-| Phase 0: SFT 热启动 | ✅ | `outputs/phase0/` | 2026-03-20 |
-| Phase 1: RL 训练 | ✅ | `outputs/phase1/best` (checkpoint-1322) | 2026-03-22 |
-| **Phase 2: 课程退火** | **✅** | **`outputs/phase2/best` + `checkpoint_500`** | **2026-03-30** |
+| Phase 0: SFT 热启动 | ✅ | `outputs_v1/phase0/` | 2026-03-20 |
+| Phase 1: RL 训练 | ✅ | `outputs_v1/phase1/best` (checkpoint-1322) | 2026-03-22 |
+| **Phase 2: 课程退火** | **✅** | **`outputs_v1/phase2/best` + `checkpoint_500`** | **2026-03-30** |
 | Phase 3: 全闭环 | ☐ | — | — |
 
 #### Phase 2 关键指标
@@ -39,7 +39,7 @@ R_ext=0.000 | R_self=0.150 | R_annealed=0.092
 mem_size=9 | ADD:9 / NOOP:1491
 ```
 
-本地已下载完整输出：`outputs/phase2/best`、`checkpoint_100~500`、`calibration.json`
+本地已下载完整输出：`outputs_v1/phase2/best`、`checkpoint_100~500`、`calibration.json`
 
 - **α 从 1.0 降至 0.622**：self-reward 正在接管 ext-reward，退火进行中
 - **τ (Kendall) = 0.302**：self-reward 与 ext-reward 相关性偏低（阈值 0.5），annealing 多次暂停
@@ -57,10 +57,10 @@ mem_size=9 | ADD:9 / NOOP:1491
 | Self-Consolidation | fast_mode | 314 | 0.032 | 0.000 | 3/26 |
 
 结果/日志文件：
-- [baseline_results.json](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/baseline_results.json) — 保存了 evolver 的完整评估结果
-- [reflexion_fast_eval.log](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/reflexion_fast_eval.log)
-- [evolver_fast_eval.log](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/evolver_fast_eval.log)
-- [selfconsolidation_fast_eval.log](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/selfconsolidation_fast_eval.log)
+- [baseline_results.json](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/baseline_results.json) — 保存了 evolver 的完整评估结果
+- [reflexion_fast_eval.log](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/reflexion_fast_eval.log)
+- [evolver_fast_eval.log](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/evolver_fast_eval.log)
+- [selfconsolidation_fast_eval.log](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/selfconsolidation_fast_eval.log)
 
 #### RL Baseline（需训练 → 评测）
 
@@ -70,12 +70,12 @@ mem_size=9 | ADD:9 / NOOP:1491
 | **Mem0+Memory-R1** | 3 | 1228 | 0.025 | **0.028** | 314 | ✅ 完成 |
 
 日志/数据文件：
-- [memory_r1_eval_results.json](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/memory_r1_eval_results.json) — Memory-R1 完整评估结果（314 ep, F1=0.036）
-- [rl_baselines_v2.log](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/rl_baselines_v2.log) — Memory-R1 训练日志
-- [rl_eval_v2.log](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/rl_eval_v2.log) — Memory-R1 评估日志
-- [memory_r1_train_metrics.json](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/checkpoints/memory_r1_train_metrics.json)
-- [mem0_rl_v2.log](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/mem0_rl_v2.log) — Mem0+R1 训练+评估日志
-- [rl_baselines_combined1.json](file:///d:/USTC/2026Winter/G-MSRA/results/baselines/rl_baselines_combined1.json) — Mem0+R1 完整结果（F1=0.028, 314 ep）
+- [memory_r1_eval_results.json](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/memory_r1_eval_results.json) — Memory-R1 完整评估结果（314 ep, F1=0.036）
+- [rl_baselines_v2.log](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/rl_baselines_v2.log) — Memory-R1 训练日志
+- [rl_eval_v2.log](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/rl_eval_v2.log) — Memory-R1 评估日志
+- [memory_r1_train_metrics.json](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/checkpoints/memory_r1_train_metrics.json)
+- [mem0_rl_v2.log](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/mem0_rl_v2.log) — Mem0+R1 训练+评估日志
+- [rl_baselines_combined1.json](file:///d:/USTC/2026Winter/G-MSRA/results_v1/baselines/rl_baselines_combined1.json) — Mem0+R1 完整结果（F1=0.028, 314 ep）
 
 ### 1.3 性能优化措施（v5.1→v6.0 期间实施）
 
@@ -93,7 +93,7 @@ mem_size=9 | ADD:9 / NOOP:1491
 
 ### ~~问题 1：Phase 2 输出未下载到本地~~ ✅ 已解决
 
-`outputs/phase2/` 已下载，包含 `best`、`checkpoint_100~500`、`calibration.json`。
+`outputs_v1/phase2/` 已下载，包含 `best`、`checkpoint_100~500`、`calibration.json`。
 
 ### ~~问题 2：Mem0+Memory-R1 Baseline 不完整~~ ✅ 已解决
 
@@ -146,13 +146,13 @@ nvidia-smi
 ```bash
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=2 \
 python scripts/train_phase3_full.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
-    --output_dir outputs/phase3 \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
+    --output_dir outputs_v1/phase3 \
     --max_episodes 3000 \
     --max_events 3 \
     --no_qlora --no_wandb \
-    2>&1 | tee logs/phase3.log
+    2>&1 | tee logs_v1/phase3.log
 ```
 
 > 📝 `--checkpoint` 指向 Phase 2 的 agent 状态（memory_store + step_count），`--lora_checkpoint` 指向 Phase 1 的 LoRA adapter（因为 Phase 2 没有保存 LoRA 权重）。
@@ -170,7 +170,7 @@ python scripts/train_phase3_full.py \
 #### Step 4: 监控进度（Shell 2）
 
 ```bash
-tail -f logs/phase3.log
+tail -f logs_v1/phase3.log
 # 应看到：
 # Episode 50/3000 | R_avg=0.xxx | success=0.xxx | mem=N | Speed: 0.05 ep/s | ETA: 13.5h
 ```
@@ -179,15 +179,15 @@ tail -f logs/phase3.log
 
 训练完成后：
 ```bash
-scp -r wujcan@Tang2:/NAS/yesh/G-MSRA/outputs/phase3 d:/USTC/2026Winter/G-MSRA/outputs/
-scp wujcan@Tang2:/NAS/yesh/G-MSRA/logs/phase3.log d:/USTC/2026Winter/G-MSRA/logs/
+scp -r wujcan@Tang2:/NAS/yesh/G-MSRA/outputs_v1/phase3 d:/USTC/2026Winter/G-MSRA/outputs/
+scp wujcan@Tang2:/NAS/yesh/G-MSRA/logs_v1/phase3.log d:/USTC/2026Winter/G-MSRA/logs/
 ```
 
 预期输出文件：
-- `outputs/phase3/best/` — 最优 checkpoint（LoRA + memory_store + agent_meta）
-- `outputs/phase3/checkpoint_500/`, `checkpoint_1000/`, ... — 中间 checkpoint
-- `outputs/phase3/metrics.json` — 训练指标（每 50 ep）
-- `outputs/phase3/diagnostics.json` — 完整诊断（memory 分布、操作统计）
+- `outputs_v1/phase3/best/` — 最优 checkpoint（LoRA + memory_store + agent_meta）
+- `outputs_v1/phase3/checkpoint_500/`, `checkpoint_1000/`, ... — 中间 checkpoint
+- `outputs_v1/phase3/metrics.json` — 训练指标（每 50 ep）
+- `outputs_v1/phase3/diagnostics.json` — 完整诊断（memory 分布、操作统计）
 
 > ⚠️ **不支持多卡并行**：agent.step() 内部维护有状态的 memory_store，不兼容数据并行。单 GPU 即可。
 
@@ -201,7 +201,7 @@ Phase 3 完成后，用训练好的模型在 LoCoMo 测试集上评测：
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=<GPU> \
 python baselines/eval_baselines.py \
     --agent gmsra \
-    --checkpoint outputs/phase3/best \
+    --checkpoint outputs_v1/phase3/best \
     --benchmark locomo \
     2>&1 | tee results/gmsra_eval.log
 ```
@@ -263,7 +263,7 @@ PYTHONPATH=/NAS/yesh/G-MSRA python scripts/run_ablation.py \
 
 ## 五、本地文件清单
 
-### 日志文件 (`logs/`)
+### 日志文件 (`logs_v1/`)
 
 | 文件 | 说明 | 大小 |
 |------|------|------|
@@ -271,15 +271,15 @@ PYTHONPATH=/NAS/yesh/G-MSRA python scripts/run_ablation.py \
 | `phase2_tang.log` | Phase 2 旧版运行（未限事件，已废弃） | 1.6 MB |
 | `phase2_v2.log` | **Phase 2 完整训练日志（500/500 步）** | 485 KB |
 
-### 训练输出 (`outputs/`)
+### 训练输出 (`outputs_v1/`)
 
 | 目录 | 说明 | 状态 |
 |------|------|:----:|
-| `outputs/phase0/` | SFT 热启动 checkpoint | ✅ 本地 |
-| `outputs/phase1/best` | Phase 1 RL 最优 checkpoint | ✅ 本地 |
-| `outputs/phase2/` | Phase 2 退火 checkpoint (best + checkpoint_100~500 + calibration.json) | ✅ 本地 |
+| `outputs_v1/phase0/` | SFT 热启动 checkpoint | ✅ 本地 |
+| `outputs_v1/phase1/best` | Phase 1 RL 最优 checkpoint | ✅ 本地 |
+| `outputs_v1/phase2/` | Phase 2 退火 checkpoint (best + checkpoint_100~500 + calibration.json) | ✅ 本地 |
 
-### Baseline 结果 (`results/baselines/`)
+### Baseline 结果 (`results_v1/baselines/`)
 
 | 文件 | 说明 | 完整？ |
 |------|------|:------:|

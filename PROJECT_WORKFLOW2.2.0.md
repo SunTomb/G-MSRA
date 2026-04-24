@@ -99,37 +99,37 @@ export PYTHONPATH=/NAS/yesh/G-MSRA
 # =================== A. G-MSRA v11 (完整系统) ===================
 tmux new-session -d -s eval_a "
 CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v11/best \
-    --lora_checkpoint outputs/phase3_v11/best/lora \
+    --checkpoint outputs_v1/phase3_v11/best \
+    --lora_checkpoint outputs_v1/phase3_v11/best/lora \
     --no_qlora --benchmark locomo \
     --output_dir results/gmsra_v11 \
-    2>&1 | tee logs/eval_gmsra_v11_locomo.log
+    2>&1 | tee logs_v1/eval_gmsra_v11_locomo.log
 
 CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v11/best \
-    --lora_checkpoint outputs/phase3_v11/best/lora \
+    --checkpoint outputs_v1/phase3_v11/best \
+    --lora_checkpoint outputs_v1/phase3_v11/best/lora \
     --no_qlora --benchmark longmemeval \
     --output_dir results/gmsra_v11 \
-    2>&1 | tee logs/eval_gmsra_v11_longmemeval.log
+    2>&1 | tee logs_v1/eval_gmsra_v11_longmemeval.log
 "
 
 # =================== B. G-MSRA checkpoint-only ===================
 tmux new-session -d -s eval_b "
 CUDA_VISIBLE_DEVICES=1 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v11/best \
-    --lora_checkpoint outputs/phase3_v11/best/lora \
+    --checkpoint outputs_v1/phase3_v11/best \
+    --lora_checkpoint outputs_v1/phase3_v11/best/lora \
     --no_qlora --benchmark locomo \
     --checkpoint_only \
     --output_dir results/gmsra_v11_ckpt_only \
-    2>&1 | tee logs/eval_gmsra_v11_ckpt_only_locomo.log
+    2>&1 | tee logs_v1/eval_gmsra_v11_ckpt_only_locomo.log
 
 CUDA_VISIBLE_DEVICES=1 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v11/best \
-    --lora_checkpoint outputs/phase3_v11/best/lora \
+    --checkpoint outputs_v1/phase3_v11/best \
+    --lora_checkpoint outputs_v1/phase3_v11/best/lora \
     --no_qlora --benchmark longmemeval \
     --checkpoint_only \
     --output_dir results/gmsra_v11_ckpt_only \
-    2>&1 | tee logs/eval_gmsra_v11_ckpt_only_longmemeval.log
+    2>&1 | tee logs_v1/eval_gmsra_v11_ckpt_only_longmemeval.log
 "
 
 # =================== C. Events Only baseline ====================
@@ -140,46 +140,46 @@ echo '{}' > outputs/empty_checkpoint/memory_store.json
 tmux new-session -d -s eval_c "
 CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark locomo \
     --output_dir results/events_only_v11 \
-    2>&1 | tee logs/eval_events_only_locomo.log
+    2>&1 | tee logs_v1/eval_events_only_locomo.log
 
 CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark longmemeval \
     --output_dir results/events_only_v11 \
-    2>&1 | tee logs/eval_events_only_longmemeval.log
+    2>&1 | tee logs_v1/eval_events_only_longmemeval.log
 "
 
 # =================== D. No Memory (pure LLM) ====================
 tmux new-session -d -s eval_d "
 CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark locomo \
     --no_memory \
     --output_dir results/no_memory_v11 \
-    2>&1 | tee logs/eval_no_memory_locomo.log
+    2>&1 | tee logs_v1/eval_no_memory_locomo.log
 
 CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark longmemeval \
     --no_memory \
     --output_dir results/no_memory_v11 \
-    2>&1 | tee logs/eval_no_memory_longmemeval.log
+    2>&1 | tee logs_v1/eval_no_memory_longmemeval.log
 "
 
 # =================== E. Phase 2 v7 baseline =====================
 tmux new-session -d -s eval_e "
 CUDA_VISIBLE_DEVICES=0 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2_v7/checkpoint_2000 \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2_v7/checkpoint_2000 \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark locomo \
-    --output_dir results/phase2_v7 \
-    2>&1 | tee logs/eval_phase2_v7_locomo.log
+    --output_dir results_v1/phase2_v7 \
+    2>&1 | tee logs_v1/eval_phase2_v7_locomo.log
 "
 ```
 
@@ -188,7 +188,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/eval_locomo.py \
 
 ### 3.3 评测结果收集
 
-每组评测完成后，结果在 `results/<组名>/<benchmark>_results.json`。
+每组评测完成后，结果在 `results_v1/<组名>/<benchmark>_results.json`。
 
 ```bash
 # 快速查看所有结果
@@ -238,11 +238,11 @@ done
 # Ablation: 不同 checkpoint 阶段的评测
 for ckpt in 500 1000 1500 2000; do
     CUDA_VISIBLE_DEVICES=0 python scripts/eval_locomo.py \
-        --checkpoint outputs/phase3_v11/checkpoint_${ckpt} \
-        --lora_checkpoint outputs/phase3_v11/checkpoint_${ckpt}/lora \
+        --checkpoint outputs_v1/phase3_v11/checkpoint_${ckpt} \
+        --lora_checkpoint outputs_v1/phase3_v11/checkpoint_${ckpt}/lora \
         --no_qlora --benchmark locomo \
         --output_dir results/ablation_ckpt_${ckpt} \
-        2>&1 | tee logs/eval_ablation_ckpt_${ckpt}.log
+        2>&1 | tee logs_v1/eval_ablation_ckpt_${ckpt}.log
 done
 ```
 
@@ -292,11 +292,11 @@ done
 
 | 路径 | 说明 |
 |------|------|
-| `outputs/phase3_v11/best/` | 最终 checkpoint（memory_store + LoRA） |
-| `outputs/phase3_v11/checkpoint_{500..3000}/` | 中间 checkpoint（含 LoRA） |
-| `outputs/phase3_v11/metrics.json` | 训练指标日志 |
-| `outputs/phase3_v11/diagnostics.json` | Agent 诊断信息 |
-| `logs/phase3_v11.log` | 完整训练日志（27462 行） |
+| `outputs_v1/phase3_v11/best/` | 最终 checkpoint（memory_store + LoRA） |
+| `outputs_v1/phase3_v11/checkpoint_{500..3000}/` | 中间 checkpoint（含 LoRA） |
+| `outputs_v1/phase3_v11/metrics.json` | 训练指标日志 |
+| `outputs_v1/phase3_v11/diagnostics.json` | Agent 诊断信息 |
+| `logs_v1/phase3_v11.log` | 完整训练日志（27462 行） |
 
 ### 6.2 代码文件
 

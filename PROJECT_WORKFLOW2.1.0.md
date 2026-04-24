@@ -74,10 +74,10 @@ Activations + Gradients      ≈  6-10 GB
 ```bash
 # Tang3, 单卡, 预计 40-55h, ~28-32 GB VRAM
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=2 python scripts/train_phase2_transition.py \
-    --checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase1/best \
     --anneal_steps 3000 \
     --no_qlora --no_wandb \
-    --output_dir outputs/phase2_v6 \
+    --output_dir outputs_v1/phase2_v6 \
     2>&1 | tee logs2/phase2_v6.log
 ```
 
@@ -91,14 +91,14 @@ PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=2 python scripts/train_phase2_t
 ```bash
 # Tang3, 单卡, 预计 60-80h, ~30-35 GB VRAM
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 python scripts/train_phase3_full.py \
-    --checkpoint outputs/phase2_v6/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2_v6/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --max_episodes 5000 \
     --max_events 5 \
     --num_epochs 2 \
     --no_qlora --no_wandb \
-    --output_dir outputs/phase3_v6 \
-    2>&1 | tee logs/phase3_v6.log
+    --output_dir outputs_v1/phase3_v6 \
+    2>&1 | tee logs_v1/phase3_v6.log
 ```
 
 **监控要点**：
@@ -119,28 +119,28 @@ PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 python scripts/train_phase3_f
 
 # G-MSRA 主模型 (事件注入模式 — 与之前对比)
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v6/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase3_v6/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark longmemeval \
     --output_dir results/gmsra_v6 \
-    2>&1 | tee logs/eval_gmsra_v6.log
+    2>&1 | tee logs_v1/eval_gmsra_v6.log
 
 # G-MSRA (checkpoint-only 模式 — 验证 memory 质量)
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v6/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase3_v6/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark longmemeval \
     --checkpoint_only \
     --output_dir results/gmsra_v6_ckpt_only \
-    2>&1 | tee logs/eval_gmsra_v6_ckpt_only.log
+    2>&1 | tee logs_v1/eval_gmsra_v6_ckpt_only.log
 
 # Events Only baseline (空 checkpoint 对比)
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark longmemeval \
     --output_dir results/events_only_v6 \
-    2>&1 | tee logs/eval_events_only_v6.log
+    2>&1 | tee logs_v1/eval_events_only_v6.log
 ```
 
 ---

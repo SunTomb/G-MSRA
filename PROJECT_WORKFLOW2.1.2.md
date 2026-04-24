@@ -119,16 +119,16 @@ python -c "import ast; ast.parse(open('scripts/train_phase3_full.py').read()); p
 tmux new-session -d -s phase3_v11 "
 export PYTHONPATH=/NAS/yesh/G-MSRA
 CUDA_VISIBLE_DEVICES=1 python scripts/train_phase3_full.py \
-    --checkpoint outputs/phase2_v7/checkpoint_2000 \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2_v7/checkpoint_2000 \
+    --lora_checkpoint outputs_v1/phase1/best \
     --max_episodes 3000 \
     --max_events 5 \
     --num_epochs 2 \
     --epsilon_start 0.15 \
     --epsilon_end 0.05 \
     --no_qlora --no_wandb \
-    --output_dir outputs/phase3_v11 \
-    2>&1 | tee logs/phase3_v11.log
+    --output_dir outputs_v1/phase3_v11 \
+    2>&1 | tee logs_v1/phase3_v11.log
 "
 ```
 
@@ -136,10 +136,10 @@ CUDA_VISIBLE_DEVICES=1 python scripts/train_phase3_full.py \
 
 ```bash
 tmux attach -t phase3_v11
-tail -f logs/phase3_v11.log
+tail -f logs_v1/phase3_v11.log
 
 # 关键检查：consolidation 后 mem 是否保持 >350
-grep -E 'Consolidation at|Cleared|Episode.*/3172' logs/phase3_v11.log | tail -5
+grep -E 'Consolidation at|Cleared|Episode.*/3172' logs_v1/phase3_v11.log | tail -5
 ```
 
 ---
@@ -195,11 +195,11 @@ grep -E 'Consolidation at|Cleared|Episode.*/3172' logs/phase3_v11.log | tail -5
 
 ```bash
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v11/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase3_v11/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --no_qlora --benchmark longmemeval \
     --output_dir results/gmsra_v11 \
-    2>&1 | tee logs/eval_gmsra_v11.log
+    2>&1 | tee logs_v1/eval_gmsra_v11.log
 ```
 
 ---

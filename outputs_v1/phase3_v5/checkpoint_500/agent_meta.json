@@ -1,0 +1,4017 @@
+{
+  "step_count": 11000,
+  "episode_count": 0,
+  "trigger_diagnostics": {
+    "total_triggers": 0,
+    "history": [
+      {
+        "step": 9004,
+        "conflict": 0.0,
+        "variance": 0.0,
+        "growth": 0.12840324922590587,
+        "score": 0.03852097476777176,
+        "triggered": false
+      },
+      {
+        "step": 9008,
+        "conflict": 0.0,
+        "variance": 0.0225,
+        "growth": 0.12840324922590587,
+        "score": 0.04527097476777176,
+        "triggered": false
+      },
+      {
+        "step": 9012,
+        "conflict": 0.0,
+        "variance": 0.02,
+        "growth": 0.1284851715020593,
+        "score": 0.04454555145061778,
+        "triggered": false
+      },
+      {
+        "step": 9016,
+        "conflict": 0.0,
+        "variance": 0.015074999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.04311488415833736,
+        "triggered": false
+      },
+      {
+        "step": 9020,
+        "conflict": 0.0,
+        "variance": 0.012095999999999999,
+        "growth": 0.12864128052779122,
+        "score": 0.042221184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9024,
+        "conflict": 0.0,
+        "variance": 0.0101,
+        "growth": 0.12864128052779122,
+        "score": 0.04162238415833736,
+        "triggered": false
+      },
+      {
+        "step": 9028,
+        "conflict": 0.0,
+        "variance": 0.008669387755102039,
+        "growth": 0.12864128052779122,
+        "score": 0.04119320048486798,
+        "triggered": false
+      },
+      {
+        "step": 9032,
+        "conflict": 0.0,
+        "variance": 0.00759375,
+        "growth": 0.12864128052779122,
+        "score": 0.04087050915833736,
+        "triggered": false
+      },
+      {
+        "step": 9036,
+        "conflict": 0.0,
+        "variance": 0.009688888888888888,
+        "growth": 0.12864128052779122,
+        "score": 0.04149905082500403,
+        "triggered": false
+      },
+      {
+        "step": 9040,
+        "conflict": 0.0,
+        "variance": 0.014759510204081635,
+        "growth": 0.12864128052779122,
+        "score": 0.04302023721956186,
+        "triggered": false
+      },
+      {
+        "step": 9044,
+        "conflict": 0.0,
+        "variance": 0.013646146061730478,
+        "growth": 0.12864128052779122,
+        "score": 0.042686227976856506,
+        "triggered": false
+      },
+      {
+        "step": 9048,
+        "conflict": 0.0,
+        "variance": 0.01268344671201814,
+        "growth": 0.12864128052779122,
+        "score": 0.042397418171942806,
+        "triggered": false
+      },
+      {
+        "step": 9052,
+        "conflict": 0.0,
+        "variance": 0.012119985508996501,
+        "growth": 0.12864128052779122,
+        "score": 0.04222837981103632,
+        "triggered": false
+      },
+      {
+        "step": 9056,
+        "conflict": 0.0,
+        "variance": 0.011417909204498125,
+        "growth": 0.12864128052779122,
+        "score": 0.0420177569196868,
+        "triggered": false
+      },
+      {
+        "step": 9060,
+        "conflict": 0.0,
+        "variance": 0.11375345326278657,
+        "growth": 0.12864128052779122,
+        "score": 0.07271842013717333,
+        "triggered": false
+      },
+      {
+        "step": 9064,
+        "conflict": 0.0,
+        "variance": 0.10766381802721087,
+        "growth": 0.12864128052779122,
+        "score": 0.07089152956650063,
+        "triggered": false
+      },
+      {
+        "step": 9068,
+        "conflict": 0.0,
+        "variance": 0.10217767420693764,
+        "growth": 0.12864128052779122,
+        "score": 0.06924568642041866,
+        "triggered": false
+      },
+      {
+        "step": 9072,
+        "conflict": 0.0,
+        "variance": 0.09721221690322217,
+        "growth": 0.12864128052779122,
+        "score": 0.067756049229304,
+        "triggered": false
+      },
+      {
+        "step": 9076,
+        "conflict": 0.0,
+        "variance": 0.09269852827557616,
+        "growth": 0.12864128052779122,
+        "score": 0.06640194264101021,
+        "triggered": false
+      },
+      {
+        "step": 9080,
+        "conflict": 0.0,
+        "variance": 0.08857894784580499,
+        "growth": 0.12864128052779122,
+        "score": 0.06516606851207886,
+        "triggered": false
+      },
+      {
+        "step": 9084,
+        "conflict": 0.0,
+        "variance": 0.08857894784580499,
+        "growth": 0.12864128052779122,
+        "score": 0.06516606851207886,
+        "triggered": false
+      },
+      {
+        "step": 9088,
+        "conflict": 0.0,
+        "variance": 0.0850968049886621,
+        "growth": 0.12864128052779122,
+        "score": 0.06412142565493599,
+        "triggered": false
+      },
+      {
+        "step": 9092,
+        "conflict": 0.0,
+        "variance": 0.08563623356009073,
+        "growth": 0.12864128052779122,
+        "score": 0.06428325422636458,
+        "triggered": false
+      },
+      {
+        "step": 9096,
+        "conflict": 0.0,
+        "variance": 0.08563623356009073,
+        "growth": 0.12864128052779122,
+        "score": 0.06428325422636458,
+        "triggered": false
+      },
+      {
+        "step": 9100,
+        "conflict": 0.0,
+        "variance": 0.0856362335600907,
+        "growth": 0.12864128052779122,
+        "score": 0.06428325422636458,
+        "triggered": false
+      },
+      {
+        "step": 9104,
+        "conflict": 0.0,
+        "variance": 0.08563623356009073,
+        "growth": 0.12864128052779122,
+        "score": 0.06428325422636458,
+        "triggered": false
+      },
+      {
+        "step": 9108,
+        "conflict": 0.0,
+        "variance": 0.0856362335600907,
+        "growth": 0.12864128052779122,
+        "score": 0.06428325422636458,
+        "triggered": false
+      },
+      {
+        "step": 9112,
+        "conflict": 0.0,
+        "variance": 0.0856362335600907,
+        "growth": 0.12864128052779122,
+        "score": 0.06428325422636458,
+        "triggered": false
+      },
+      {
+        "step": 9116,
+        "conflict": 0.0,
+        "variance": 0.08577037641723353,
+        "growth": 0.12864128052779122,
+        "score": 0.06432349708350743,
+        "triggered": false
+      },
+      {
+        "step": 9120,
+        "conflict": 0.0,
+        "variance": 0.08414044444444443,
+        "growth": 0.12864128052779122,
+        "score": 0.0638345174916707,
+        "triggered": false
+      },
+      {
+        "step": 9124,
+        "conflict": 0.0,
+        "variance": 0.08414044444444443,
+        "growth": 0.12864128052779122,
+        "score": 0.0638345174916707,
+        "triggered": false
+      },
+      {
+        "step": 9128,
+        "conflict": 0.0,
+        "variance": 0.08388044444444444,
+        "growth": 0.12864128052779122,
+        "score": 0.06375651749167069,
+        "triggered": false
+      },
+      {
+        "step": 9132,
+        "conflict": 0.0,
+        "variance": 0.09345599999999996,
+        "growth": 0.12864128052779122,
+        "score": 0.06662918415833735,
+        "triggered": false
+      },
+      {
+        "step": 9136,
+        "conflict": 0.0,
+        "variance": 0.09287766666666664,
+        "growth": 0.12864128052779122,
+        "score": 0.06645568415833736,
+        "triggered": false
+      },
+      {
+        "step": 9140,
+        "conflict": 0.0,
+        "variance": 0.014255444444444446,
+        "growth": 0.12864128052779122,
+        "score": 0.0428690174916707,
+        "triggered": false
+      },
+      {
+        "step": 9144,
+        "conflict": 0.0,
+        "variance": 0.014255444444444446,
+        "growth": 0.12864128052779122,
+        "score": 0.0428690174916707,
+        "triggered": false
+      },
+      {
+        "step": 9148,
+        "conflict": 0.0,
+        "variance": 0.014255444444444446,
+        "growth": 0.12864128052779122,
+        "score": 0.0428690174916707,
+        "triggered": false
+      },
+      {
+        "step": 9152,
+        "conflict": 0.0,
+        "variance": 0.014255444444444446,
+        "growth": 0.12864128052779122,
+        "score": 0.0428690174916707,
+        "triggered": false
+      },
+      {
+        "step": 9156,
+        "conflict": 0.0,
+        "variance": 0.014255444444444442,
+        "growth": 0.12864128052779122,
+        "score": 0.0428690174916707,
+        "triggered": false
+      },
+      {
+        "step": 9160,
+        "conflict": 0.0,
+        "variance": 0.014255444444444442,
+        "growth": 0.12864128052779122,
+        "score": 0.0428690174916707,
+        "triggered": false
+      },
+      {
+        "step": 9164,
+        "conflict": 0.0,
+        "variance": 0.014023444444444444,
+        "growth": 0.12864128052779122,
+        "score": 0.0427994174916707,
+        "triggered": false
+      },
+      {
+        "step": 9168,
+        "conflict": 0.0,
+        "variance": 0.014294798611111112,
+        "growth": 0.12864128052779122,
+        "score": 0.042880823741670696,
+        "triggered": false
+      },
+      {
+        "step": 9172,
+        "conflict": 0.0,
+        "variance": 0.023973965277777776,
+        "growth": 0.12864128052779122,
+        "score": 0.0457845737416707,
+        "triggered": false
+      },
+      {
+        "step": 9176,
+        "conflict": 0.0,
+        "variance": 0.027748896407254364,
+        "growth": 0.12864128052779122,
+        "score": 0.04691705308051367,
+        "triggered": false
+      },
+      {
+        "step": 9180,
+        "conflict": 0.0,
+        "variance": 0.027748896407254357,
+        "growth": 0.12864128052779122,
+        "score": 0.04691705308051367,
+        "triggered": false
+      },
+      {
+        "step": 9184,
+        "conflict": 0.0,
+        "variance": 0.027748896407254364,
+        "growth": 0.12864128052779122,
+        "score": 0.04691705308051367,
+        "triggered": false
+      },
+      {
+        "step": 9188,
+        "conflict": 0.0,
+        "variance": 0.027748896407254364,
+        "growth": 0.12864128052779122,
+        "score": 0.04691705308051367,
+        "triggered": false
+      },
+      {
+        "step": 9192,
+        "conflict": 0.0,
+        "variance": 0.027748896407254364,
+        "growth": 0.12864128052779122,
+        "score": 0.04691705308051367,
+        "triggered": false
+      },
+      {
+        "step": 9196,
+        "conflict": 0.0,
+        "variance": 0.027748896407254364,
+        "growth": 0.12864128052779122,
+        "score": 0.04691705308051367,
+        "triggered": false
+      },
+      {
+        "step": 9200,
+        "conflict": 0.0,
+        "variance": 0.027397305498163455,
+        "growth": 0.12864128052779122,
+        "score": 0.0468115758077864,
+        "triggered": false
+      },
+      {
+        "step": 9204,
+        "conflict": 0.0,
+        "variance": 0.22178042671028467,
+        "growth": 0.12864128052779122,
+        "score": 0.10512651217142276,
+        "triggered": false
+      },
+      {
+        "step": 9208,
+        "conflict": 0.0,
+        "variance": 0.22337760852846644,
+        "growth": 0.12864128052779122,
+        "score": 0.1056056667168773,
+        "triggered": false
+      },
+      {
+        "step": 9212,
+        "conflict": 0.0,
+        "variance": 0.218582861053719,
+        "growth": 0.12864128052779122,
+        "score": 0.10416724247445305,
+        "triggered": false
+      },
+      {
+        "step": 9216,
+        "conflict": 0.0,
+        "variance": 0.21856690877949747,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218661,
+        "triggered": false
+      },
+      {
+        "step": 9220,
+        "conflict": 0.0,
+        "variance": 0.21856690877949747,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218661,
+        "triggered": false
+      },
+      {
+        "step": 9224,
+        "conflict": 0.0,
+        "variance": 0.21856690877949747,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218661,
+        "triggered": false
+      },
+      {
+        "step": 9228,
+        "conflict": 0.0,
+        "variance": 0.21856690877949747,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218661,
+        "triggered": false
+      },
+      {
+        "step": 9232,
+        "conflict": 0.0,
+        "variance": 0.21856690877949742,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218658,
+        "triggered": false
+      },
+      {
+        "step": 9236,
+        "conflict": 0.0,
+        "variance": 0.21856690877949742,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218658,
+        "triggered": false
+      },
+      {
+        "step": 9240,
+        "conflict": 0.0,
+        "variance": 0.21856690877949747,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218661,
+        "triggered": false
+      },
+      {
+        "step": 9244,
+        "conflict": 0.0,
+        "variance": 0.21856690877949747,
+        "growth": 0.12864128052779122,
+        "score": 0.10416245679218661,
+        "triggered": false
+      },
+      {
+        "step": 9248,
+        "conflict": 0.0,
+        "variance": 0.21858737629115246,
+        "growth": 0.12864128052779122,
+        "score": 0.1041685970456831,
+        "triggered": false
+      },
+      {
+        "step": 9252,
+        "conflict": 0.0,
+        "variance": 0.21362787745665374,
+        "growth": 0.12864128052779122,
+        "score": 0.10268074739533348,
+        "triggered": false
+      },
+      {
+        "step": 9256,
+        "conflict": 0.0,
+        "variance": 0.21171518408941484,
+        "growth": 0.12864128052779122,
+        "score": 0.10210693938516181,
+        "triggered": false
+      },
+      {
+        "step": 9260,
+        "conflict": 0.0,
+        "variance": 0.21171518408941484,
+        "growth": 0.12864128052779122,
+        "score": 0.10210693938516181,
+        "triggered": false
+      },
+      {
+        "step": 9264,
+        "conflict": 0.0,
+        "variance": 0.21131167205935011,
+        "growth": 0.12864128052779122,
+        "score": 0.1019858857761424,
+        "triggered": false
+      },
+      {
+        "step": 9268,
+        "conflict": 0.0,
+        "variance": 0.21131167205935006,
+        "growth": 0.12864128052779122,
+        "score": 0.10198588577614238,
+        "triggered": false
+      },
+      {
+        "step": 9272,
+        "conflict": 0.0,
+        "variance": 0.21131167205935003,
+        "growth": 0.12864128052779122,
+        "score": 0.10198588577614237,
+        "triggered": false
+      },
+      {
+        "step": 9276,
+        "conflict": 0.0,
+        "variance": 0.21131167205935006,
+        "growth": 0.12864128052779122,
+        "score": 0.10198588577614238,
+        "triggered": false
+      },
+      {
+        "step": 9280,
+        "conflict": 0.0,
+        "variance": 0.21105799585183654,
+        "growth": 0.12864128052779122,
+        "score": 0.10190978291388833,
+        "triggered": false
+      },
+      {
+        "step": 9284,
+        "conflict": 0.0,
+        "variance": 0.0038138694356172403,
+        "growth": 0.12864128052779122,
+        "score": 0.039736544989022536,
+        "triggered": false
+      },
+      {
+        "step": 9288,
+        "conflict": 0.0,
+        "variance": 0.003813869435617241,
+        "growth": 0.12864128052779122,
+        "score": 0.039736544989022536,
+        "triggered": false
+      },
+      {
+        "step": 9292,
+        "conflict": 0.0,
+        "variance": 0.003813869435617241,
+        "growth": 0.12864128052779122,
+        "score": 0.039736544989022536,
+        "triggered": false
+      },
+      {
+        "step": 9296,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197937,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9300,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197933,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9304,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197937,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9308,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197933,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9312,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197933,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9316,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197933,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9320,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197937,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9324,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197933,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9328,
+        "conflict": 0.0,
+        "variance": 0.003195870200108167,
+        "growth": 0.12864128052779122,
+        "score": 0.03955114521836981,
+        "triggered": false
+      },
+      {
+        "step": 9332,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197937,
+        "growth": 0.12864128052779122,
+        "score": 0.0396748010323233,
+        "triggered": false
+      },
+      {
+        "step": 9336,
+        "conflict": 0.0,
+        "variance": 0.0036080562466197946,
+        "growth": 0.12864128052779122,
+        "score": 0.039674801032323306,
+        "triggered": false
+      },
+      {
+        "step": 9340,
+        "conflict": 0.0,
+        "variance": 0.0038327808488229772,
+        "growth": 0.12864128052779122,
+        "score": 0.03974221841298426,
+        "triggered": false
+      },
+      {
+        "step": 9344,
+        "conflict": 0.0,
+        "variance": 0.002172842105263158,
+        "growth": 0.12864128052779122,
+        "score": 0.039244236789916315,
+        "triggered": false
+      },
+      {
+        "step": 9348,
+        "conflict": 0.0,
+        "variance": 0.04734652631578947,
+        "growth": 0.12864128052779122,
+        "score": 0.05279634205307421,
+        "triggered": false
+      },
+      {
+        "step": 9352,
+        "conflict": 0.0,
+        "variance": 0.04734652631578947,
+        "growth": 0.12864128052779122,
+        "score": 0.05279634205307421,
+        "triggered": false
+      },
+      {
+        "step": 9356,
+        "conflict": 0.0,
+        "variance": 0.047346526315789464,
+        "growth": 0.12864128052779122,
+        "score": 0.0527963420530742,
+        "triggered": false
+      },
+      {
+        "step": 9360,
+        "conflict": 0.0,
+        "variance": 0.0474696842105263,
+        "growth": 0.12864128052779122,
+        "score": 0.052833289421495254,
+        "triggered": false
+      },
+      {
+        "step": 9364,
+        "conflict": 0.0,
+        "variance": 0.04752084210526316,
+        "growth": 0.12864128052779122,
+        "score": 0.05284863678991631,
+        "triggered": false
+      },
+      {
+        "step": 9368,
+        "conflict": 0.0,
+        "variance": 0.051574082644628115,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9372,
+        "conflict": 0.0,
+        "variance": 0.05157408264462811,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9376,
+        "conflict": 0.0,
+        "variance": 0.05157408264462811,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9380,
+        "conflict": 0.0,
+        "variance": 0.051574082644628115,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9384,
+        "conflict": 0.0,
+        "variance": 0.051574082644628115,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9388,
+        "conflict": 0.0,
+        "variance": 0.05157408264462811,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9392,
+        "conflict": 0.0,
+        "variance": 0.05157408264462811,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9396,
+        "conflict": 0.0,
+        "variance": 0.05157408264462811,
+        "growth": 0.12864128052779122,
+        "score": 0.054064608951725796,
+        "triggered": false
+      },
+      {
+        "step": 9400,
+        "conflict": 0.0,
+        "variance": 0.06254457380760045,
+        "growth": 0.12864128052779122,
+        "score": 0.0573557563006175,
+        "triggered": false
+      },
+      {
+        "step": 9404,
+        "conflict": 0.0,
+        "variance": 0.06254457380760045,
+        "growth": 0.12864128052779122,
+        "score": 0.0573557563006175,
+        "triggered": false
+      },
+      {
+        "step": 9408,
+        "conflict": 0.0,
+        "variance": 0.06254457380760045,
+        "growth": 0.12864128052779122,
+        "score": 0.0573557563006175,
+        "triggered": false
+      },
+      {
+        "step": 9412,
+        "conflict": 0.0,
+        "variance": 0.06308477066337627,
+        "growth": 0.12864128052779122,
+        "score": 0.057517815357350247,
+        "triggered": false
+      },
+      {
+        "step": 9416,
+        "conflict": 0.0,
+        "variance": 0.06308477066337628,
+        "growth": 0.12864128052779122,
+        "score": 0.057517815357350247,
+        "triggered": false
+      },
+      {
+        "step": 9420,
+        "conflict": 0.0,
+        "variance": 0.0635769101028841,
+        "growth": 0.12864128052779122,
+        "score": 0.057665457189202594,
+        "triggered": false
+      },
+      {
+        "step": 9424,
+        "conflict": 0.0,
+        "variance": 0.06309987114184515,
+        "growth": 0.12864128052779122,
+        "score": 0.05752234550089091,
+        "triggered": false
+      },
+      {
+        "step": 9428,
+        "conflict": 0.0,
+        "variance": 0.020926156856130883,
+        "growth": 0.12864128052779122,
+        "score": 0.04487023121517663,
+        "triggered": false
+      },
+      {
+        "step": 9432,
+        "conflict": 0.0,
+        "variance": 0.020905117895091918,
+        "growth": 0.12864128052779122,
+        "score": 0.04486391952686494,
+        "triggered": false
+      },
+      {
+        "step": 9436,
+        "conflict": 0.0,
+        "variance": 0.020905117895091918,
+        "growth": 0.12864128052779122,
+        "score": 0.04486391952686494,
+        "triggered": false
+      },
+      {
+        "step": 9440,
+        "conflict": 0.0,
+        "variance": 0.020905117895091918,
+        "growth": 0.12864128052779122,
+        "score": 0.04486391952686494,
+        "triggered": false
+      },
+      {
+        "step": 9444,
+        "conflict": 0.0,
+        "variance": 0.02533175157886846,
+        "growth": 0.12864128052779122,
+        "score": 0.0461919096319979,
+        "triggered": false
+      },
+      {
+        "step": 9448,
+        "conflict": 0.0,
+        "variance": 0.22100966893424032,
+        "growth": 0.12864128052779122,
+        "score": 0.10489528483860945,
+        "triggered": false
+      },
+      {
+        "step": 9452,
+        "conflict": 0.0,
+        "variance": 0.2210096689342403,
+        "growth": 0.12864128052779122,
+        "score": 0.10489528483860945,
+        "triggered": false
+      },
+      {
+        "step": 9456,
+        "conflict": 0.0,
+        "variance": 0.21980604081632643,
+        "growth": 0.12864128052779122,
+        "score": 0.10453419640323529,
+        "triggered": false
+      },
+      {
+        "step": 9460,
+        "conflict": 0.0,
+        "variance": 0.22915842176870743,
+        "growth": 0.12864128052779122,
+        "score": 0.10733991068894959,
+        "triggered": false
+      },
+      {
+        "step": 9464,
+        "conflict": 0.0,
+        "variance": 0.22691568268960477,
+        "growth": 0.12864128052779122,
+        "score": 0.10666708896521879,
+        "triggered": false
+      },
+      {
+        "step": 9468,
+        "conflict": 0.0,
+        "variance": 0.22691568268960477,
+        "growth": 0.12864128052779122,
+        "score": 0.10666708896521879,
+        "triggered": false
+      },
+      {
+        "step": 9472,
+        "conflict": 0.0,
+        "variance": 0.22691568268960474,
+        "growth": 0.12864128052779122,
+        "score": 0.10666708896521879,
+        "triggered": false
+      },
+      {
+        "step": 9476,
+        "conflict": 0.0,
+        "variance": 0.22691568268960474,
+        "growth": 0.12864128052779122,
+        "score": 0.10666708896521879,
+        "triggered": false
+      },
+      {
+        "step": 9480,
+        "conflict": 0.0,
+        "variance": 0.22226662888626522,
+        "growth": 0.12864128052779122,
+        "score": 0.10527237282421693,
+        "triggered": false
+      },
+      {
+        "step": 9484,
+        "conflict": 0.0,
+        "variance": 0.22226662888626522,
+        "growth": 0.12864128052779122,
+        "score": 0.10527237282421693,
+        "triggered": false
+      },
+      {
+        "step": 9488,
+        "conflict": 0.0,
+        "variance": 0.2222666288862653,
+        "growth": 0.12864128052779122,
+        "score": 0.10527237282421695,
+        "triggered": false
+      },
+      {
+        "step": 9492,
+        "conflict": 0.0,
+        "variance": 0.2236299405745769,
+        "growth": 0.12864128052779122,
+        "score": 0.10568136633071043,
+        "triggered": false
+      },
+      {
+        "step": 9496,
+        "conflict": 0.0,
+        "variance": 0.22362994057457689,
+        "growth": 0.12864128052779122,
+        "score": 0.10568136633071043,
+        "triggered": false
+      },
+      {
+        "step": 9500,
+        "conflict": 0.0,
+        "variance": 0.2236299405745769,
+        "growth": 0.12864128052779122,
+        "score": 0.10568136633071043,
+        "triggered": false
+      },
+      {
+        "step": 9504,
+        "conflict": 0.0,
+        "variance": 0.23152560579824213,
+        "growth": 0.12864128052779122,
+        "score": 0.10805006589781001,
+        "triggered": false
+      },
+      {
+        "step": 9508,
+        "conflict": 0.0,
+        "variance": 0.23392041099304733,
+        "growth": 0.12864128052779122,
+        "score": 0.10876850745625156,
+        "triggered": false
+      },
+      {
+        "step": 9512,
+        "conflict": 0.0,
+        "variance": 0.23439126172256475,
+        "growth": 0.12864128052779122,
+        "score": 0.10890976267510678,
+        "triggered": false
+      },
+      {
+        "step": 9516,
+        "conflict": 0.0,
+        "variance": 0.23850160323290628,
+        "growth": 0.12864128052779122,
+        "score": 0.11014286512820924,
+        "triggered": false
+      },
+      {
+        "step": 9520,
+        "conflict": 0.0,
+        "variance": 0.23850160323290628,
+        "growth": 0.12864128052779122,
+        "score": 0.11014286512820924,
+        "triggered": false
+      },
+      {
+        "step": 9524,
+        "conflict": 0.0,
+        "variance": 0.241867122369854,
+        "growth": 0.12864128052779122,
+        "score": 0.11115252086929356,
+        "triggered": false
+      },
+      {
+        "step": 9528,
+        "conflict": 0.0,
+        "variance": 0.06300214112887273,
+        "growth": 0.12864128052779122,
+        "score": 0.05749302649699918,
+        "triggered": false
+      },
+      {
+        "step": 9532,
+        "conflict": 0.0,
+        "variance": 0.06300214112887273,
+        "growth": 0.12864128052779122,
+        "score": 0.05749302649699918,
+        "triggered": false
+      },
+      {
+        "step": 9536,
+        "conflict": 0.0,
+        "variance": 0.06408116263646567,
+        "growth": 0.12864128052779122,
+        "score": 0.05781673294927707,
+        "triggered": false
+      },
+      {
+        "step": 9540,
+        "conflict": 0.0,
+        "variance": 0.051316852872155906,
+        "growth": 0.12864128052779122,
+        "score": 0.05398744001998414,
+        "triggered": false
+      },
+      {
+        "step": 9544,
+        "conflict": 0.0,
+        "variance": 0.05114838271604939,
+        "growth": 0.12864128052779122,
+        "score": 0.05393689897315218,
+        "triggered": false
+      },
+      {
+        "step": 9548,
+        "conflict": 0.0,
+        "variance": 0.05058671604938272,
+        "growth": 0.12864128052779122,
+        "score": 0.05376839897315218,
+        "triggered": false
+      },
+      {
+        "step": 9552,
+        "conflict": 0.0,
+        "variance": 0.05058671604938272,
+        "growth": 0.12864128052779122,
+        "score": 0.05376839897315218,
+        "triggered": false
+      },
+      {
+        "step": 9556,
+        "conflict": 0.0,
+        "variance": 0.05058671604938272,
+        "growth": 0.12864128052779122,
+        "score": 0.05376839897315218,
+        "triggered": false
+      },
+      {
+        "step": 9560,
+        "conflict": 0.0,
+        "variance": 0.0474658238285488,
+        "growth": 0.12864128052779122,
+        "score": 0.05283213130690201,
+        "triggered": false
+      },
+      {
+        "step": 9564,
+        "conflict": 0.0,
+        "variance": 0.04746582382854882,
+        "growth": 0.12864128052779122,
+        "score": 0.05283213130690201,
+        "triggered": false
+      },
+      {
+        "step": 9568,
+        "conflict": 0.0,
+        "variance": 0.04746582382854882,
+        "growth": 0.12864128052779122,
+        "score": 0.05283213130690201,
+        "triggered": false
+      },
+      {
+        "step": 9572,
+        "conflict": 0.0,
+        "variance": 0.03978435217322,
+        "growth": 0.12864128052779122,
+        "score": 0.05052768981030337,
+        "triggered": false
+      },
+      {
+        "step": 9576,
+        "conflict": 0.0,
+        "variance": 0.04029420194646264,
+        "growth": 0.12864128052779122,
+        "score": 0.050680644742276154,
+        "triggered": false
+      },
+      {
+        "step": 9580,
+        "conflict": 0.0,
+        "variance": 0.04029420194646264,
+        "growth": 0.12864128052779122,
+        "score": 0.050680644742276154,
+        "triggered": false
+      },
+      {
+        "step": 9584,
+        "conflict": 0.0,
+        "variance": 0.02435126921781562,
+        "growth": 0.12864128052779122,
+        "score": 0.04589776492368205,
+        "triggered": false
+      },
+      {
+        "step": 9588,
+        "conflict": 0.0,
+        "variance": 0.02435126921781562,
+        "growth": 0.12864128052779122,
+        "score": 0.04589776492368205,
+        "triggered": false
+      },
+      {
+        "step": 9592,
+        "conflict": 0.0,
+        "variance": 0.02462554485399602,
+        "growth": 0.12864128052779122,
+        "score": 0.04598004761453617,
+        "triggered": false
+      },
+      {
+        "step": 9596,
+        "conflict": 0.0,
+        "variance": 0.006371154831320285,
+        "growth": 0.12864128052779122,
+        "score": 0.04050373060773345,
+        "triggered": false
+      },
+      {
+        "step": 9600,
+        "conflict": 0.0,
+        "variance": 0.006371154831320283,
+        "growth": 0.12864128052779122,
+        "score": 0.04050373060773345,
+        "triggered": false
+      },
+      {
+        "step": 9604,
+        "conflict": 0.0,
+        "variance": 0.006371154831320283,
+        "growth": 0.12864128052779122,
+        "score": 0.04050373060773345,
+        "triggered": false
+      },
+      {
+        "step": 9608,
+        "conflict": 0.0,
+        "variance": 0.006371154831320283,
+        "growth": 0.12864128052779122,
+        "score": 0.04050373060773345,
+        "triggered": false
+      },
+      {
+        "step": 9612,
+        "conflict": 0.0,
+        "variance": 0.006371154831320285,
+        "growth": 0.12864128052779122,
+        "score": 0.04050373060773345,
+        "triggered": false
+      },
+      {
+        "step": 9616,
+        "conflict": 0.0,
+        "variance": 0.006506216055810079,
+        "growth": 0.12864128052779122,
+        "score": 0.04054424897508039,
+        "triggered": false
+      },
+      {
+        "step": 9620,
+        "conflict": 0.0,
+        "variance": 0.006506216055810081,
+        "growth": 0.12864128052779122,
+        "score": 0.04054424897508039,
+        "triggered": false
+      },
+      {
+        "step": 9624,
+        "conflict": 0.0,
+        "variance": 0.006371154831320283,
+        "growth": 0.12864128052779122,
+        "score": 0.04050373060773345,
+        "triggered": false
+      },
+      {
+        "step": 9628,
+        "conflict": 0.0,
+        "variance": 0.006627685443565183,
+        "growth": 0.12864128052779122,
+        "score": 0.04058068979140692,
+        "triggered": false
+      },
+      {
+        "step": 9632,
+        "conflict": 0.0,
+        "variance": 0.0066276854435651815,
+        "growth": 0.12864128052779122,
+        "score": 0.040580689791406915,
+        "triggered": false
+      },
+      {
+        "step": 9636,
+        "conflict": 0.0,
+        "variance": 0.006627685443565183,
+        "growth": 0.12864128052779122,
+        "score": 0.04058068979140692,
+        "triggered": false
+      },
+      {
+        "step": 9640,
+        "conflict": 0.0,
+        "variance": 0.004672750000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.03999420915833737,
+        "triggered": false
+      },
+      {
+        "step": 9644,
+        "conflict": 0.0,
+        "variance": 0.0046727500000000016,
+        "growth": 0.12864128052779122,
+        "score": 0.03999420915833737,
+        "triggered": false
+      },
+      {
+        "step": 9648,
+        "conflict": 0.0,
+        "variance": 0.004672750000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.03999420915833737,
+        "triggered": false
+      },
+      {
+        "step": 9652,
+        "conflict": 0.0,
+        "variance": 0.004354749999999999,
+        "growth": 0.12864128052779122,
+        "score": 0.039898809158337364,
+        "triggered": false
+      },
+      {
+        "step": 9656,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.03914318415833736,
+        "triggered": false
+      },
+      {
+        "step": 9660,
+        "conflict": 0.0,
+        "variance": 0.0018359999999999995,
+        "growth": 0.12864128052779122,
+        "score": 0.03914318415833736,
+        "triggered": false
+      },
+      {
+        "step": 9664,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.03914318415833736,
+        "triggered": false
+      },
+      {
+        "step": 9668,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.03914318415833736,
+        "triggered": false
+      },
+      {
+        "step": 9672,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.03914318415833736,
+        "triggered": false
+      },
+      {
+        "step": 9676,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9680,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9684,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9688,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9692,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.03914318415833736,
+        "triggered": false
+      },
+      {
+        "step": 9696,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9700,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9704,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9708,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9712,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9716,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9720,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9724,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9728,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9732,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9736,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9740,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9744,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9748,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9752,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9756,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9760,
+        "conflict": 0.0,
+        "variance": 0.0012959999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9764,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9768,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9772,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9776,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9780,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9784,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9788,
+        "conflict": 0.0,
+        "variance": 0.0006839999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.03879758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9792,
+        "conflict": 0.0,
+        "variance": 0.0012959999999999998,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9796,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9800,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9804,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9808,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9812,
+        "conflict": 0.0,
+        "variance": 0.004353777777777778,
+        "growth": 0.12864128052779122,
+        "score": 0.0398985174916707,
+        "triggered": false
+      },
+      {
+        "step": 9816,
+        "conflict": 0.0,
+        "variance": 0.008705707602339182,
+        "growth": 0.12864128052779122,
+        "score": 0.04120409643903912,
+        "triggered": false
+      },
+      {
+        "step": 9820,
+        "conflict": 0.0,
+        "variance": 0.0146313216374269,
+        "growth": 0.12864128052779122,
+        "score": 0.04298178064956543,
+        "triggered": false
+      },
+      {
+        "step": 9824,
+        "conflict": 0.0,
+        "variance": 0.014631321637426902,
+        "growth": 0.12864128052779122,
+        "score": 0.04298178064956543,
+        "triggered": false
+      },
+      {
+        "step": 9828,
+        "conflict": 0.0,
+        "variance": 0.014631321637426897,
+        "growth": 0.12864128052779122,
+        "score": 0.04298178064956543,
+        "triggered": false
+      },
+      {
+        "step": 9832,
+        "conflict": 0.0,
+        "variance": 0.014631321637426897,
+        "growth": 0.12864128052779122,
+        "score": 0.04298178064956543,
+        "triggered": false
+      },
+      {
+        "step": 9836,
+        "conflict": 0.0,
+        "variance": 0.014631321637426897,
+        "growth": 0.12864128052779122,
+        "score": 0.04298178064956543,
+        "triggered": false
+      },
+      {
+        "step": 9840,
+        "conflict": 0.0,
+        "variance": 0.014617637426900584,
+        "growth": 0.12864128052779122,
+        "score": 0.04297767538640754,
+        "triggered": false
+      },
+      {
+        "step": 9844,
+        "conflict": 0.0,
+        "variance": 0.014631321637426895,
+        "growth": 0.12864128052779122,
+        "score": 0.04298178064956543,
+        "triggered": false
+      },
+      {
+        "step": 9848,
+        "conflict": 0.0,
+        "variance": 0.014573005847953213,
+        "growth": 0.12864128052779122,
+        "score": 0.042964285912723325,
+        "triggered": false
+      },
+      {
+        "step": 9852,
+        "conflict": 0.0,
+        "variance": 0.014573005847953213,
+        "growth": 0.12864128052779122,
+        "score": 0.042964285912723325,
+        "triggered": false
+      },
+      {
+        "step": 9856,
+        "conflict": 0.0,
+        "variance": 0.014573005847953213,
+        "growth": 0.12864128052779122,
+        "score": 0.042964285912723325,
+        "triggered": false
+      },
+      {
+        "step": 9860,
+        "conflict": 0.0,
+        "variance": 0.014573005847953213,
+        "growth": 0.12864128052779122,
+        "score": 0.042964285912723325,
+        "triggered": false
+      },
+      {
+        "step": 9864,
+        "conflict": 0.0,
+        "variance": 0.014573005847953213,
+        "growth": 0.12864128052779122,
+        "score": 0.042964285912723325,
+        "triggered": false
+      },
+      {
+        "step": 9868,
+        "conflict": 0.0,
+        "variance": 0.028624707602339185,
+        "growth": 0.12864128052779122,
+        "score": 0.04717979643903912,
+        "triggered": false
+      },
+      {
+        "step": 9872,
+        "conflict": 0.0,
+        "variance": 0.029055023391812866,
+        "growth": 0.12864128052779122,
+        "score": 0.047308891175881225,
+        "triggered": false
+      },
+      {
+        "step": 9876,
+        "conflict": 0.0,
+        "variance": 0.029055023391812863,
+        "growth": 0.12864128052779122,
+        "score": 0.047308891175881225,
+        "triggered": false
+      },
+      {
+        "step": 9880,
+        "conflict": 0.0,
+        "variance": 0.029055023391812863,
+        "growth": 0.12864128052779122,
+        "score": 0.047308891175881225,
+        "triggered": false
+      },
+      {
+        "step": 9884,
+        "conflict": 0.0,
+        "variance": 0.03353391812865497,
+        "growth": 0.12864128052779122,
+        "score": 0.048652559596933855,
+        "triggered": false
+      },
+      {
+        "step": 9888,
+        "conflict": 0.0,
+        "variance": 0.03353391812865497,
+        "growth": 0.12864128052779122,
+        "score": 0.048652559596933855,
+        "triggered": false
+      },
+      {
+        "step": 9892,
+        "conflict": 0.0,
+        "variance": 0.032836842105263164,
+        "growth": 0.12864128052779122,
+        "score": 0.04844343678991631,
+        "triggered": false
+      },
+      {
+        "step": 9896,
+        "conflict": 0.0,
+        "variance": 0.030423999999999996,
+        "growth": 0.12864128052779122,
+        "score": 0.047719584158337366,
+        "triggered": false
+      },
+      {
+        "step": 9900,
+        "conflict": 0.0,
+        "variance": 0.025383999999999997,
+        "growth": 0.12864128052779122,
+        "score": 0.04620758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9904,
+        "conflict": 0.0,
+        "variance": 0.025383999999999997,
+        "growth": 0.12864128052779122,
+        "score": 0.04620758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9908,
+        "conflict": 0.0,
+        "variance": 0.025384,
+        "growth": 0.12864128052779122,
+        "score": 0.04620758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9912,
+        "conflict": 0.0,
+        "variance": 0.025383999999999997,
+        "growth": 0.12864128052779122,
+        "score": 0.04620758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9916,
+        "conflict": 0.0,
+        "variance": 0.025383999999999997,
+        "growth": 0.12864128052779122,
+        "score": 0.04620758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9920,
+        "conflict": 0.0,
+        "variance": 0.025383999999999997,
+        "growth": 0.12864128052779122,
+        "score": 0.04620758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9924,
+        "conflict": 0.0,
+        "variance": 0.025384000000000007,
+        "growth": 0.12864128052779122,
+        "score": 0.04620758415833737,
+        "triggered": false
+      },
+      {
+        "step": 9928,
+        "conflict": 0.0,
+        "variance": 0.025395999999999995,
+        "growth": 0.12864128052779122,
+        "score": 0.04621118415833736,
+        "triggered": false
+      },
+      {
+        "step": 9932,
+        "conflict": 0.0,
+        "variance": 0.025396000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.046211184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9936,
+        "conflict": 0.0,
+        "variance": 0.025396000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.046211184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9940,
+        "conflict": 0.0,
+        "variance": 0.02539600000000001,
+        "growth": 0.12864128052779122,
+        "score": 0.046211184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9944,
+        "conflict": 0.0,
+        "variance": 0.02539600000000001,
+        "growth": 0.12864128052779122,
+        "score": 0.046211184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9948,
+        "conflict": 0.0,
+        "variance": 0.008811000000000003,
+        "growth": 0.12864128052779122,
+        "score": 0.041235684158337366,
+        "triggered": false
+      },
+      {
+        "step": 9952,
+        "conflict": 0.0,
+        "variance": 0.009171,
+        "growth": 0.12864128052779122,
+        "score": 0.04134368415833736,
+        "triggered": false
+      },
+      {
+        "step": 9956,
+        "conflict": 0.0,
+        "variance": 0.009171000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.04134368415833736,
+        "triggered": false
+      },
+      {
+        "step": 9960,
+        "conflict": 0.0,
+        "variance": 0.009171000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.04134368415833736,
+        "triggered": false
+      },
+      {
+        "step": 9964,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9968,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9972,
+        "conflict": 0.0,
+        "variance": 0.001296,
+        "growth": 0.12864128052779122,
+        "score": 0.038981184158337366,
+        "triggered": false
+      },
+      {
+        "step": 9976,
+        "conflict": 0.0,
+        "variance": 0.004830693877551022,
+        "growth": 0.12864128052779122,
+        "score": 0.04004159232160267,
+        "triggered": false
+      },
+      {
+        "step": 9980,
+        "conflict": 0.0,
+        "variance": 0.004830693877551021,
+        "growth": 0.12864128052779122,
+        "score": 0.04004159232160267,
+        "triggered": false
+      },
+      {
+        "step": 9984,
+        "conflict": 0.0,
+        "variance": 0.004830693877551021,
+        "growth": 0.12864128052779122,
+        "score": 0.04004159232160267,
+        "triggered": false
+      },
+      {
+        "step": 9988,
+        "conflict": 0.0,
+        "variance": 0.004830693877551021,
+        "growth": 0.12864128052779122,
+        "score": 0.04004159232160267,
+        "triggered": false
+      },
+      {
+        "step": 9992,
+        "conflict": 0.0,
+        "variance": 0.01210569387755102,
+        "growth": 0.12864128052779122,
+        "score": 0.04222409232160267,
+        "triggered": false
+      },
+      {
+        "step": 9996,
+        "conflict": 0.0,
+        "variance": 0.012105693877551022,
+        "growth": 0.12864128052779122,
+        "score": 0.04222409232160267,
+        "triggered": false
+      },
+      {
+        "step": 10000,
+        "conflict": 0.0,
+        "variance": 0.012105693877551022,
+        "growth": 0.12864128052779122,
+        "score": 0.04222409232160267,
+        "triggered": false
+      },
+      {
+        "step": 10004,
+        "conflict": 0.0,
+        "variance": 0.01375680994897959,
+        "growth": 0.12864128052779122,
+        "score": 0.042719427143031244,
+        "triggered": false
+      },
+      {
+        "step": 10008,
+        "conflict": 0.0,
+        "variance": 0.024412682964852613,
+        "growth": 0.12864128052779122,
+        "score": 0.04591618904779315,
+        "triggered": false
+      },
+      {
+        "step": 10012,
+        "conflict": 0.0,
+        "variance": 0.0240796897675737,
+        "growth": 0.12864128052779122,
+        "score": 0.045816291088609476,
+        "triggered": false
+      },
+      {
+        "step": 10016,
+        "conflict": 0.0,
+        "variance": 0.0240796897675737,
+        "growth": 0.12864128052779122,
+        "score": 0.045816291088609476,
+        "triggered": false
+      },
+      {
+        "step": 10020,
+        "conflict": 0.0,
+        "variance": 0.03473479180839002,
+        "growth": 0.12864128052779122,
+        "score": 0.04901282170085437,
+        "triggered": false
+      },
+      {
+        "step": 10024,
+        "conflict": 0.0,
+        "variance": 0.03473479180839002,
+        "growth": 0.12864128052779122,
+        "score": 0.04901282170085437,
+        "triggered": false
+      },
+      {
+        "step": 10028,
+        "conflict": 0.0,
+        "variance": 0.04619349716553288,
+        "growth": 0.12864128052779122,
+        "score": 0.05245043330799723,
+        "triggered": false
+      },
+      {
+        "step": 10032,
+        "conflict": 0.0,
+        "variance": 0.04619349716553288,
+        "growth": 0.12864128052779122,
+        "score": 0.05245043330799723,
+        "triggered": false
+      },
+      {
+        "step": 10036,
+        "conflict": 0.0,
+        "variance": 0.04619349716553288,
+        "growth": 0.12864128052779122,
+        "score": 0.05245043330799723,
+        "triggered": false
+      },
+      {
+        "step": 10040,
+        "conflict": 0.0,
+        "variance": 0.04619349716553288,
+        "growth": 0.12864128052779122,
+        "score": 0.05245043330799723,
+        "triggered": false
+      },
+      {
+        "step": 10044,
+        "conflict": 0.0,
+        "variance": 0.04619349716553288,
+        "growth": 0.12864128052779122,
+        "score": 0.05245043330799723,
+        "triggered": false
+      },
+      {
+        "step": 10048,
+        "conflict": 0.0,
+        "variance": 0.048877672158781596,
+        "growth": 0.12864128052779122,
+        "score": 0.05325568580597184,
+        "triggered": false
+      },
+      {
+        "step": 10052,
+        "conflict": 0.0,
+        "variance": 0.048877672158781596,
+        "growth": 0.12864128052779122,
+        "score": 0.05325568580597184,
+        "triggered": false
+      },
+      {
+        "step": 10056,
+        "conflict": 0.0,
+        "variance": 0.04934981057936723,
+        "growth": 0.12864128052779122,
+        "score": 0.05339732733214753,
+        "triggered": false
+      },
+      {
+        "step": 10060,
+        "conflict": 0.0,
+        "variance": 0.04851258231849765,
+        "growth": 0.12864128052779122,
+        "score": 0.053146158853886655,
+        "triggered": false
+      },
+      {
+        "step": 10064,
+        "conflict": 0.0,
+        "variance": 0.04851258231849766,
+        "growth": 0.12864128052779122,
+        "score": 0.05314615885388666,
+        "triggered": false
+      },
+      {
+        "step": 10068,
+        "conflict": 0.0,
+        "variance": 0.04709275623154113,
+        "growth": 0.12864128052779122,
+        "score": 0.0527202110277997,
+        "triggered": false
+      },
+      {
+        "step": 10072,
+        "conflict": 0.0,
+        "variance": 0.043949930144584606,
+        "growth": 0.12864128052779122,
+        "score": 0.051777363201712744,
+        "triggered": false
+      },
+      {
+        "step": 10076,
+        "conflict": 0.0,
+        "variance": 0.043949930144584606,
+        "growth": 0.12864128052779122,
+        "score": 0.051777363201712744,
+        "triggered": false
+      },
+      {
+        "step": 10080,
+        "conflict": 0.0,
+        "variance": 0.04449495350067516,
+        "growth": 0.12864128052779122,
+        "score": 0.05194087020853991,
+        "triggered": false
+      },
+      {
+        "step": 10084,
+        "conflict": 0.0,
+        "variance": 0.045653704241781876,
+        "growth": 0.12864128052779122,
+        "score": 0.052288495430871926,
+        "triggered": false
+      },
+      {
+        "step": 10088,
+        "conflict": 0.0,
+        "variance": 0.20204863177801383,
+        "growth": 0.12864128052779122,
+        "score": 0.0992069736917415,
+        "triggered": false
+      },
+      {
+        "step": 10092,
+        "conflict": 0.0,
+        "variance": 0.20382962493944173,
+        "growth": 0.12864128052779122,
+        "score": 0.09974127164016988,
+        "triggered": false
+      },
+      {
+        "step": 10096,
+        "conflict": 0.0,
+        "variance": 0.20118074706146688,
+        "growth": 0.12864128052779122,
+        "score": 0.09894660827677743,
+        "triggered": false
+      },
+      {
+        "step": 10100,
+        "conflict": 0.0,
+        "variance": 0.19818800377990373,
+        "growth": 0.12864128052779122,
+        "score": 0.09804878529230848,
+        "triggered": false
+      },
+      {
+        "step": 10104,
+        "conflict": 0.0,
+        "variance": 0.19818800377990375,
+        "growth": 0.12864128052779122,
+        "score": 0.09804878529230848,
+        "triggered": false
+      },
+      {
+        "step": 10108,
+        "conflict": 0.0,
+        "variance": 0.19137116402997978,
+        "growth": 0.12864128052779122,
+        "score": 0.0960037333673313,
+        "triggered": false
+      },
+      {
+        "step": 10112,
+        "conflict": 0.0,
+        "variance": 0.1941712995584341,
+        "growth": 0.12864128052779122,
+        "score": 0.0968437740258676,
+        "triggered": false
+      },
+      {
+        "step": 10116,
+        "conflict": 0.0,
+        "variance": 0.1941712995584341,
+        "growth": 0.12864128052779122,
+        "score": 0.0968437740258676,
+        "triggered": false
+      },
+      {
+        "step": 10120,
+        "conflict": 0.0,
+        "variance": 0.1941712995584341,
+        "growth": 0.12864128052779122,
+        "score": 0.0968437740258676,
+        "triggered": false
+      },
+      {
+        "step": 10124,
+        "conflict": 0.0,
+        "variance": 0.19210833637025354,
+        "growth": 0.12864128052779122,
+        "score": 0.09622488506941343,
+        "triggered": false
+      },
+      {
+        "step": 10128,
+        "conflict": 0.0,
+        "variance": 0.1899709703265094,
+        "growth": 0.12864128052779122,
+        "score": 0.09558367525629018,
+        "triggered": false
+      },
+      {
+        "step": 10132,
+        "conflict": 0.0,
+        "variance": 0.1899709703265094,
+        "growth": 0.12864128052779122,
+        "score": 0.09558367525629018,
+        "triggered": false
+      },
+      {
+        "step": 10136,
+        "conflict": 0.0,
+        "variance": 0.1899709703265094,
+        "growth": 0.12864128052779122,
+        "score": 0.09558367525629018,
+        "triggered": false
+      },
+      {
+        "step": 10140,
+        "conflict": 0.0,
+        "variance": 0.19173027005455917,
+        "growth": 0.12864128052779122,
+        "score": 0.09611146517470512,
+        "triggered": false
+      },
+      {
+        "step": 10144,
+        "conflict": 0.0,
+        "variance": 0.19173027005455917,
+        "growth": 0.12864128052779122,
+        "score": 0.09611146517470512,
+        "triggered": false
+      },
+      {
+        "step": 10148,
+        "conflict": 0.0,
+        "variance": 0.19341222188051102,
+        "growth": 0.12864128052779122,
+        "score": 0.09661605072249066,
+        "triggered": false
+      },
+      {
+        "step": 10152,
+        "conflict": 0.0,
+        "variance": 0.19321648994577903,
+        "growth": 0.12864128052779122,
+        "score": 0.09655733114207107,
+        "triggered": false
+      },
+      {
+        "step": 10156,
+        "conflict": 0.0,
+        "variance": 0.193216489945779,
+        "growth": 0.12864128052779122,
+        "score": 0.09655733114207106,
+        "triggered": false
+      },
+      {
+        "step": 10160,
+        "conflict": 0.0,
+        "variance": 0.19296968624442978,
+        "growth": 0.12864128052779122,
+        "score": 0.0964832900316663,
+        "triggered": false
+      },
+      {
+        "step": 10164,
+        "conflict": 0.0,
+        "variance": 0.19296968624442978,
+        "growth": 0.12864128052779122,
+        "score": 0.0964832900316663,
+        "triggered": false
+      },
+      {
+        "step": 10168,
+        "conflict": 0.0,
+        "variance": 0.01605043838118197,
+        "growth": 0.12864128052779122,
+        "score": 0.04340751567269196,
+        "triggered": false
+      },
+      {
+        "step": 10172,
+        "conflict": 0.0,
+        "variance": 0.016050438381181968,
+        "growth": 0.12864128052779122,
+        "score": 0.04340751567269195,
+        "triggered": false
+      },
+      {
+        "step": 10176,
+        "conflict": 0.0,
+        "variance": 0.0132989012345679,
+        "growth": 0.12864128052779122,
+        "score": 0.04258205452870773,
+        "triggered": false
+      },
+      {
+        "step": 10180,
+        "conflict": 0.0,
+        "variance": 0.0132989012345679,
+        "growth": 0.12864128052779122,
+        "score": 0.04258205452870773,
+        "triggered": false
+      },
+      {
+        "step": 10184,
+        "conflict": 0.0,
+        "variance": 0.013298901234567898,
+        "growth": 0.12864128052779122,
+        "score": 0.04258205452870773,
+        "triggered": false
+      },
+      {
+        "step": 10188,
+        "conflict": 0.0,
+        "variance": 0.013298901234567898,
+        "growth": 0.12864128052779122,
+        "score": 0.04258205452870773,
+        "triggered": false
+      },
+      {
+        "step": 10192,
+        "conflict": 0.0,
+        "variance": 0.005708777777777779,
+        "growth": 0.12864128052779122,
+        "score": 0.040305017491670696,
+        "triggered": false
+      },
+      {
+        "step": 10196,
+        "conflict": 0.0,
+        "variance": 0.005708777777777779,
+        "growth": 0.12864128052779122,
+        "score": 0.040305017491670696,
+        "triggered": false
+      },
+      {
+        "step": 10200,
+        "conflict": 0.0,
+        "variance": 0.005708777777777778,
+        "growth": 0.12864128052779122,
+        "score": 0.040305017491670696,
+        "triggered": false
+      },
+      {
+        "step": 10204,
+        "conflict": 0.0,
+        "variance": 0.0030509999999999995,
+        "growth": 0.12864128052779122,
+        "score": 0.039507684158337365,
+        "triggered": false
+      },
+      {
+        "step": 10208,
+        "conflict": 0.0,
+        "variance": 0.0026190000000000002,
+        "growth": 0.12864128052779122,
+        "score": 0.039378084158337365,
+        "triggered": false
+      },
+      {
+        "step": 10212,
+        "conflict": 0.0,
+        "variance": 0.0026639999999999993,
+        "growth": 0.12864128052779122,
+        "score": 0.039391584158337364,
+        "triggered": false
+      },
+      {
+        "step": 10216,
+        "conflict": 0.0,
+        "variance": 0.0026639999999999993,
+        "growth": 0.12864128052779122,
+        "score": 0.039391584158337364,
+        "triggered": false
+      },
+      {
+        "step": 10220,
+        "conflict": 0.0,
+        "variance": 0.00306,
+        "growth": 0.1216355952568023,
+        "score": 0.037408678577040694,
+        "triggered": false
+      },
+      {
+        "step": 10224,
+        "conflict": 0.0,
+        "variance": 0.0030600000000000002,
+        "growth": 0.1216355952568023,
+        "score": 0.037408678577040694,
+        "triggered": false
+      },
+      {
+        "step": 10228,
+        "conflict": 0.0,
+        "variance": 0.0030599999999999994,
+        "growth": 0.1216355952568023,
+        "score": 0.037408678577040694,
+        "triggered": false
+      },
+      {
+        "step": 10232,
+        "conflict": 0.0,
+        "variance": 0.013651000000000005,
+        "growth": 0.1216355952568023,
+        "score": 0.040585978577040695,
+        "triggered": false
+      },
+      {
+        "step": 10236,
+        "conflict": 0.0,
+        "variance": 0.013651000000000007,
+        "growth": 0.1216355952568023,
+        "score": 0.040585978577040695,
+        "triggered": false
+      },
+      {
+        "step": 10240,
+        "conflict": 0.0,
+        "variance": 0.013651000000000005,
+        "growth": 0.1216355952568023,
+        "score": 0.040585978577040695,
+        "triggered": false
+      },
+      {
+        "step": 10244,
+        "conflict": 0.0,
+        "variance": 0.013651000000000005,
+        "growth": 0.1216355952568023,
+        "score": 0.040585978577040695,
+        "triggered": false
+      },
+      {
+        "step": 10248,
+        "conflict": 0.0,
+        "variance": 0.019419000000000013,
+        "growth": 0.1216355952568023,
+        "score": 0.042316378577040695,
+        "triggered": false
+      },
+      {
+        "step": 10252,
+        "conflict": 0.0,
+        "variance": 0.019419000000000013,
+        "growth": 0.1216355952568023,
+        "score": 0.042316378577040695,
+        "triggered": false
+      },
+      {
+        "step": 10256,
+        "conflict": 0.0,
+        "variance": 0.019395000000000003,
+        "growth": 0.1216355952568023,
+        "score": 0.042309178577040696,
+        "triggered": false
+      },
+      {
+        "step": 10260,
+        "conflict": 0.0,
+        "variance": 0.019395000000000003,
+        "growth": 0.1216355952568023,
+        "score": 0.042309178577040696,
+        "triggered": false
+      },
+      {
+        "step": 10264,
+        "conflict": 0.0,
+        "variance": 0.019395000000000006,
+        "growth": 0.1216355952568023,
+        "score": 0.042309178577040696,
+        "triggered": false
+      },
+      {
+        "step": 10268,
+        "conflict": 0.0,
+        "variance": 0.019395000000000006,
+        "growth": 0.1216355952568023,
+        "score": 0.042309178577040696,
+        "triggered": false
+      },
+      {
+        "step": 10272,
+        "conflict": 0.0,
+        "variance": 0.019395000000000003,
+        "growth": 0.1216355952568023,
+        "score": 0.042309178577040696,
+        "triggered": false
+      },
+      {
+        "step": 10276,
+        "conflict": 0.0,
+        "variance": 0.019395000000000006,
+        "growth": 0.1216355952568023,
+        "score": 0.042309178577040696,
+        "triggered": false
+      },
+      {
+        "step": 10280,
+        "conflict": 0.0,
+        "variance": 0.019330568704799482,
+        "growth": 0.1216355952568023,
+        "score": 0.042289849188480534,
+        "triggered": false
+      },
+      {
+        "step": 10284,
+        "conflict": 0.0,
+        "variance": 0.021801722550953327,
+        "growth": 0.1216355952568023,
+        "score": 0.04303119534232669,
+        "triggered": false
+      },
+      {
+        "step": 10288,
+        "conflict": 0.0,
+        "variance": 0.021801722550953327,
+        "growth": 0.1216355952568023,
+        "score": 0.04303119534232669,
+        "triggered": false
+      },
+      {
+        "step": 10292,
+        "conflict": 0.0,
+        "variance": 0.02206349178172256,
+        "growth": 0.1216355952568023,
+        "score": 0.04310972611155746,
+        "triggered": false
+      },
+      {
+        "step": 10296,
+        "conflict": 0.0,
+        "variance": 0.02322903665351743,
+        "growth": 0.1216355952568023,
+        "score": 0.04345938957309592,
+        "triggered": false
+      },
+      {
+        "step": 10300,
+        "conflict": 0.0,
+        "variance": 0.023488575115055886,
+        "growth": 0.1216355952568023,
+        "score": 0.04353725111155746,
+        "triggered": false
+      },
+      {
+        "step": 10304,
+        "conflict": 0.0,
+        "variance": 0.02322903665351743,
+        "growth": 0.1216355952568023,
+        "score": 0.04345938957309592,
+        "triggered": false
+      },
+      {
+        "step": 10308,
+        "conflict": 0.0,
+        "variance": 0.030872626397107174,
+        "growth": 0.1216355952568023,
+        "score": 0.045752466496172844,
+        "triggered": false
+      },
+      {
+        "step": 10312,
+        "conflict": 0.0,
+        "variance": 0.02237729306377383,
+        "growth": 0.1216355952568023,
+        "score": 0.04320386649617284,
+        "triggered": false
+      },
+      {
+        "step": 10316,
+        "conflict": 0.0,
+        "variance": 0.022057754602235368,
+        "growth": 0.1216355952568023,
+        "score": 0.043108004957711304,
+        "triggered": false
+      },
+      {
+        "step": 10320,
+        "conflict": 0.0,
+        "variance": 0.02205775460223537,
+        "growth": 0.1216355952568023,
+        "score": 0.043108004957711304,
+        "triggered": false
+      },
+      {
+        "step": 10324,
+        "conflict": 0.0,
+        "variance": 0.022057754602235368,
+        "growth": 0.1216355952568023,
+        "score": 0.043108004957711304,
+        "triggered": false
+      },
+      {
+        "step": 10328,
+        "conflict": 0.0,
+        "variance": 0.01724288280736357,
+        "growth": 0.1216355952568023,
+        "score": 0.041663543419249764,
+        "triggered": false
+      },
+      {
+        "step": 10332,
+        "conflict": 0.0,
+        "variance": 0.017242882807363573,
+        "growth": 0.1216355952568023,
+        "score": 0.041663543419249764,
+        "triggered": false
+      },
+      {
+        "step": 10336,
+        "conflict": 0.0,
+        "variance": 0.017091344345825113,
+        "growth": 0.1216355952568023,
+        "score": 0.04161808188078823,
+        "triggered": false
+      },
+      {
+        "step": 10340,
+        "conflict": 0.0,
+        "variance": 0.017091344345825113,
+        "growth": 0.1216355952568023,
+        "score": 0.04161808188078823,
+        "triggered": false
+      },
+      {
+        "step": 10344,
+        "conflict": 0.0,
+        "variance": 0.017091344345825113,
+        "growth": 0.1216355952568023,
+        "score": 0.04161808188078823,
+        "triggered": false
+      },
+      {
+        "step": 10348,
+        "conflict": 0.0,
+        "variance": 0.028279936705846054,
+        "growth": 0.1216355952568023,
+        "score": 0.044974659588794506,
+        "triggered": false
+      },
+      {
+        "step": 10352,
+        "conflict": 0.0,
+        "variance": 0.028279936705846054,
+        "growth": 0.1216355952568023,
+        "score": 0.044974659588794506,
+        "triggered": false
+      },
+      {
+        "step": 10356,
+        "conflict": 0.0,
+        "variance": 0.028279936705846047,
+        "growth": 0.1216355952568023,
+        "score": 0.044974659588794506,
+        "triggered": false
+      },
+      {
+        "step": 10360,
+        "conflict": 0.0,
+        "variance": 0.028796382653061236,
+        "growth": 0.1216355952568023,
+        "score": 0.04512959337295906,
+        "triggered": false
+      },
+      {
+        "step": 10364,
+        "conflict": 0.0,
+        "variance": 0.028953753743509246,
+        "growth": 0.1216355952568023,
+        "score": 0.04517680470009346,
+        "triggered": false
+      },
+      {
+        "step": 10368,
+        "conflict": 0.0,
+        "variance": 0.028953753743509246,
+        "growth": 0.1216355952568023,
+        "score": 0.04517680470009346,
+        "triggered": false
+      },
+      {
+        "step": 10372,
+        "conflict": 0.0,
+        "variance": 0.028953753743509246,
+        "growth": 0.1216355952568023,
+        "score": 0.04517680470009346,
+        "triggered": false
+      },
+      {
+        "step": 10376,
+        "conflict": 0.0,
+        "variance": 0.06696330044680594,
+        "growth": 0.1216355952568023,
+        "score": 0.05657966871108247,
+        "triggered": false
+      },
+      {
+        "step": 10380,
+        "conflict": 0.0,
+        "variance": 0.06696330044680594,
+        "growth": 0.1216355952568023,
+        "score": 0.05657966871108247,
+        "triggered": false
+      },
+      {
+        "step": 10384,
+        "conflict": 0.0,
+        "variance": 0.06696330044680593,
+        "growth": 0.1216355952568023,
+        "score": 0.05657966871108247,
+        "triggered": false
+      },
+      {
+        "step": 10388,
+        "conflict": 0.0,
+        "variance": 0.06068610264460814,
+        "growth": 0.1216355952568023,
+        "score": 0.054696509370423134,
+        "triggered": false
+      },
+      {
+        "step": 10392,
+        "conflict": 0.0,
+        "variance": 0.06068610264460814,
+        "growth": 0.1216355952568023,
+        "score": 0.054696509370423134,
+        "triggered": false
+      },
+      {
+        "step": 10396,
+        "conflict": 0.0,
+        "variance": 0.06127357517208069,
+        "growth": 0.1216355952568023,
+        "score": 0.054872751128664896,
+        "triggered": false
+      },
+      {
+        "step": 10400,
+        "conflict": 0.0,
+        "variance": 0.06127357517208069,
+        "growth": 0.1216355952568023,
+        "score": 0.054872751128664896,
+        "triggered": false
+      },
+      {
+        "step": 10404,
+        "conflict": 0.0,
+        "variance": 0.06127357517208069,
+        "growth": 0.1216355952568023,
+        "score": 0.054872751128664896,
+        "triggered": false
+      },
+      {
+        "step": 10408,
+        "conflict": 0.0,
+        "variance": 0.061273575172080694,
+        "growth": 0.1216355952568023,
+        "score": 0.054872751128664896,
+        "triggered": false
+      },
+      {
+        "step": 10412,
+        "conflict": 0.0,
+        "variance": 0.06127357517208069,
+        "growth": 0.1216355952568023,
+        "score": 0.054872751128664896,
+        "triggered": false
+      },
+      {
+        "step": 10416,
+        "conflict": 0.0,
+        "variance": 0.061789047699553214,
+        "growth": 0.1216355952568023,
+        "score": 0.055027392886906654,
+        "triggered": false
+      },
+      {
+        "step": 10420,
+        "conflict": 0.0,
+        "variance": 0.06152883890834439,
+        "growth": 0.1216355952568023,
+        "score": 0.05494933024954401,
+        "triggered": false
+      },
+      {
+        "step": 10424,
+        "conflict": 0.0,
+        "variance": 0.06152883890834439,
+        "growth": 0.1216355952568023,
+        "score": 0.05494933024954401,
+        "triggered": false
+      },
+      {
+        "step": 10428,
+        "conflict": 0.0,
+        "variance": 0.05061204142011834,
+        "growth": 0.1216355952568023,
+        "score": 0.05167429100307619,
+        "triggered": false
+      },
+      {
+        "step": 10432,
+        "conflict": 0.0,
+        "variance": 0.05070411834319527,
+        "growth": 0.1216355952568023,
+        "score": 0.05170191407999927,
+        "triggered": false
+      },
+      {
+        "step": 10436,
+        "conflict": 0.0,
+        "variance": 0.05070411834319527,
+        "growth": 0.1216355952568023,
+        "score": 0.05170191407999927,
+        "triggered": false
+      },
+      {
+        "step": 10440,
+        "conflict": 0.0,
+        "variance": 0.051636539065330264,
+        "growth": 0.1216355952568023,
+        "score": 0.05198164029663977,
+        "triggered": false
+      },
+      {
+        "step": 10444,
+        "conflict": 0.0,
+        "variance": 0.0498208163265306,
+        "growth": 0.1216355952568023,
+        "score": 0.05143692347499987,
+        "triggered": false
+      },
+      {
+        "step": 10448,
+        "conflict": 0.0,
+        "variance": 0.0498208163265306,
+        "growth": 0.1216355952568023,
+        "score": 0.05143692347499987,
+        "triggered": false
+      },
+      {
+        "step": 10452,
+        "conflict": 0.0,
+        "variance": 0.0498208163265306,
+        "growth": 0.1216355952568023,
+        "score": 0.05143692347499987,
+        "triggered": false
+      },
+      {
+        "step": 10456,
+        "conflict": 0.0,
+        "variance": 0.006035102040816326,
+        "growth": 0.1216355952568023,
+        "score": 0.03830120918928559,
+        "triggered": false
+      },
+      {
+        "step": 10460,
+        "conflict": 0.0,
+        "variance": 0.0060351020408163265,
+        "growth": 0.1216355952568023,
+        "score": 0.03830120918928559,
+        "triggered": false
+      },
+      {
+        "step": 10464,
+        "conflict": 0.0,
+        "variance": 0.0057248163265306105,
+        "growth": 0.1216355952568023,
+        "score": 0.038208123474999876,
+        "triggered": false
+      },
+      {
+        "step": 10468,
+        "conflict": 0.0,
+        "variance": 0.0057248163265306105,
+        "growth": 0.1216355952568023,
+        "score": 0.038208123474999876,
+        "triggered": false
+      },
+      {
+        "step": 10472,
+        "conflict": 0.0,
+        "variance": 0.0060351020408163265,
+        "growth": 0.1216355952568023,
+        "score": 0.03830120918928559,
+        "triggered": false
+      },
+      {
+        "step": 10476,
+        "conflict": 0.0,
+        "variance": 0.0060351020408163265,
+        "growth": 0.1216355952568023,
+        "score": 0.03830120918928559,
+        "triggered": false
+      },
+      {
+        "step": 10480,
+        "conflict": 0.0,
+        "variance": 0.00627338775510204,
+        "growth": 0.1216355952568023,
+        "score": 0.0383726949035713,
+        "triggered": false
+      },
+      {
+        "step": 10484,
+        "conflict": 0.0,
+        "variance": 0.014531061273022883,
+        "growth": 0.1216355952568023,
+        "score": 0.04084999695894756,
+        "triggered": false
+      },
+      {
+        "step": 10488,
+        "conflict": 0.0,
+        "variance": 0.019475691814894804,
+        "growth": 0.1216355952568023,
+        "score": 0.04233338612150913,
+        "triggered": false
+      },
+      {
+        "step": 10492,
+        "conflict": 0.0,
+        "variance": 0.09240223806557897,
+        "growth": 0.1216355952568023,
+        "score": 0.06421134999671438,
+        "triggered": false
+      },
+      {
+        "step": 10496,
+        "conflict": 0.0,
+        "variance": 0.09240223806557897,
+        "growth": 0.1216355952568023,
+        "score": 0.06421134999671438,
+        "triggered": false
+      },
+      {
+        "step": 10500,
+        "conflict": 0.0,
+        "variance": 0.09345615432173661,
+        "growth": 0.1216355952568023,
+        "score": 0.06452752487356167,
+        "triggered": false
+      },
+      {
+        "step": 10504,
+        "conflict": 0.0,
+        "variance": 0.09345615432173662,
+        "growth": 0.1216355952568023,
+        "score": 0.06452752487356167,
+        "triggered": false
+      },
+      {
+        "step": 10508,
+        "conflict": 0.0,
+        "variance": 0.09340962722814058,
+        "growth": 0.1216355952568023,
+        "score": 0.06451356674548286,
+        "triggered": false
+      },
+      {
+        "step": 10512,
+        "conflict": 0.0,
+        "variance": 0.09345493264685976,
+        "growth": 0.1216355952568023,
+        "score": 0.06452715837109863,
+        "triggered": false
+      },
+      {
+        "step": 10516,
+        "conflict": 0.0,
+        "variance": 0.09315040781713597,
+        "growth": 0.1216355952568023,
+        "score": 0.06443580092218149,
+        "triggered": false
+      },
+      {
+        "step": 10520,
+        "conflict": 0.0,
+        "variance": 0.09402928430353955,
+        "growth": 0.1216355952568023,
+        "score": 0.06469946386810255,
+        "triggered": false
+      },
+      {
+        "step": 10524,
+        "conflict": 0.0,
+        "variance": 0.09289279898262076,
+        "growth": 0.1216355952568023,
+        "score": 0.06435851827182693,
+        "triggered": false
+      },
+      {
+        "step": 10528,
+        "conflict": 0.0,
+        "variance": 0.09289279898262075,
+        "growth": 0.1216355952568023,
+        "score": 0.06435851827182691,
+        "triggered": false
+      },
+      {
+        "step": 10532,
+        "conflict": 0.0,
+        "variance": 0.09289279898262078,
+        "growth": 0.1216355952568023,
+        "score": 0.06435851827182693,
+        "triggered": false
+      },
+      {
+        "step": 10536,
+        "conflict": 0.0,
+        "variance": 0.09628173734311082,
+        "growth": 0.1216355952568023,
+        "score": 0.06537519977997394,
+        "triggered": false
+      },
+      {
+        "step": 10540,
+        "conflict": 0.0,
+        "variance": 0.09429611748951068,
+        "growth": 0.1216355952568023,
+        "score": 0.0647795138238939,
+        "triggered": false
+      },
+      {
+        "step": 10544,
+        "conflict": 0.0,
+        "variance": 0.09429611748951068,
+        "growth": 0.1216355952568023,
+        "score": 0.0647795138238939,
+        "triggered": false
+      },
+      {
+        "step": 10548,
+        "conflict": 0.0,
+        "variance": 0.09303552200688013,
+        "growth": 0.1216355952568023,
+        "score": 0.06440133517910474,
+        "triggered": false
+      },
+      {
+        "step": 10552,
+        "conflict": 0.0,
+        "variance": 0.09494363898523647,
+        "growth": 0.1216355952568023,
+        "score": 0.06497377027261163,
+        "triggered": false
+      },
+      {
+        "step": 10556,
+        "conflict": 0.0,
+        "variance": 0.09303552200688012,
+        "growth": 0.1216355952568023,
+        "score": 0.06440133517910472,
+        "triggered": false
+      },
+      {
+        "step": 10560,
+        "conflict": 0.0,
+        "variance": 0.09693423019254169,
+        "growth": 0.1216355952568023,
+        "score": 0.0655709476348032,
+        "triggered": false
+      },
+      {
+        "step": 10564,
+        "conflict": 0.0,
+        "variance": 0.09687110345036029,
+        "growth": 0.1216355952568023,
+        "score": 0.06555200961214877,
+        "triggered": false
+      },
+      {
+        "step": 10568,
+        "conflict": 0.0,
+        "variance": 0.10136242120823269,
+        "growth": 0.1216355952568023,
+        "score": 0.06689940493951049,
+        "triggered": false
+      },
+      {
+        "step": 10572,
+        "conflict": 0.0,
+        "variance": 0.03842994975811419,
+        "growth": 0.1216355952568023,
+        "score": 0.048019663504474945,
+        "triggered": false
+      },
+      {
+        "step": 10576,
+        "conflict": 0.0,
+        "variance": 0.04064200814272158,
+        "growth": 0.1216355952568023,
+        "score": 0.048683281019857166,
+        "triggered": false
+      },
+      {
+        "step": 10580,
+        "conflict": 0.0,
+        "variance": 0.03887076774912824,
+        "growth": 0.1216355952568023,
+        "score": 0.048151908901779165,
+        "triggered": false
+      },
+      {
+        "step": 10584,
+        "conflict": 0.0,
+        "variance": 0.037232023512972244,
+        "growth": 0.1216355952568023,
+        "score": 0.047660285630932366,
+        "triggered": false
+      },
+      {
+        "step": 10588,
+        "conflict": 0.0,
+        "variance": 0.04345768706044252,
+        "growth": 0.1216355952568023,
+        "score": 0.049527984695173444,
+        "triggered": false
+      },
+      {
+        "step": 10592,
+        "conflict": 0.0,
+        "variance": 0.04404176813413894,
+        "growth": 0.1216355952568023,
+        "score": 0.049703209017282375,
+        "triggered": false
+      },
+      {
+        "step": 10596,
+        "conflict": 0.0,
+        "variance": 0.044171225380273016,
+        "growth": 0.1216355952568023,
+        "score": 0.049742046191122595,
+        "triggered": false
+      },
+      {
+        "step": 10600,
+        "conflict": 0.0,
+        "variance": 0.042262611478898524,
+        "growth": 0.1216355952568023,
+        "score": 0.04916946202071025,
+        "triggered": false
+      },
+      {
+        "step": 10604,
+        "conflict": 0.0,
+        "variance": 0.04285223426341285,
+        "growth": 0.1216355952568023,
+        "score": 0.049346348856064544,
+        "triggered": false
+      },
+      {
+        "step": 10608,
+        "conflict": 0.0,
+        "variance": 0.04077289150615489,
+        "growth": 0.1216355952568023,
+        "score": 0.048722546028887155,
+        "triggered": false
+      },
+      {
+        "step": 10612,
+        "conflict": 0.0,
+        "variance": 0.03893769022082303,
+        "growth": 0.1216355952568023,
+        "score": 0.048171985643287604,
+        "triggered": false
+      },
+      {
+        "step": 10616,
+        "conflict": 0.0,
+        "variance": 0.03568112099458897,
+        "growth": 0.1216355952568023,
+        "score": 0.047195014875417385,
+        "triggered": false
+      },
+      {
+        "step": 10620,
+        "conflict": 0.0,
+        "variance": 0.03830841142215298,
+        "growth": 0.1216355952568023,
+        "score": 0.04798320200368658,
+        "triggered": false
+      },
+      {
+        "step": 10624,
+        "conflict": 0.0,
+        "variance": 0.03830841142215298,
+        "growth": 0.1216355952568023,
+        "score": 0.04798320200368658,
+        "triggered": false
+      },
+      {
+        "step": 10628,
+        "conflict": 0.0,
+        "variance": 0.03979636635155251,
+        "growth": 0.1216355952568023,
+        "score": 0.04842958848250645,
+        "triggered": false
+      },
+      {
+        "step": 10632,
+        "conflict": 0.0,
+        "variance": 0.0397963663515525,
+        "growth": 0.1216355952568023,
+        "score": 0.04842958848250644,
+        "triggered": false
+      },
+      {
+        "step": 10636,
+        "conflict": 0.0,
+        "variance": 0.21166751994336272,
+        "growth": 0.1216355952568023,
+        "score": 0.09999093456004951,
+        "triggered": false
+      },
+      {
+        "step": 10640,
+        "conflict": 0.0,
+        "variance": 0.20905789494631621,
+        "growth": 0.1216355952568023,
+        "score": 0.09920804706093556,
+        "triggered": false
+      },
+      {
+        "step": 10644,
+        "conflict": 0.0,
+        "variance": 0.20635033427412633,
+        "growth": 0.1216355952568023,
+        "score": 0.09839577885927858,
+        "triggered": false
+      },
+      {
+        "step": 10648,
+        "conflict": 0.0,
+        "variance": 0.2049088539785549,
+        "growth": 0.1216355952568023,
+        "score": 0.09796333477060716,
+        "triggered": false
+      },
+      {
+        "step": 10652,
+        "conflict": 0.0,
+        "variance": 0.2049088539785549,
+        "growth": 0.1216355952568023,
+        "score": 0.09796333477060716,
+        "triggered": false
+      },
+      {
+        "step": 10656,
+        "conflict": 0.0,
+        "variance": 0.20530349887495994,
+        "growth": 0.1216355952568023,
+        "score": 0.09808172823952867,
+        "triggered": false
+      },
+      {
+        "step": 10660,
+        "conflict": 0.0,
+        "variance": 0.20892899534839074,
+        "growth": 0.1216355952568023,
+        "score": 0.09916937718155791,
+        "triggered": false
+      },
+      {
+        "step": 10664,
+        "conflict": 0.0,
+        "variance": 0.2114882932324492,
+        "growth": 0.1216355952568023,
+        "score": 0.09993716654677545,
+        "triggered": false
+      },
+      {
+        "step": 10668,
+        "conflict": 0.0,
+        "variance": 0.20978971172796582,
+        "growth": 0.1216355952568023,
+        "score": 0.09942759209543044,
+        "triggered": false
+      },
+      {
+        "step": 10672,
+        "conflict": 0.0,
+        "variance": 0.2116027026350323,
+        "growth": 0.1216355952568023,
+        "score": 0.09997148936755038,
+        "triggered": false
+      },
+      {
+        "step": 10676,
+        "conflict": 0.0,
+        "variance": 0.21107949407888257,
+        "growth": 0.1216355952568023,
+        "score": 0.09981452680070546,
+        "triggered": false
+      },
+      {
+        "step": 10680,
+        "conflict": 0.0,
+        "variance": 0.2118884431130416,
+        "growth": 0.1216355952568023,
+        "score": 0.10005721151095318,
+        "triggered": false
+      },
+      {
+        "step": 10684,
+        "conflict": 0.0,
+        "variance": 0.21144650270051302,
+        "growth": 0.1216355952568023,
+        "score": 0.0999246293871946,
+        "triggered": false
+      },
+      {
+        "step": 10688,
+        "conflict": 0.0,
+        "variance": 0.21323204790041111,
+        "growth": 0.1216355952568023,
+        "score": 0.10046029294716402,
+        "triggered": false
+      },
+      {
+        "step": 10692,
+        "conflict": 0.0,
+        "variance": 0.21478925557687018,
+        "growth": 0.1216355952568023,
+        "score": 0.10092745525010174,
+        "triggered": false
+      },
+      {
+        "step": 10696,
+        "conflict": 0.0,
+        "variance": 0.2205553187105412,
+        "growth": 0.1216355952568023,
+        "score": 0.10265727419020305,
+        "triggered": false
+      },
+      {
+        "step": 10700,
+        "conflict": 0.0,
+        "variance": 0.38541424579652706,
+        "growth": 0.1216355952568023,
+        "score": 0.1521149523159988,
+        "triggered": false
+      },
+      {
+        "step": 10704,
+        "conflict": 0.0,
+        "variance": 0.3806069747669031,
+        "growth": 0.1216355952568023,
+        "score": 0.15067277100711163,
+        "triggered": false
+      },
+      {
+        "step": 10708,
+        "conflict": 0.0,
+        "variance": 0.3806069747669031,
+        "growth": 0.1216355952568023,
+        "score": 0.15067277100711163,
+        "triggered": false
+      },
+      {
+        "step": 10712,
+        "conflict": 0.0,
+        "variance": 0.38590234382361677,
+        "growth": 0.1216355952568023,
+        "score": 0.15226138172412573,
+        "triggered": false
+      },
+      {
+        "step": 10716,
+        "conflict": 0.0,
+        "variance": 0.2280632336340863,
+        "growth": 0.1216355952568023,
+        "score": 0.10490964866726657,
+        "triggered": false
+      },
+      {
+        "step": 10720,
+        "conflict": 0.0,
+        "variance": 0.22894324187539938,
+        "growth": 0.1216355952568023,
+        "score": 0.1051736511396605,
+        "triggered": false
+      },
+      {
+        "step": 10724,
+        "conflict": 0.0,
+        "variance": 0.22850107287446564,
+        "growth": 0.1216355952568023,
+        "score": 0.10504100043938037,
+        "triggered": false
+      },
+      {
+        "step": 10728,
+        "conflict": 0.0,
+        "variance": 0.22712960293047044,
+        "growth": 0.1216355952568023,
+        "score": 0.10462955945618183,
+        "triggered": false
+      },
+      {
+        "step": 10732,
+        "conflict": 0.0,
+        "variance": 0.22712960293047044,
+        "growth": 0.1216355952568023,
+        "score": 0.10462955945618183,
+        "triggered": false
+      },
+      {
+        "step": 10736,
+        "conflict": 0.0,
+        "variance": 0.23230089857811648,
+        "growth": 0.1216355952568023,
+        "score": 0.10618094815047563,
+        "triggered": false
+      },
+      {
+        "step": 10740,
+        "conflict": 0.0,
+        "variance": 0.23230089857811653,
+        "growth": 0.1216355952568023,
+        "score": 0.10618094815047564,
+        "triggered": false
+      },
+      {
+        "step": 10744,
+        "conflict": 0.0,
+        "variance": 0.2323008985781166,
+        "growth": 0.1216355952568023,
+        "score": 0.10618094815047567,
+        "triggered": false
+      },
+      {
+        "step": 10748,
+        "conflict": 0.0,
+        "variance": 0.2290454238280965,
+        "growth": 0.1216355952568023,
+        "score": 0.10520430572546964,
+        "triggered": false
+      },
+      {
+        "step": 10752,
+        "conflict": 0.0,
+        "variance": 0.22904542382809648,
+        "growth": 0.1216355952568023,
+        "score": 0.10520430572546963,
+        "triggered": false
+      },
+      {
+        "step": 10756,
+        "conflict": 0.0,
+        "variance": 0.22809934077251887,
+        "growth": 0.1216355952568023,
+        "score": 0.10492048080879635,
+        "triggered": false
+      },
+      {
+        "step": 10760,
+        "conflict": 0.0,
+        "variance": 0.2621262511295318,
+        "growth": 0.1216355952568023,
+        "score": 0.11512855391590023,
+        "triggered": false
+      },
+      {
+        "step": 10764,
+        "conflict": 0.0,
+        "variance": 0.26334306915746525,
+        "growth": 0.1216355952568023,
+        "score": 0.11549359932428026,
+        "triggered": false
+      },
+      {
+        "step": 10768,
+        "conflict": 0.0,
+        "variance": 0.2558804038295042,
+        "growth": 0.1216355952568023,
+        "score": 0.11325479972589196,
+        "triggered": false
+      },
+      {
+        "step": 10772,
+        "conflict": 0.0,
+        "variance": 0.25588040382950417,
+        "growth": 0.1216355952568023,
+        "score": 0.11325479972589193,
+        "triggered": false
+      },
+      {
+        "step": 10776,
+        "conflict": 0.0,
+        "variance": 0.25643196571538357,
+        "growth": 0.1216355952568023,
+        "score": 0.11342026829165576,
+        "triggered": false
+      },
+      {
+        "step": 10780,
+        "conflict": 0.0,
+        "variance": 0.0978235850317758,
+        "growth": 0.1216355952568023,
+        "score": 0.06583775408657343,
+        "triggered": false
+      },
+      {
+        "step": 10784,
+        "conflict": 0.0,
+        "variance": 0.09874324980443147,
+        "growth": 0.1216355952568023,
+        "score": 0.06611365351837013,
+        "triggered": false
+      },
+      {
+        "step": 10788,
+        "conflict": 0.0,
+        "variance": 0.09518408787279224,
+        "growth": 0.1216355952568023,
+        "score": 0.06504590493887837,
+        "triggered": false
+      },
+      {
+        "step": 10792,
+        "conflict": 0.0,
+        "variance": 0.08086621043696032,
+        "growth": 0.1216355952568023,
+        "score": 0.06075054170812878,
+        "triggered": false
+      },
+      {
+        "step": 10796,
+        "conflict": 0.0,
+        "variance": 0.08344052340052659,
+        "growth": 0.1216355952568023,
+        "score": 0.06152283559719866,
+        "triggered": false
+      },
+      {
+        "step": 10800,
+        "conflict": 0.0,
+        "variance": 0.08331953808472556,
+        "growth": 0.1216355952568023,
+        "score": 0.06148654000245836,
+        "triggered": false
+      },
+      {
+        "step": 10804,
+        "conflict": 0.0,
+        "variance": 0.08153984551122623,
+        "growth": 0.1216355952568023,
+        "score": 0.06095263223040856,
+        "triggered": false
+      },
+      {
+        "step": 10808,
+        "conflict": 0.0,
+        "variance": 0.08068088313331266,
+        "growth": 0.1216355952568023,
+        "score": 0.060694943517034486,
+        "triggered": false
+      },
+      {
+        "step": 10812,
+        "conflict": 0.0,
+        "variance": 0.08068088313331265,
+        "growth": 0.1216355952568023,
+        "score": 0.060694943517034486,
+        "triggered": false
+      },
+      {
+        "step": 10816,
+        "conflict": 0.0,
+        "variance": 0.06884956442055024,
+        "growth": 0.1216355952568023,
+        "score": 0.057145547903205765,
+        "triggered": false
+      },
+      {
+        "step": 10820,
+        "conflict": 0.0,
+        "variance": 0.06884956442055024,
+        "growth": 0.1216355952568023,
+        "score": 0.057145547903205765,
+        "triggered": false
+      },
+      {
+        "step": 10824,
+        "conflict": 0.0,
+        "variance": 0.10074635586440055,
+        "growth": 0.1216355952568023,
+        "score": 0.06671458533636085,
+        "triggered": false
+      },
+      {
+        "step": 10828,
+        "conflict": 0.0,
+        "variance": 0.10246274089113849,
+        "growth": 0.1216355952568023,
+        "score": 0.06722950084438224,
+        "triggered": false
+      },
+      {
+        "step": 10832,
+        "conflict": 0.0,
+        "variance": 0.10074635586440053,
+        "growth": 0.1216355952568023,
+        "score": 0.06671458533636085,
+        "triggered": false
+      },
+      {
+        "step": 10836,
+        "conflict": 0.0,
+        "variance": 0.10178075871645045,
+        "growth": 0.1216355952568023,
+        "score": 0.06702490619197582,
+        "triggered": false
+      },
+      {
+        "step": 10840,
+        "conflict": 0.0,
+        "variance": 0.05032278842530367,
+        "growth": 0.1216355952568023,
+        "score": 0.05158751510463179,
+        "triggered": false
+      },
+      {
+        "step": 10844,
+        "conflict": 0.0,
+        "variance": 0.051031656517995294,
+        "growth": 0.1216355952568023,
+        "score": 0.05180017553243928,
+        "triggered": false
+      },
+      {
+        "step": 10848,
+        "conflict": 0.0,
+        "variance": 0.04773033884297519,
+        "growth": 0.1216355952568023,
+        "score": 0.050809780229933245,
+        "triggered": false
+      },
+      {
+        "step": 10852,
+        "conflict": 0.0,
+        "variance": 0.04773033884297519,
+        "growth": 0.1216355952568023,
+        "score": 0.050809780229933245,
+        "triggered": false
+      },
+      {
+        "step": 10856,
+        "conflict": 0.0,
+        "variance": 0.047866975206611574,
+        "growth": 0.1216355952568023,
+        "score": 0.05085077113902416,
+        "triggered": false
+      },
+      {
+        "step": 10860,
+        "conflict": 0.0,
+        "variance": 0.048228066115702475,
+        "growth": 0.1216355952568023,
+        "score": 0.05095909841175143,
+        "triggered": false
+      },
+      {
+        "step": 10864,
+        "conflict": 0.0,
+        "variance": 0.048517157024793374,
+        "growth": 0.1216355952568023,
+        "score": 0.0510458256844787,
+        "triggered": false
+      },
+      {
+        "step": 10868,
+        "conflict": 0.0,
+        "variance": 0.04803897520661156,
+        "growth": 0.1216355952568023,
+        "score": 0.050902371139024155,
+        "triggered": false
+      },
+      {
+        "step": 10872,
+        "conflict": 0.0,
+        "variance": 0.04803897520661155,
+        "growth": 0.1216355952568023,
+        "score": 0.050902371139024155,
+        "triggered": false
+      },
+      {
+        "step": 10876,
+        "conflict": 0.0,
+        "variance": 0.04803897520661155,
+        "growth": 0.1216355952568023,
+        "score": 0.050902371139024155,
+        "triggered": false
+      },
+      {
+        "step": 10880,
+        "conflict": 0.0,
+        "variance": 0.04759599999999999,
+        "growth": 0.1216355952568023,
+        "score": 0.050769478577040686,
+        "triggered": false
+      },
+      {
+        "step": 10884,
+        "conflict": 0.0,
+        "variance": 0.04759599999999999,
+        "growth": 0.1216355952568023,
+        "score": 0.050769478577040686,
+        "triggered": false
+      },
+      {
+        "step": 10888,
+        "conflict": 0.0,
+        "variance": 0.047595999999999986,
+        "growth": 0.1216355952568023,
+        "score": 0.050769478577040686,
+        "triggered": false
+      },
+      {
+        "step": 10892,
+        "conflict": 0.0,
+        "variance": 0.04753599999999999,
+        "growth": 0.1216355952568023,
+        "score": 0.05075147857704069,
+        "triggered": false
+      },
+      {
+        "step": 10896,
+        "conflict": 0.0,
+        "variance": 0.04753599999999999,
+        "growth": 0.1216355952568023,
+        "score": 0.05075147857704069,
+        "triggered": false
+      },
+      {
+        "step": 10900,
+        "conflict": 0.0,
+        "variance": 0.04753599999999999,
+        "growth": 0.1216355952568023,
+        "score": 0.05075147857704069,
+        "triggered": false
+      },
+      {
+        "step": 10904,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10908,
+        "conflict": 0.0,
+        "variance": 0.0027,
+        "growth": 0.1216355952568023,
+        "score": 0.03730067857704069,
+        "triggered": false
+      },
+      {
+        "step": 10912,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10916,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10920,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10924,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10928,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10932,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10936,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10940,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10944,
+        "conflict": 0.0,
+        "variance": 0.0027,
+        "growth": 0.1216355952568023,
+        "score": 0.03730067857704069,
+        "triggered": false
+      },
+      {
+        "step": 10948,
+        "conflict": 0.0,
+        "variance": 0.0027,
+        "growth": 0.1216355952568023,
+        "score": 0.03730067857704069,
+        "triggered": false
+      },
+      {
+        "step": 10952,
+        "conflict": 0.0,
+        "variance": 0.0026999999999999997,
+        "growth": 0.1216355952568023,
+        "score": 0.03730067857704069,
+        "triggered": false
+      },
+      {
+        "step": 10956,
+        "conflict": 0.0,
+        "variance": 0.003024,
+        "growth": 0.1216355952568023,
+        "score": 0.03739787857704069,
+        "triggered": false
+      },
+      {
+        "step": 10960,
+        "conflict": 0.0,
+        "variance": 0.0030239999999999998,
+        "growth": 0.1216355952568023,
+        "score": 0.03739787857704069,
+        "triggered": false
+      },
+      {
+        "step": 10964,
+        "conflict": 0.0,
+        "variance": 0.003276,
+        "growth": 0.1216355952568023,
+        "score": 0.03747347857704069,
+        "triggered": false
+      },
+      {
+        "step": 10968,
+        "conflict": 0.0,
+        "variance": 0.0030239999999999998,
+        "growth": 0.1216355952568023,
+        "score": 0.03739787857704069,
+        "triggered": false
+      },
+      {
+        "step": 10972,
+        "conflict": 0.0,
+        "variance": 0.0026999999999999997,
+        "growth": 0.1216355952568023,
+        "score": 0.03730067857704069,
+        "triggered": false
+      },
+      {
+        "step": 10976,
+        "conflict": 0.0,
+        "variance": 0.0027,
+        "growth": 0.1216355952568023,
+        "score": 0.03730067857704069,
+        "triggered": false
+      },
+      {
+        "step": 10980,
+        "conflict": 0.0,
+        "variance": 0.0026999999999999997,
+        "growth": 0.1216355952568023,
+        "score": 0.03730067857704069,
+        "triggered": false
+      },
+      {
+        "step": 10984,
+        "conflict": 0.0,
+        "variance": 0.0023039999999999996,
+        "growth": 0.1216355952568023,
+        "score": 0.037181878577040695,
+        "triggered": false
+      },
+      {
+        "step": 10988,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.1216355952568023,
+        "score": 0.03704147857704069,
+        "triggered": false
+      },
+      {
+        "step": 10992,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.1216355952568023,
+        "score": 0.03704147857704069,
+        "triggered": false
+      },
+      {
+        "step": 10996,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.1216355952568023,
+        "score": 0.03704147857704069,
+        "triggered": false
+      },
+      {
+        "step": 11000,
+        "conflict": 0.0,
+        "variance": 0.0018360000000000002,
+        "growth": 0.1216355952568023,
+        "score": 0.03704147857704069,
+        "triggered": false
+      }
+    ],
+    "current_memory_size": 187
+  },
+  "operation_stats": {
+    "ADD": 4,
+    "UPDATE": 0,
+    "DELETE": 0,
+    "NOOP": 1996,
+    "total": 2000
+  }
+}

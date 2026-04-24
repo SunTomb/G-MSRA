@@ -26,8 +26,8 @@
 
 | Benchmark | F1 | EM | 内存条数 | 耗时 | 日志 |
 |-----------|:---:|:---:|:---:|:---:|------|
-| LoCoMo (400 examples) | **0.0962** | 0.0450 | 183 | ~38min | `logs/eval_phase2_locomo.log` |
-| LongMemEval (500 examples) | **0.2616** | 0.1760 | 183 | ~109min | `logs/eval_phase2_longmemeval.log` |
+| LoCoMo (400 examples) | **0.0962** | 0.0450 | 183 | ~38min | `logs_v1/eval_phase2_locomo.log` |
+| LongMemEval (500 examples) | **0.2616** | 0.1760 | 183 | ~109min | `logs_v1/eval_phase2_longmemeval.log` |
 
 **LongMemEval 分类详情**：
 
@@ -49,7 +49,7 @@
 | [2] | 0.0086 | 0.0000 | 65 |
 | [5] | 0.0000 | 0.0000 | 86 |
 
-结果文件：`results/eval_phase2/`, `results/eval_phase3v5/`
+结果文件：`results_v1/eval_phase2/`, `results_v1/eval_phase3v5/`
 
 ---
 
@@ -59,10 +59,10 @@
 
 | Benchmark | F1 | EM | 耗时 | 日志 |
 |-----------|:---:|:---:|:---:|------|
-| LoCoMo | 0.0272 | 0.0175 | 18.9min | `logs/ablation_no_memory_locomo.log` |
-| LongMemEval | 0.0490 | 0.0140 | 24.3min | `logs/ablation_no_memory_longmemeval.log` |
+| LoCoMo | 0.0272 | 0.0175 | 18.9min | `logs_v1/ablation_no_memory_locomo.log` |
+| LongMemEval | 0.0490 | 0.0140 | 24.3min | `logs_v1/ablation_no_memory_longmemeval.log` |
 
-结果文件：`results/ablation_no_memory/`
+结果文件：`results_v1/ablation_no_memory/`
 
 ---
 
@@ -70,7 +70,7 @@
 
 | Baseline | LoCoMo F1 | LongMem F1 | 状态 | 说明 |
 |----------|:---------:|:----------:|:----:|------|
-| Reflexion | **0.0163** | **0.0408** | ✅ 完成 | `results/baselines_v2/reflexion/results.json` |
+| Reflexion | **0.0163** | **0.0408** | ✅ 完成 | `results_v1/baselines_v2/reflexion/results_v1.json` |
 | EvolveR | — | — | ❌ 被 kill（模型加载中） | 需重跑 |
 | Self-Consolidation | — | — | ❌ 未开始 | 需重跑 |
 | Memory-R1 | — | — | ❌ OOM @ optimizer.step() | 需 `--eval_only` |
@@ -240,16 +240,16 @@ tail -f logs/baselines_v2_part2.log | grep "progress\|BASELINE\|eval_only"
 > ⚠️ 需确认 `eval_locomo.py` 支持空 checkpoint。如不支持，创建空 checkpoint 目录：
 >
 > ```bash
-> mkdir -p outputs/empty_checkpoint
-> echo '[]' > outputs/empty_checkpoint/memory_store.json
-> echo '{"step_count": 0}' > outputs/empty_checkpoint/agent_meta.json
+> mkdir -p outputs_v1/empty_checkpoint
+> echo '[]' > outputs_v1/empty_checkpoint/memory_store.json
+> echo '{"step_count": 0}' > outputs_v1/empty_checkpoint/agent_meta.json
 > ```
 
 ```bash
 # A0.5a: LoCoMo
 CUDA_VISIBLE_DEVICES=5 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --output_dir results/ablation_events_only \
     --benchmark locomo \
     --no_qlora \
@@ -258,7 +258,7 @@ CUDA_VISIBLE_DEVICES=5 python scripts/eval_locomo.py \
 # A0.5b: LongMemEval
 CUDA_VISIBLE_DEVICES=6 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --output_dir results/ablation_events_only \
     --benchmark longmemeval \
     --no_qlora \
@@ -306,7 +306,7 @@ A0.5: Events Only   |   待填    |   待填     |     待       |      待     
 
 #### Table 3: Phase 2 Self-Reward 校准
 
-数据来源：`logs/phase2_v4.log`, `outputs/phase2/calibration.json`
+数据来源：`logs_v1/phase2_v4.log`, `outputs_v1/phase2/calibration.json`
 
 #### Per-Category Highlight
 
@@ -324,11 +324,11 @@ LongMemEval Category    | G-MSRA F1 | No-Memory F1 | Δ      |
 
 | 图编号 | 内容 | 数据来源 | 优先级 |
 |:------:|------|---------|:------:|
-| Fig 2 | Phase 2 α 退火曲线 | `logs/phase2_v4.log` | ⭐⭐⭐⭐⭐ |
-| Fig 3 | Phase 2 τ vs Step | `logs/phase2_v4.log` | ⭐⭐⭐⭐⭐ |
-| Fig 4 | Phase 3 R_avg 曲线 | `outputs/phase3_v5/metrics.json` | ⭐⭐⭐⭐ |
-| Fig 5 | 消融对比柱状图 | ablation results | ⭐⭐⭐⭐⭐ |
-| Fig 6 | Per-category F1 (Full vs No-Memory) | eval results | ⭐⭐⭐⭐ |
+| Fig 2 | Phase 2 α 退火曲线 | `logs_v1/phase2_v4.log` | ⭐⭐⭐⭐⭐ |
+| Fig 3 | Phase 2 τ vs Step | `logs_v1/phase2_v4.log` | ⭐⭐⭐⭐⭐ |
+| Fig 4 | Phase 3 R_avg 曲线 | `outputs_v1/phase3_v5/metrics.json` | ⭐⭐⭐⭐ |
+| Fig 5 | 消融对比柱状图 | ablation results_v1 | ⭐⭐⭐⭐⭐ |
+| Fig 6 | Per-category F1 (Full vs No-Memory) | eval results_v1 | ⭐⭐⭐⭐ |
 
 ---
 

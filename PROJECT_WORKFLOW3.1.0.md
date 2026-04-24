@@ -79,14 +79,29 @@ v2 (新方案): Event → RL CRUD → Memory Store → (直接) → QA
 | **Memory 初始化** | 从 Phase 2 checkpoint 加载 | **每 episode 空 store**（无历史包袱） |
 | **模型权重** | LoRA 被蒸馏修改 | **LoRA 只做 RL 梯度更新** |
 
-### 3.2 训练命令
+### 3.2 资源估算基准
+
+> 以下估算基于 v11 实测数据：3172 episodes × 5 events/ep → 19.1h @ 0.05 ep/s（单卡 A40 48GB, bf16）。  
+> v2 每 episode 10 events（2× v11），但删除了 LoRA 蒸馏开销，净效速率约 0.03-0.04 ep/s。
+
+| 资源项 | bf16 (`--no_qlora`) | QLoRA 4-bit |
+|--------|:-------------------:|:-----------:|
+| 模型权重 | ~14 GB | ~5 GB |
+| LoRA 适配器 | ~0.1 GB | ~0.1 GB |
+| 优化器状态 (AdamW) | ~2 GB | ~1 GB |
+| KV Cache + 生成 | ~2 GB | ~1.5 GB |
+| 梯度 + 激活 | ~2 GB | ~1 GB |
+| **合计峰值** | **~20-22 GB** | **~9-11 GB** |
+| 适合显卡 | A40 (48GB) ✅ / A100 (80GB) ✅ | RTX 3090 (24GB) ✅ |
+
+### 3.3 训练命令
 
 #### 实验 1: 基础 v2 训练（推荐先跑这个）
 
 ```bash
 cd /NAS/yesh/G-MSRA
 
-PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 \
+PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=0 \
 python scripts/train_phase_v2.py \
     --lora_checkpoint outputs/phase1/best \
     --output_dir outputs/v2_base \
@@ -97,8 +112,15 @@ python scripts/train_phase_v2.py \
     2>&1 | tee logs/v2_base.log
 ```
 
-**预计时间**：~12-18h（取决于 GPU）  
+| 指标 | 值 |
+|------|----|
+| **显存占用** | **~20-22 GB** (bf16, 单卡) |
+| **总 episodes** | 3000 × 3 epochs = **9000** |
+| **预估速率** | ~0.03-0.04 ep/s (A40) |
+| **预计时间** | **~65-85h** (A40) / **~50-65h** (A100) |
+
 **关键监控指标**：
+
 - NOOP% < 50%（vs v11 的 96%）→ 训练成功的必要条件
 - UPDATE% > 10% → 证明 RL 学到了知识更新
 - avg_f1 持续上升 → 奖励信号有效
@@ -106,7 +128,7 @@ python scripts/train_phase_v2.py \
 #### 实验 2: 带 Compaction 的 v2 训练
 
 ```bash
-PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=2 \
+PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=4 \
 python scripts/train_phase_v2.py \
     --lora_checkpoint outputs/phase1/best \
     --output_dir outputs/v2_compact \
@@ -119,12 +141,17 @@ python scripts/train_phase_v2.py \
     2>&1 | tee logs/v2_compact.log
 ```
 
-**注意**：Compaction 需要额外的 LLM 推理（每 100 episodes），训练会略慢。
+| 指标 | 值 |
+|------|----|
+| **显存占用** | **~22-25 GB** (bf16, 需额外 embedding 空间用于聚类) |
+| **总 episodes** | 3000 × 3 epochs = **9000** |
+| **预计时间** | **~70-95h** (A40) / **~55-75h** (A100) |
+| **额外开销** | 每 100 ep 触发 LLM compaction (~30s/次, 共 ~90 次) |
 
 #### 实验 3: 高 NOOP 惩罚消融
 
 ```bash
-PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=3 \
+PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=7 \
 python scripts/train_phase_v2.py \
     --lora_checkpoint outputs/phase1/best \
     --output_dir outputs/v2_high_penalty \
@@ -134,7 +161,13 @@ python scripts/train_phase_v2.py \
     2>&1 | tee logs/v2_high_penalty.log
 ```
 
-### 3.3 训练过程监控
+| 指标 | 值 |
+|------|----|
+| **显存占用** | **~20-22 GB** (与实验 1 相同) |
+| **总 episodes** | 3000 × 3 epochs = **9000** |
+| **预计时间** | **~65-85h** (A40) / **~50-65h** (A100) |
+
+### 3.4 训练过程监控
 
 训练脚本每 25 个 episode 输出一次日志，格式：
 
@@ -155,21 +188,25 @@ explore=250 | compact=2 | baselines={ADD:0.12,UPDATE:0.45,DELETE:0.32,NOOP:-0.28
 | avg_reward | > 0 | 持续 < -0.2（惩罚过重） |
 | memory_size | 10-100 | > 400（ADD 泛滥）或 0（全删了） |
 
-### 3.4 如果训练不健康
+### 3.5 如果训练不健康
 
 **情况 1: NOOP 仍然 > 70%**
+
 - 增大 NOOP 惩罚: `--noop_penalty 0.30`
 - 增大初始探索: `--epsilon_start 0.30`
 
 **情况 2: avg_f1 = 0（奖励信号失效）**
+
 - 检查数据加载是否正常（QA pair 是否存在）
 - 检查 `answer_question()` 是否能正确生成回答
 
 **情况 3: memory_size 一直增长到 500**
+
 - 增大 compactness_weight: `--compactness_weight 0.20`
 - 降低 OPERATION_BONUS["ADD"] 到 0.00
 
 **情况 4: 训练 NaN / loss 爆炸**
+
 - 降低学习率: 修改 `config.rl.learning_rate` 到 `5e-6`
 - 增大 grad_accum: 修改 `config.rl.gradient_accumulation_steps` 到 `4`
 
@@ -179,8 +216,11 @@ explore=250 | compact=2 | baselines={ADD:0.12,UPDATE:0.45,DELETE:0.32,NOOP:-0.28
 
 ### 4.1 EvoMemory 评测（主战场）
 
+> EvoMemory 共 100 条样例，每条 3-5 个 events + 1 QA。纯推理，无梯度。  
+> **显存：~15-16 GB** (bf16 推理) | 可与训练共享同一张卡（串行）
+
 ```bash
-# Raw ADD baseline
+# Raw ADD baseline （预计 ~15min）
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=0 \
 python scripts/eval_evomemory.py \
     --mode raw_add \
@@ -189,7 +229,7 @@ python scripts/eval_evomemory.py \
     --no_qlora \
     2>&1 | tee logs/eval_evo_raw_add.log
 
-# Heuristic CRUD baseline
+# Heuristic CRUD baseline （预计 ~20min）
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=0 \
 python scripts/eval_evomemory.py \
     --mode heuristic_crud \
@@ -199,7 +239,7 @@ python scripts/eval_evomemory.py \
     --no_qlora \
     2>&1 | tee logs/eval_evo_heuristic.log
 
-# RL CRUD (v2 trained)
+# RL CRUD (v2 trained) （预计 ~25min，含 RL decide 开销）
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=0 \
 python scripts/eval_evomemory.py \
     --mode rl_crud \
@@ -210,6 +250,9 @@ python scripts/eval_evomemory.py \
 ```
 
 ### 4.2 LoCoMo per-example 评测（泛化验证）
+
+> LoCoMo 44 条 × 多轮 QA。  
+> **显存：~15-16 GB** (bf16 推理) | **预计时间：~30-45min**
 
 ```bash
 # v2 在传统评测下必须 ≥ Events Only baseline (0.097)
@@ -288,7 +331,21 @@ python scripts/eval_locomo.py \
 
 ---
 
-## 七、时间线
+## 七、GPU 规划总览
+
+### 7.1 显卡分配建议
+
+| GPU | 任务 | 显存占用 | 预计时间 |
+|:---:|------|:--------:|:--------:|
+| GPU 1 (A40/A100) | 实验 1: v2_base 训练 | ~20-22 GB | ~65-85h |
+| GPU 2 (A40/A100) | 实验 2: v2_compact 训练 | ~22-25 GB | ~70-95h |
+| GPU 3 (A40/A100) | 实验 3: v2_high_penalty 训练 | ~20-22 GB | ~65-85h |
+| GPU 0 (任意) | Phase 2: 评测（训练后串行） | ~15-16 GB | ~2h |
+
+> **3 个训练实验可并行**，各占一张卡。评测在训练结束后串行跑即可。  
+> 如果只有 2 张卡，建议先跑实验 1 + 实验 3（并行），实验 2 后补。
+
+### 7.2 时间线
 
 | 阶段 | 状态 | 时间 |
 |:----:|------|:----:|
@@ -297,7 +354,7 @@ python scripts/eval_locomo.py \
 | 方向转型决策 | ✅ | 4/24 |
 | Phase 0: 架构精简 | ✅ | 4/24 |
 | Phase 1: v2 训练脚本 | ✅ | 4/24 |
-| 📌 **v2 训练** | **待部署** | 4/24-25 |
-| ⏳ Phase 2: 评测 | 待训练完成 | 4/25-26 |
-| ⏳ Phase 3: Baselines | 待实现 | 4/26-27 |
-| ⏳ Phase 4: 分析+论文 | 待开始 | 4/27+ |
+| 📌 **v2 训练 (3 实验并行)** | **待部署** | 4/24-28 (~3-4天) |
+| ⏳ Phase 2: 评测 | 待训练完成 | 4/28-29 (~2h) |
+| ⏳ Phase 3: Baselines | 待实现 | 4/29-30 |
+| ⏳ Phase 4: 分析+论文 | 待开始 | 4/30+ |

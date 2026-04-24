@@ -28,8 +28,8 @@
 
 | Benchmark | F1 | EM | 内存条数 | 日志 |
 |-----------|:---:|:---:|:---:|------|
-| LoCoMo (400) | **0.0962** | 0.0450 | 183 | `logs/eval_phase2_locomo.log` |
-| LongMemEval (500) | **0.2616** | 0.1760 | 183 | `logs/eval_phase2_longmemeval.log` |
+| LoCoMo (400) | **0.0962** | 0.0450 | 183 | `logs_v1/eval_phase2_locomo.log` |
+| LongMemEval (500) | **0.2616** | 0.1760 | 183 | `logs_v1/eval_phase2_longmemeval.log` |
 
 **LongMemEval 分类详情**：
 
@@ -57,8 +57,8 @@
 
 | Benchmark | F1 | EM | 日志 |
 |-----------|:---:|:---:|------|
-| LoCoMo | 0.0272 | 0.0175 | `logs/ablation_no_memory_locomo.log` |
-| LongMemEval | 0.0490 | 0.0140 | `logs/ablation_no_memory_longmemeval.log` |
+| LoCoMo | 0.0272 | 0.0175 | `logs_v1/ablation_no_memory_locomo.log` |
+| LongMemEval | 0.0490 | 0.0140 | `logs_v1/ablation_no_memory_longmemeval.log` |
 
 ---
 
@@ -66,8 +66,8 @@
 
 | Benchmark | F1 | EM | 日志 |
 |-----------|:---:|:---:|------|
-| LoCoMo (400) | **0.0970** | 0.0450 | `logs/ablation_events_only_locomo.log` |
-| LongMemEval (500) | **0.2621** | 0.1760 | `logs/ablation_events_only_longmemeval.log` |
+| LoCoMo (400) | **0.0970** | 0.0450 | `logs_v1/ablation_events_only_locomo.log` |
+| LongMemEval (500) | **0.2621** | 0.1760 | `logs_v1/ablation_events_only_longmemeval.log` |
 
 ---
 
@@ -75,11 +75,11 @@
 
 | Baseline | LoCoMo F1 | LongMem F1 | 日志 |
 |----------|:---------:|:----------:|------|
-| Reflexion | 0.0163 | 0.0408 | `logs/baselines_v2_part1.log` |
-| EvolveR | 0.0175 | 0.0413 | `logs/baselines_v2_part1.log` |
-| Self-Consolidation | 0.0156 | 0.0374 | `logs/baselines_v2_part1.log` |
-| Memory-R1 | **0.0963** | **0.2731** | `logs/baselines_v2_part2.log` |
-| Mem0+Memory-R1 | 0.0204 | 0.0426 | `logs/baselines_v2_mem0r1_retry.log` |
+| Reflexion | 0.0163 | 0.0408 | `logs_v1/baselines_v2_part1.log` |
+| EvolveR | 0.0175 | 0.0413 | `logs_v1/baselines_v2_part1.log` |
+| Self-Consolidation | 0.0156 | 0.0374 | `logs_v1/baselines_v2_part1.log` |
+| Memory-R1 | **0.0963** | **0.2731** | `logs_v1/baselines_v2_part2.log` |
+| Mem0+Memory-R1 | 0.0204 | 0.0426 | `logs_v1/baselines_v2_mem0r1_retry.log` |
 
 ---
 
@@ -96,8 +96,8 @@
 | A6 | No consolidation (no LoRA) | 0.0970 | 0.2616 | +0.8% | 0.0% |
 | A7 | No curriculum (skip Phase 1-2) | 0.0970 | 0.2616 | +0.8% | 0.0% |
 
-**日志目录**：`logs/ablation_eval_A{1-7}_*.log`
-**结果目录**：`results/ablations_eval/A{1-7}_*/`
+**日志目录**：`logs_v1/ablation_eval_A{1-7}_*.log`
+**结果目录**：`results_v1/ablations_eval/A{1-7}_*/`
 
 ---
 
@@ -322,12 +322,12 @@ export HF_HUB_OFFLINE=1
 tmux new -s scalability
 
 # --- max_events=250 (已有结果，直接复用) ---
-# 结果在 results/eval_phase2/longmemeval_results.json
+# 结果在 results_v1/eval_phase2/longmemeval_results.json
 
 # --- max_events=500 ---
 CUDA_VISIBLE_DEVICES=3 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --benchmark longmemeval \
     --output_dir results/scalability/gmsra_500 \
     --max_events 500 \
@@ -336,8 +336,8 @@ CUDA_VISIBLE_DEVICES=3 python scripts/eval_locomo.py \
 
 # --- max_events=0 (无上限，使用全部 events) ---
 CUDA_VISIBLE_DEVICES=2 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --benchmark longmemeval \
     --output_dir results/scalability/gmsra_all \
     --max_events 0 \
@@ -351,7 +351,7 @@ CUDA_VISIBLE_DEVICES=2 python scripts/eval_locomo.py \
 # --- max_events=500 ---
 CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --benchmark longmemeval \
     --output_dir results/scalability/events_only_500 \
     --max_events 500 \
@@ -361,7 +361,7 @@ CUDA_VISIBLE_DEVICES=4 python scripts/eval_locomo.py \
 # --- max_events=0 (无上限) ---
 CUDA_VISIBLE_DEVICES=2 python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --benchmark longmemeval \
     --output_dir results/scalability/events_only_all \
     --max_events 0 \
@@ -505,7 +505,7 @@ F1 ↑
 
 | 原始叙事 | 问题 | 建议叙事 |
 |---------|------|---------|
-| "RL learns CRUD strategy" | RL 未收敛 | "We propose a principled RL framework; current results validate the retrieval pipeline while RL convergence remains future work" |
+| "RL learns CRUD strategy" | RL 未收敛 | "We propose a principled RL framework; current results_v1 validate the retrieval pipeline while RL convergence remains future work" |
 | "Consolidation is essential" | A6 无差异 | "Adaptive triggering prevents premature consolidation noise (A4 evidence)" |
 | "G-MSRA >> baselines" | ≈ Memory-R1 ≈ Events Only | "G-MSRA provides autonomous memory management matching oracle baselines without external labels" |
 | "Structured memory > raw events" | 两者等效 @ 250 events | "Structured memory provides scalable retrieval (Fig.X) and superior knowledge update capability (Cat[3])" |
@@ -591,29 +591,29 @@ F1 ↑
 
 | 日志 | 说明 | 状态 |
 |------|------|:----:|
-| `logs/eval_phase2_locomo.log` | G-MSRA LoCoMo | ✅ |
-| `logs/eval_phase2_longmemeval.log` | G-MSRA LongMemEval | ✅ |
-| `logs/baselines_v2_part1.log` | Reflexion + EvolveR + Self-Consolidation | ✅ |
-| `logs/baselines_v2_part2.log` | Memory-R1 (ok) + Mem0 (OOM) | ✅ |
-| `logs/baselines_v2_mem0r1_retry.log` | T8: Mem0+R1 重跑 | ✅ |
-| `logs/ablation_no_memory_*.log` | T5-A0 | ✅ |
-| `logs/ablation_events_only_*.log` | T5-A0.5 | ✅ |
-| `logs/ablations_high_v2.log` | A1+A2+A6 训练 | ✅ |
-| `logs/ablations_low_v2.log` | A3+A4+A5+A7 训练 | ✅ |
-| `logs/ablation_eval_A{1-7}_*.log` | T7: 消融统一 benchmark 评估 | ✅ |
-| `logs/scalability_*.log` | T11: Scalability 实验 | ❌ 待生成 |
+| `logs_v1/eval_phase2_locomo.log` | G-MSRA LoCoMo | ✅ |
+| `logs_v1/eval_phase2_longmemeval.log` | G-MSRA LongMemEval | ✅ |
+| `logs_v1/baselines_v2_part1.log` | Reflexion + EvolveR + Self-Consolidation | ✅ |
+| `logs_v1/baselines_v2_part2.log` | Memory-R1 (ok) + Mem0 (OOM) | ✅ |
+| `logs_v1/baselines_v2_mem0r1_retry.log` | T8: Mem0+R1 重跑 | ✅ |
+| `logs_v1/ablation_no_memory_*.log` | T5-A0 | ✅ |
+| `logs_v1/ablation_events_only_*.log` | T5-A0.5 | ✅ |
+| `logs_v1/ablations_high_v2.log` | A1+A2+A6 训练 | ✅ |
+| `logs_v1/ablations_low_v2.log` | A3+A4+A5+A7 训练 | ✅ |
+| `logs_v1/ablation_eval_A{1-7}_*.log` | T7: 消融统一 benchmark 评估 | ✅ |
+| `logs_v1/scalability_*.log` | T11: Scalability 实验 | ❌ 待生成 |
 
 ### 结果文件
 
 | 路径 | 说明 | 状态 |
 |------|------|:----:|
-| `results/eval_phase2/` | G-MSRA 主模型 | ✅ |
-| `results/baselines_v2/` | Baseline 聚合 | ✅ |
-| `results/ablation_no_memory/` | T5-A0 | ✅ |
-| `results/ablation_events_only/` | T5-A0.5 | ✅ |
-| `results/ablations/` | T6 消融训练结果 (内部验证集) | ✅ |
-| `results/ablations_eval/A{1-7}_*/` | T7 消融统一 benchmark 评估 | ✅ |
-| `results/scalability/` | T11 Scalability 实验 | ❌ 待生成 |
+| `results_v1/eval_phase2/` | G-MSRA 主模型 | ✅ |
+| `results_v1/baselines_v2/` | Baseline 聚合 | ✅ |
+| `results_v1/ablation_no_memory/` | T5-A0 | ✅ |
+| `results_v1/ablation_events_only/` | T5-A0.5 | ✅ |
+| `results_v1/ablations/` | T6 消融训练结果 (内部验证集) | ✅ |
+| `results_v1/ablations_eval/A{1-7}_*/` | T7 消融统一 benchmark 评估 | ✅ |
+| `results_v1/scalability/` | T11 Scalability 实验 | ❌ 待生成 |
 
 ### 脚本文件
 

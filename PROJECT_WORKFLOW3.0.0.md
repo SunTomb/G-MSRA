@@ -241,10 +241,10 @@ G-MSRA 的核心假设是：
 
 | 路径 | 说明 |
 |------|------|
-| `results/merge_sweep/merge_sweep_results.json` | 14 组 LoRA merge 评测结果 |
-| `results/diag_agent_step/locomo_results.json` | RL 策略评测结果 |
-| `logs/merge_sweep.log` | Merge sweep 完整日志（262MB） |
-| `logs/diag_agent_step.log` | Agent step 评测日志 |
+| `results_v1/merge_sweep/merge_sweep_results.json` | 14 组 LoRA merge 评测结果 |
+| `results_v1/diag_agent_step/locomo_results.json` | RL 策略评测结果 |
+| `logs_v1/merge_sweep.log` | Merge sweep 完整日志（262MB） |
+| `logs_v1/diag_agent_step.log` | Agent step 评测日志 |
 
 ### 7.2 关键脚本
 

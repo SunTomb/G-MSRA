@@ -1,0 +1,1198 @@
+[
+  {
+    "episode": 2025,
+    "avg_success_rate": 0.4,
+    "avg_reward": -0.0394403904904275,
+    "memory_size": 193,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 8,
+      "UPDATE": 2,
+      "DELETE": 2,
+      "NOOP": 113
+    },
+    "operation_stats_window": {
+      "ADD": "6.4%",
+      "UPDATE": "1.6%",
+      "DELETE": "1.6%",
+      "NOOP": "90.4%"
+    },
+    "baselines": {
+      "ADD": "0.071",
+      "UPDATE": "0.370",
+      "DELETE": "0.280",
+      "NOOP": "-0.058"
+    }
+  },
+  {
+    "episode": 2050,
+    "avg_success_rate": 0.34,
+    "avg_reward": -0.048839354919139676,
+    "memory_size": 197,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 13,
+      "UPDATE": 6,
+      "DELETE": 3,
+      "NOOP": 228
+    },
+    "operation_stats_window": {
+      "ADD": "5.2%",
+      "UPDATE": "2.4%",
+      "DELETE": "1.2%",
+      "NOOP": "91.2%"
+    },
+    "baselines": {
+      "ADD": "0.069",
+      "UPDATE": "0.366",
+      "DELETE": "0.279",
+      "NOOP": "-0.096"
+    }
+  },
+  {
+    "episode": 2075,
+    "avg_success_rate": 0.14,
+    "avg_reward": -0.07071915967392595,
+    "memory_size": 195,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 14,
+      "UPDATE": 8,
+      "DELETE": 6,
+      "NOOP": 347
+    },
+    "operation_stats_window": {
+      "ADD": "3.7%",
+      "UPDATE": "2.1%",
+      "DELETE": "1.6%",
+      "NOOP": "92.5%"
+    },
+    "baselines": {
+      "ADD": "0.068",
+      "UPDATE": "0.364",
+      "DELETE": "0.275",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2100,
+    "avg_success_rate": 0.08,
+    "avg_reward": -0.08025093389134316,
+    "memory_size": 197,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 16,
+      "UPDATE": 9,
+      "DELETE": 6,
+      "NOOP": 469
+    },
+    "operation_stats_window": {
+      "ADD": "3.2%",
+      "UPDATE": "1.8%",
+      "DELETE": "1.2%",
+      "NOOP": "93.8%"
+    },
+    "baselines": {
+      "ADD": "0.068",
+      "UPDATE": "0.364",
+      "DELETE": "0.275",
+      "NOOP": "-0.081"
+    }
+  },
+  {
+    "episode": 2125,
+    "avg_success_rate": 0.12,
+    "avg_reward": -0.07821003212000659,
+    "memory_size": 201,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 20,
+      "UPDATE": 12,
+      "DELETE": 6,
+      "NOOP": 587
+    },
+    "operation_stats_window": {
+      "ADD": "2.4%",
+      "UPDATE": "2.0%",
+      "DELETE": "0.8%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.065",
+      "UPDATE": "0.362",
+      "DELETE": "0.275",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2150,
+    "avg_success_rate": 0.1,
+    "avg_reward": -0.07990858063031979,
+    "memory_size": 202,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 23,
+      "UPDATE": 13,
+      "DELETE": 8,
+      "NOOP": 706
+    },
+    "operation_stats_window": {
+      "ADD": "2.0%",
+      "UPDATE": "1.4%",
+      "DELETE": "1.0%",
+      "NOOP": "95.6%"
+    },
+    "baselines": {
+      "ADD": "0.063",
+      "UPDATE": "0.364",
+      "DELETE": "0.272",
+      "NOOP": "-0.099"
+    }
+  },
+  {
+    "episode": 2175,
+    "avg_success_rate": 0.14,
+    "avg_reward": -0.08011840008921328,
+    "memory_size": 201,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 25,
+      "UPDATE": 13,
+      "DELETE": 11,
+      "NOOP": 826
+    },
+    "operation_stats_window": {
+      "ADD": "2.2%",
+      "UPDATE": "1.0%",
+      "DELETE": "1.0%",
+      "NOOP": "95.8%"
+    },
+    "baselines": {
+      "ADD": "0.062",
+      "UPDATE": "0.364",
+      "DELETE": "0.271",
+      "NOOP": "-0.086"
+    }
+  },
+  {
+    "episode": 2200,
+    "avg_success_rate": 0.22,
+    "avg_reward": -0.07247232582625922,
+    "memory_size": 204,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 29,
+      "UPDATE": 16,
+      "DELETE": 12,
+      "NOOP": 943
+    },
+    "operation_stats_window": {
+      "ADD": "2.6%",
+      "UPDATE": "1.4%",
+      "DELETE": "1.2%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.062",
+      "UPDATE": "0.368",
+      "DELETE": "0.270",
+      "NOOP": "-0.086"
+    }
+  },
+  {
+    "episode": 2225,
+    "avg_success_rate": 0.34,
+    "avg_reward": -0.06680689352677001,
+    "memory_size": 208,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 34,
+      "UPDATE": 17,
+      "DELETE": 13,
+      "NOOP": 1061
+    },
+    "operation_stats_window": {
+      "ADD": "2.8%",
+      "UPDATE": "1.0%",
+      "DELETE": "1.4%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.066",
+      "UPDATE": "0.369",
+      "DELETE": "0.269",
+      "NOOP": "-0.074"
+    }
+  },
+  {
+    "episode": 2250,
+    "avg_success_rate": 0.4,
+    "avg_reward": -0.06388271717919364,
+    "memory_size": 211,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 37,
+      "UPDATE": 19,
+      "DELETE": 13,
+      "NOOP": 1181
+    },
+    "operation_stats_window": {
+      "ADD": "2.8%",
+      "UPDATE": "1.2%",
+      "DELETE": "1.0%",
+      "NOOP": "95.0%"
+    },
+    "baselines": {
+      "ADD": "0.073",
+      "UPDATE": "0.367",
+      "DELETE": "0.269",
+      "NOOP": "-0.081"
+    }
+  },
+  {
+    "episode": 2275,
+    "avg_success_rate": 0.38,
+    "avg_reward": -0.05138669200008989,
+    "memory_size": 213,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 40,
+      "UPDATE": 25,
+      "DELETE": 14,
+      "NOOP": 1296
+    },
+    "operation_stats_window": {
+      "ADD": "3.0%",
+      "UPDATE": "2.4%",
+      "DELETE": "0.6%",
+      "NOOP": "94.0%"
+    },
+    "baselines": {
+      "ADD": "0.071",
+      "UPDATE": "0.365",
+      "DELETE": "0.268",
+      "NOOP": "-0.076"
+    }
+  },
+  {
+    "episode": 2300,
+    "avg_success_rate": 0.22,
+    "avg_reward": -0.06112108704334554,
+    "memory_size": 220,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 47,
+      "UPDATE": 26,
+      "DELETE": 14,
+      "NOOP": 1413
+    },
+    "operation_stats_window": {
+      "ADD": "3.6%",
+      "UPDATE": "2.0%",
+      "DELETE": "0.4%",
+      "NOOP": "94.0%"
+    },
+    "baselines": {
+      "ADD": "0.069",
+      "UPDATE": "0.364",
+      "DELETE": "0.268",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2325,
+    "avg_success_rate": 0.04,
+    "avg_reward": -0.0817136268343816,
+    "memory_size": 224,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 51,
+      "UPDATE": 29,
+      "DELETE": 14,
+      "NOOP": 1531
+    },
+    "operation_stats_window": {
+      "ADD": "3.4%",
+      "UPDATE": "2.4%",
+      "DELETE": "0.2%",
+      "NOOP": "94.0%"
+    },
+    "baselines": {
+      "ADD": "0.066",
+      "UPDATE": "0.362",
+      "DELETE": "0.268",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2350,
+    "avg_success_rate": 0.06,
+    "avg_reward": -0.07873217427954275,
+    "memory_size": 223,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 52,
+      "UPDATE": 32,
+      "DELETE": 16,
+      "NOOP": 1650
+    },
+    "operation_stats_window": {
+      "ADD": "3.0%",
+      "UPDATE": "2.6%",
+      "DELETE": "0.6%",
+      "NOOP": "93.8%"
+    },
+    "baselines": {
+      "ADD": "0.065",
+      "UPDATE": "0.360",
+      "DELETE": "0.271",
+      "NOOP": "-0.077"
+    }
+  },
+  {
+    "episode": 2375,
+    "avg_success_rate": 0.28,
+    "avg_reward": -0.03685132044434431,
+    "memory_size": 227,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 57,
+      "UPDATE": 38,
+      "DELETE": 17,
+      "NOOP": 1763
+    },
+    "operation_stats_window": {
+      "ADD": "3.4%",
+      "UPDATE": "2.6%",
+      "DELETE": "0.6%",
+      "NOOP": "93.4%"
+    },
+    "baselines": {
+      "ADD": "0.069",
+      "UPDATE": "0.361",
+      "DELETE": "0.276",
+      "NOOP": "-0.000"
+    }
+  },
+  {
+    "episode": 2400,
+    "avg_success_rate": 0.36,
+    "avg_reward": -0.02528552005544242,
+    "memory_size": 231,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 61,
+      "UPDATE": 43,
+      "DELETE": 17,
+      "NOOP": 1879
+    },
+    "operation_stats_window": {
+      "ADD": "2.8%",
+      "UPDATE": "3.4%",
+      "DELETE": "0.6%",
+      "NOOP": "93.2%"
+    },
+    "baselines": {
+      "ADD": "0.071",
+      "UPDATE": "0.369",
+      "DELETE": "0.276",
+      "NOOP": "-0.091"
+    }
+  },
+  {
+    "episode": 2425,
+    "avg_success_rate": 0.34,
+    "avg_reward": -0.05480622238900577,
+    "memory_size": 232,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 62,
+      "UPDATE": 47,
+      "DELETE": 17,
+      "NOOP": 1999
+    },
+    "operation_stats_window": {
+      "ADD": "2.2%",
+      "UPDATE": "3.6%",
+      "DELETE": "0.6%",
+      "NOOP": "93.6%"
+    },
+    "baselines": {
+      "ADD": "0.070",
+      "UPDATE": "0.368",
+      "DELETE": "0.276",
+      "NOOP": "-0.056"
+    }
+  },
+  {
+    "episode": 2450,
+    "avg_success_rate": 0.42,
+    "avg_reward": -0.053766283980859614,
+    "memory_size": 236,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 66,
+      "UPDATE": 48,
+      "DELETE": 17,
+      "NOOP": 2119
+    },
+    "operation_stats_window": {
+      "ADD": "2.8%",
+      "UPDATE": "3.2%",
+      "DELETE": "0.2%",
+      "NOOP": "93.8%"
+    },
+    "baselines": {
+      "ADD": "0.068",
+      "UPDATE": "0.367",
+      "DELETE": "0.276",
+      "NOOP": "-0.074"
+    }
+  },
+  {
+    "episode": 2475,
+    "avg_success_rate": 0.34,
+    "avg_reward": -0.061407861966269565,
+    "memory_size": 239,
+    "consolidation_count": 0,
+    "consolidation_forced": 0,
+    "operation_stats_global": {
+      "ADD": 69,
+      "UPDATE": 50,
+      "DELETE": 17,
+      "NOOP": 2239
+    },
+    "operation_stats_window": {
+      "ADD": "2.4%",
+      "UPDATE": "2.4%",
+      "DELETE": "0.0%",
+      "NOOP": "95.2%"
+    },
+    "baselines": {
+      "ADD": "0.067",
+      "UPDATE": "0.365",
+      "DELETE": "0.276",
+      "NOOP": "-0.078"
+    }
+  },
+  {
+    "episode": 2500,
+    "avg_success_rate": 0.36,
+    "avg_reward": -0.060274724531390815,
+    "memory_size": 168,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 72,
+      "UPDATE": 51,
+      "DELETE": 20,
+      "NOOP": 2357
+    },
+    "operation_stats_window": {
+      "ADD": "2.2%",
+      "UPDATE": "1.6%",
+      "DELETE": "0.6%",
+      "NOOP": "95.6%"
+    },
+    "baselines": {
+      "ADD": "0.074",
+      "UPDATE": "0.366",
+      "DELETE": "0.272",
+      "NOOP": "-0.070"
+    }
+  },
+  {
+    "episode": 2525,
+    "avg_success_rate": 0.34,
+    "avg_reward": -0.037086621570026,
+    "memory_size": 168,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 74,
+      "UPDATE": 55,
+      "DELETE": 22,
+      "NOOP": 2474
+    },
+    "operation_stats_window": {
+      "ADD": "2.4%",
+      "UPDATE": "1.6%",
+      "DELETE": "1.0%",
+      "NOOP": "95.0%"
+    },
+    "baselines": {
+      "ADD": "0.072",
+      "UPDATE": "0.366",
+      "DELETE": "0.272",
+      "NOOP": "-0.091"
+    }
+  },
+  {
+    "episode": 2550,
+    "avg_success_rate": 0.1,
+    "avg_reward": -0.05329332352241005,
+    "memory_size": 168,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 75,
+      "UPDATE": 60,
+      "DELETE": 23,
+      "NOOP": 2592
+    },
+    "operation_stats_window": {
+      "ADD": "1.8%",
+      "UPDATE": "2.4%",
+      "DELETE": "1.2%",
+      "NOOP": "94.6%"
+    },
+    "baselines": {
+      "ADD": "0.070",
+      "UPDATE": "0.362",
+      "DELETE": "0.271",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2575,
+    "avg_success_rate": 0.0,
+    "avg_reward": -0.08140000000000003,
+    "memory_size": 168,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 77,
+      "UPDATE": 62,
+      "DELETE": 25,
+      "NOOP": 2711
+    },
+    "operation_stats_window": {
+      "ADD": "1.6%",
+      "UPDATE": "2.4%",
+      "DELETE": "1.6%",
+      "NOOP": "94.4%"
+    },
+    "baselines": {
+      "ADD": "0.068",
+      "UPDATE": "0.361",
+      "DELETE": "0.269",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2600,
+    "avg_success_rate": 0.14,
+    "avg_reward": -0.06893675082681298,
+    "memory_size": 169,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 79,
+      "UPDATE": 64,
+      "DELETE": 26,
+      "NOOP": 2831
+    },
+    "operation_stats_window": {
+      "ADD": "1.4%",
+      "UPDATE": "2.6%",
+      "DELETE": "1.2%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.074",
+      "UPDATE": "0.372",
+      "DELETE": "0.268",
+      "NOOP": "-0.056"
+    }
+  },
+  {
+    "episode": 2625,
+    "avg_success_rate": 0.28,
+    "avg_reward": -0.05174420284243197,
+    "memory_size": 172,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 83,
+      "UPDATE": 67,
+      "DELETE": 27,
+      "NOOP": 2948
+    },
+    "operation_stats_window": {
+      "ADD": "1.8%",
+      "UPDATE": "2.4%",
+      "DELETE": "1.0%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.088",
+      "UPDATE": "0.369",
+      "DELETE": "0.269",
+      "NOOP": "-0.088"
+    }
+  },
+  {
+    "episode": 2650,
+    "avg_success_rate": 0.26,
+    "avg_reward": -0.0533796768921917,
+    "memory_size": 175,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 87,
+      "UPDATE": 69,
+      "DELETE": 28,
+      "NOOP": 3066
+    },
+    "operation_stats_window": {
+      "ADD": "2.4%",
+      "UPDATE": "1.8%",
+      "DELETE": "1.0%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.085",
+      "UPDATE": "0.375",
+      "DELETE": "0.268",
+      "NOOP": "-0.093"
+    }
+  },
+  {
+    "episode": 2675,
+    "avg_success_rate": 0.44,
+    "avg_reward": -0.05015186557915933,
+    "memory_size": 177,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 89,
+      "UPDATE": 69,
+      "DELETE": 28,
+      "NOOP": 3189
+    },
+    "operation_stats_window": {
+      "ADD": "2.4%",
+      "UPDATE": "1.4%",
+      "DELETE": "0.6%",
+      "NOOP": "95.6%"
+    },
+    "baselines": {
+      "ADD": "0.081",
+      "UPDATE": "0.375",
+      "DELETE": "0.268",
+      "NOOP": "-0.019"
+    }
+  },
+  {
+    "episode": 2700,
+    "avg_success_rate": 0.46,
+    "avg_reward": -0.05269799229914609,
+    "memory_size": 173,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 89,
+      "UPDATE": 71,
+      "DELETE": 32,
+      "NOOP": 3308
+    },
+    "operation_stats_window": {
+      "ADD": "2.0%",
+      "UPDATE": "1.4%",
+      "DELETE": "1.2%",
+      "NOOP": "95.4%"
+    },
+    "baselines": {
+      "ADD": "0.081",
+      "UPDATE": "0.376",
+      "DELETE": "0.272",
+      "NOOP": "-0.095"
+    }
+  },
+  {
+    "episode": 2725,
+    "avg_success_rate": 0.2,
+    "avg_reward": -0.06760827737819289,
+    "memory_size": 174,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 92,
+      "UPDATE": 74,
+      "DELETE": 34,
+      "NOOP": 3425
+    },
+    "operation_stats_window": {
+      "ADD": "1.8%",
+      "UPDATE": "1.4%",
+      "DELETE": "1.4%",
+      "NOOP": "95.4%"
+    },
+    "baselines": {
+      "ADD": "0.077",
+      "UPDATE": "0.372",
+      "DELETE": "0.270",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2750,
+    "avg_success_rate": 0.06,
+    "avg_reward": -0.07568992578163346,
+    "memory_size": 174,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 94,
+      "UPDATE": 78,
+      "DELETE": 36,
+      "NOOP": 3542
+    },
+    "operation_stats_window": {
+      "ADD": "1.4%",
+      "UPDATE": "1.8%",
+      "DELETE": "1.6%",
+      "NOOP": "95.2%"
+    },
+    "baselines": {
+      "ADD": "0.074",
+      "UPDATE": "0.368",
+      "DELETE": "0.268",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2775,
+    "avg_success_rate": 0.02,
+    "avg_reward": -0.07855555555555559,
+    "memory_size": 174,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 96,
+      "UPDATE": 79,
+      "DELETE": 38,
+      "NOOP": 3662
+    },
+    "operation_stats_window": {
+      "ADD": "1.4%",
+      "UPDATE": "2.0%",
+      "DELETE": "2.0%",
+      "NOOP": "94.6%"
+    },
+    "baselines": {
+      "ADD": "0.072",
+      "UPDATE": "0.367",
+      "DELETE": "0.266",
+      "NOOP": "-0.050"
+    }
+  },
+  {
+    "episode": 2800,
+    "avg_success_rate": 0.14,
+    "avg_reward": -0.07501514248682863,
+    "memory_size": 172,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 97,
+      "UPDATE": 80,
+      "DELETE": 41,
+      "NOOP": 3782
+    },
+    "operation_stats_window": {
+      "ADD": "1.6%",
+      "UPDATE": "1.8%",
+      "DELETE": "1.8%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.071",
+      "UPDATE": "0.366",
+      "DELETE": "0.268",
+      "NOOP": "-0.088"
+    }
+  },
+  {
+    "episode": 2825,
+    "avg_success_rate": 0.26,
+    "avg_reward": -0.06520910342864758,
+    "memory_size": 174,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 101,
+      "UPDATE": 82,
+      "DELETE": 43,
+      "NOOP": 3899
+    },
+    "operation_stats_window": {
+      "ADD": "1.8%",
+      "UPDATE": "1.6%",
+      "DELETE": "1.8%",
+      "NOOP": "94.8%"
+    },
+    "baselines": {
+      "ADD": "0.069",
+      "UPDATE": "0.369",
+      "DELETE": "0.269",
+      "NOOP": "-0.088"
+    }
+  },
+  {
+    "episode": 2850,
+    "avg_success_rate": 0.32,
+    "avg_reward": -0.06202910097481085,
+    "memory_size": 176,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 103,
+      "UPDATE": 85,
+      "DELETE": 43,
+      "NOOP": 4019
+    },
+    "operation_stats_window": {
+      "ADD": "1.8%",
+      "UPDATE": "1.4%",
+      "DELETE": "1.4%",
+      "NOOP": "95.4%"
+    },
+    "baselines": {
+      "ADD": "0.072",
+      "UPDATE": "0.368",
+      "DELETE": "0.269",
+      "NOOP": "-0.088"
+    }
+  },
+  {
+    "episode": 2875,
+    "avg_success_rate": 0.3,
+    "avg_reward": -0.0682645338638895,
+    "memory_size": 174,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 103,
+      "UPDATE": 86,
+      "DELETE": 45,
+      "NOOP": 4141
+    },
+    "operation_stats_window": {
+      "ADD": "1.4%",
+      "UPDATE": "1.4%",
+      "DELETE": "1.4%",
+      "NOOP": "95.8%"
+    },
+    "baselines": {
+      "ADD": "0.072",
+      "UPDATE": "0.368",
+      "DELETE": "0.269",
+      "NOOP": "-0.070"
+    }
+  },
+  {
+    "episode": 2900,
+    "avg_success_rate": 0.2,
+    "avg_reward": -0.07198661808812189,
+    "memory_size": 177,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 106,
+      "UPDATE": 88,
+      "DELETE": 45,
+      "NOOP": 4261
+    },
+    "operation_stats_window": {
+      "ADD": "1.8%",
+      "UPDATE": "1.6%",
+      "DELETE": "0.8%",
+      "NOOP": "95.8%"
+    },
+    "baselines": {
+      "ADD": "0.069",
+      "UPDATE": "0.366",
+      "DELETE": "0.269",
+      "NOOP": "-0.099"
+    }
+  },
+  {
+    "episode": 2925,
+    "avg_success_rate": 0.08,
+    "avg_reward": -0.07500166870166872,
+    "memory_size": 179,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 111,
+      "UPDATE": 90,
+      "DELETE": 48,
+      "NOOP": 4376
+    },
+    "operation_stats_window": {
+      "ADD": "2.0%",
+      "UPDATE": "1.6%",
+      "DELETE": "1.0%",
+      "NOOP": "95.4%"
+    },
+    "baselines": {
+      "ADD": "0.064",
+      "UPDATE": "0.364",
+      "DELETE": "0.266",
+      "NOOP": "-0.100"
+    }
+  },
+  {
+    "episode": 2950,
+    "avg_success_rate": 0.04,
+    "avg_reward": -0.06258558558558563,
+    "memory_size": 181,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 114,
+      "UPDATE": 95,
+      "DELETE": 49,
+      "NOOP": 4492
+    },
+    "operation_stats_window": {
+      "ADD": "2.2%",
+      "UPDATE": "2.0%",
+      "DELETE": "1.2%",
+      "NOOP": "94.6%"
+    },
+    "baselines": {
+      "ADD": "0.065",
+      "UPDATE": "0.361",
+      "DELETE": "0.265",
+      "NOOP": "-0.058"
+    }
+  },
+  {
+    "episode": 2975,
+    "avg_success_rate": 0.1,
+    "avg_reward": -0.06157732276826356,
+    "memory_size": 181,
+    "consolidation_count": 1,
+    "consolidation_forced": 1,
+    "operation_stats_global": {
+      "ADD": 115,
+      "UPDATE": 99,
+      "DELETE": 50,
+      "NOOP": 4611
+    },
+    "operation_stats_window": {
+      "ADD": "2.4%",
+      "UPDATE": "2.6%",
+      "DELETE": "1.0%",
+      "NOOP": "94.0%"
+    },
+    "baselines": {
+      "ADD": "0.066",
+      "UPDATE": "0.361",
+      "DELETE": "0.264",
+      "NOOP": "-0.093"
+    }
+  },
+  {
+    "episode": 3000,
+    "avg_success_rate": 0.28,
+    "avg_reward": -0.06595520692004478,
+    "memory_size": 134,
+    "consolidation_count": 2,
+    "consolidation_forced": 2,
+    "operation_stats_global": {
+      "ADD": 118,
+      "UPDATE": 101,
+      "DELETE": 50,
+      "NOOP": 4731
+    },
+    "operation_stats_window": {
+      "ADD": "2.4%",
+      "UPDATE": "2.6%",
+      "DELETE": "1.0%",
+      "NOOP": "94.0%"
+    },
+    "baselines": {
+      "ADD": "0.069",
+      "UPDATE": "0.365",
+      "DELETE": "0.264",
+      "NOOP": "-0.071"
+    }
+  },
+  {
+    "episode": 3025,
+    "avg_success_rate": 0.28,
+    "avg_reward": -0.06944398129581111,
+    "memory_size": 136,
+    "consolidation_count": 2,
+    "consolidation_forced": 2,
+    "operation_stats_global": {
+      "ADD": 120,
+      "UPDATE": 103,
+      "DELETE": 50,
+      "NOOP": 4852
+    },
+    "operation_stats_window": {
+      "ADD": "1.8%",
+      "UPDATE": "2.6%",
+      "DELETE": "0.4%",
+      "NOOP": "95.2%"
+    },
+    "baselines": {
+      "ADD": "0.069",
+      "UPDATE": "0.364",
+      "DELETE": "0.264",
+      "NOOP": "-0.096"
+    }
+  },
+  {
+    "episode": 3050,
+    "avg_success_rate": 0.22,
+    "avg_reward": -0.07290964618757895,
+    "memory_size": 137,
+    "consolidation_count": 2,
+    "consolidation_forced": 2,
+    "operation_stats_global": {
+      "ADD": 122,
+      "UPDATE": 104,
+      "DELETE": 51,
+      "NOOP": 4973
+    },
+    "operation_stats_window": {
+      "ADD": "1.6%",
+      "UPDATE": "1.8%",
+      "DELETE": "0.4%",
+      "NOOP": "96.2%"
+    },
+    "baselines": {
+      "ADD": "0.077",
+      "UPDATE": "0.363",
+      "DELETE": "0.264",
+      "NOOP": "-0.089"
+    }
+  },
+  {
+    "episode": 3075,
+    "avg_success_rate": 0.26,
+    "avg_reward": -0.06039240063142506,
+    "memory_size": 136,
+    "consolidation_count": 2,
+    "consolidation_forced": 2,
+    "operation_stats_global": {
+      "ADD": 122,
+      "UPDATE": 109,
+      "DELETE": 52,
+      "NOOP": 5092
+    },
+    "operation_stats_window": {
+      "ADD": "1.4%",
+      "UPDATE": "2.0%",
+      "DELETE": "0.4%",
+      "NOOP": "96.2%"
+    },
+    "baselines": {
+      "ADD": "0.077",
+      "UPDATE": "0.373",
+      "DELETE": "0.263",
+      "NOOP": "-0.088"
+    }
+  },
+  {
+    "episode": 3100,
+    "avg_success_rate": 0.28,
+    "avg_reward": -0.059472980459373305,
+    "memory_size": 137,
+    "consolidation_count": 2,
+    "consolidation_forced": 2,
+    "operation_stats_global": {
+      "ADD": 124,
+      "UPDATE": 112,
+      "DELETE": 53,
+      "NOOP": 5211
+    },
+    "operation_stats_window": {
+      "ADD": "1.2%",
+      "UPDATE": "2.2%",
+      "DELETE": "0.6%",
+      "NOOP": "96.0%"
+    },
+    "baselines": {
+      "ADD": "0.081",
+      "UPDATE": "0.376",
+      "DELETE": "0.266",
+      "NOOP": "-0.067"
+    }
+  },
+  {
+    "episode": 3125,
+    "avg_success_rate": 0.34,
+    "avg_reward": -0.06437740820124721,
+    "memory_size": 140,
+    "consolidation_count": 2,
+    "consolidation_forced": 2,
+    "operation_stats_global": {
+      "ADD": 127,
+      "UPDATE": 114,
+      "DELETE": 53,
+      "NOOP": 5331
+    },
+    "operation_stats_window": {
+      "ADD": "1.4%",
+      "UPDATE": "2.2%",
+      "DELETE": "0.6%",
+      "NOOP": "95.8%"
+    },
+    "baselines": {
+      "ADD": "0.079",
+      "UPDATE": "0.373",
+      "DELETE": "0.266",
+      "NOOP": "-0.081"
+    }
+  },
+  {
+    "episode": 3150,
+    "avg_success_rate": 0.16,
+    "avg_reward": -0.07986769374416437,
+    "memory_size": 141,
+    "consolidation_count": 2,
+    "consolidation_forced": 2,
+    "operation_stats_global": {
+      "ADD": 128,
+      "UPDATE": 116,
+      "DELETE": 53,
+      "NOOP": 5453
+    },
+    "operation_stats_window": {
+      "ADD": "1.2%",
+      "UPDATE": "2.4%",
+      "DELETE": "0.4%",
+      "NOOP": "96.0%"
+    },
+    "baselines": {
+      "ADD": "0.077",
+      "UPDATE": "0.371",
+      "DELETE": "0.266",
+      "NOOP": "-0.100"
+    }
+  }
+]

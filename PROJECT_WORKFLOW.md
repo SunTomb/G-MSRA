@@ -173,7 +173,7 @@ Week:  W1──W2──W3──W4──W5──W6──W7──W8──W9──W
 | # | 任务 | 具体操作 | 产出 |
 |---|------|---------|------|
 | 2.1 | 扩充 SFT 训练数据 | 在 `train_phase0_sft.py` 中扩充 `generate_sft_data()`，从 ~80 条增加到 200+ 条，覆盖更多场景（多轮对话、冲突更新、偏好变化、时间推理等） | 更丰富的 SFT 数据 |
-| 2.2 | 跑通 Phase 0 | `bash cluster/run_song.sh phase0`，确认输出 `outputs/phase0/best` | 训练好的 SFT LoRA |
+| 2.2 | 跑通 Phase 0 | `bash cluster/run_song.sh phase0`，确认输出 `outputs_v1/phase0/best` | 训练好的 SFT LoRA |
 | 2.3 | 对接 TRL PPOTrainer | **关键任务**：`train_phase1_rl.py` 中的 RL 循环目前是伪代码。需要对接 TRL 库的 `PPOTrainer` 或 `GRPOTrainer` 完整 API。参考 [Memory-R1 的开源代码](https://github.com/) 和 [TRL 文档](https://huggingface.co/docs/trl/) | 可运行的 Phase 1 脚本 |
 
 > **⚠️ 对接 TRL 是最关键的工程任务**。当前 `train_phase1_rl.py` 已有完整的数据加载、Agent 初始化和评测循环，但 RL 训练核心需要实例化 `PPOTrainer`，将 Memory Manager 的输出作为 response，将 QA F1 作为 reward，调用 `ppo_trainer.step()` 更新策略。具体需要：
@@ -188,7 +188,7 @@ Week:  W1──W2──W3──W4──W5──W6──W7──W8──W9──W
 | 3.1 | 小规模 Phase 1 测试 | 用 50 条 LoCoMo 数据跑 100 个 episode 的 Phase 1，确认 RL 训练不发散 | Phase 1 训练日志 |
 | 3.2 | Phase 2 冒烟测试 | 用 Phase 1 的 checkpoint 跑 50 步 Phase 2 退火，确认 Kendall τ 计算正确 | Phase 2 校准日志 |
 | 3.3 | Phase 3 冒烟测试 | 确认巩固触发器能正确 fire、LoRA 蒸馏能执行 | Phase 3 巩固日志 |
-| 3.4 | 评测脚本测试 | `python scripts/eval_locomo.py --checkpoint outputs/phase0/best`，确认输出格式正确 | 评测结果 JSON |
+| 3.4 | 评测脚本测试 | `python scripts/eval_locomo.py --checkpoint outputs_v1/phase0/best`，确认输出格式正确 | 评测结果 JSON |
 
 **W3 结束判定标准**：从 Phase 0 → Phase 1 → Phase 2 → Phase 3 → eval 的完整 pipeline 能在小数据上跑通，无 crash，日志合理。
 

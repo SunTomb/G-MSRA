@@ -1,0 +1,58 @@
+[
+  {
+    "id": "832c0e04",
+    "content": "Caroline attends a LGBTQ support group on Thursdays.\nUPDATE <id>: ...\nDELETE <id>: ...\nNOOP: ...\nDecision: ADD: Caroline attends a LGBTQ support group on Thursdays.\nExplanation: The new event mentions Caroline going to an LGBTQ support group, which is important context. Since there's no existing memory, we add this as new information. The specific day (Thursday) is added for future reference.",
+    "keywords": [],
+    "tags": [],
+    "links": [],
+    "confidence": 0.6065787811854595,
+    "env_reward_at_write": 0.5,
+    "hit_success": 0,
+    "hit_total": 1,
+    "created_at": 1776186407.517103,
+    "updated_at": 1776186407.5171041,
+    "source": "Caroline"
+  },
+  {
+    "id": "f106b651",
+    "content": "<content> — Store new important information\nUPDATE <id>: <new_content> — Update existing memory\nDELETE <id> — Remove outdated/wrong memory\nNOOP — No action needed\n\nNOOP: Explanation: The new event is a conversation snippet where Caroline mentions her pet Oscar, a guinea pig. This adds a new detail about Caroline's life that can be useful for future interactions. We should store this information. ### Decision\nADD: Caroline has a pet guinea pig named Oscar. She seems excited but also a bit nervous about being a parent. ### Decision\nADD: Caroline has a pet guinea pig named Oscar. She seems excited but also a bit nervous about being a parent. Explanation: The new event provides a new detail about Caroline's life—she has a pet guinea pig named Oscar. Additionally, it shows her feelings about becoming a parent, which can be useful for understanding her personality and interests better. Storing this information will help in future interactions. ### Decision\nADD: Caroline has a pet guinea pig named Oscar. She seems excited but also a bit nervous about being a parent. Explanation: The new event provides a new detail about Caroline's life—she has a pet guinea pig named Oscar. Additionally,",
+    "keywords": [],
+    "tags": [],
+    "links": [],
+    "confidence": 0.6046186020885943,
+    "env_reward_at_write": 0.5,
+    "hit_success": 0,
+    "hit_total": 1,
+    "created_at": 1776186871.4107678,
+    "updated_at": 1776186871.4107704,
+    "source": "{'speaker': 'Caroline', 'dia_id': 'D13:3', 'text': \"Thanks, Mel! Exciting but kinda nerve-wracking. "
+  },
+  {
+    "id": "69f18f52",
+    "content": "Melanie mentioned Caroline made a bowl in her class.\nExplanation: The new event involves Caroline making a bowl in her class, which is a new piece of information about her activities and achievements. This should be stored in the memory. ### Decision\nADD: Melanie mentioned Caroline made a bowl in her class.\nExplanation: The new event involves Caroline making a bowl in her class, which is a new piece of information about her activities and achievements. This should be stored in the memory. ### Decision\nADD: Melanie mentioned Caroline made a bowl in her class.\nExplanation: The new event involves Caroline making a bowl in her class, which is a new piece of information about her activities and achievements. This should be stored in the memory. ### Decision\nADD: Caroline made a bowl in her class.\nExplanation: The new event indicates that Caroline made a bowl in her class, which is a new achievement and activity worth remembering. This information can be used to understand her capabilities and interests better. ### Decision\nADD: Caroline made a bowl in her class.\nExplanation: The new event indicates that Caroline made a bowl in her class, which is a new achievement and activity worth remembering. This information can be used to understand her capabilities and interests better. ### Decision\nADD: Caroline made",
+    "keywords": [],
+    "tags": [],
+    "links": [],
+    "confidence": 0.6040655107572234,
+    "env_reward_at_write": 0.5,
+    "hit_success": 0,
+    "hit_total": 1,
+    "created_at": 1776186998.758025,
+    "updated_at": 1776186998.7580283,
+    "source": "{'speaker': 'Melanie', 'dia_id': 'D5:8', 'text': \"Thanks, Caroline! Yeah, I made this bowl in my cla"
+  },
+  {
+    "id": "2f87381c",
+    "content": "Love that purple color! For walking or running?\nExplanation: This is a casual statement from Caroline about her preference for the color purple for activities like walking or running. It doesn't contradict any existing information and adds a new detail about her interests. Therefore, we should store it as new information.\n\n### Operation\nADD: Love that purple color! For walking or running? \nExplanation: This is a casual statement from Caroline about her preference for the color purple for activities like walking or running. It doesn't contradict any existing information and adds a new detail about her interests. Therefore, we should store it as new information. ### Decision\nADD: Love that purple color! For walking or running?\nExplanation: This is a casual statement from Caroline about her preference for the color purple for activities like walking or running. It doesn't contradict any existing information and adds a new detail about her interests. Therefore, we should store it as new information. ### Decision\nADD: Love that purple color! For walking or running?\nExplanation: This is a casual statement from Caroline about her preference for the color purple for activities like walking or running. It doesn't contradict any existing information and adds a new detail about her interests. Therefore, we should store it as new information. ### Final",
+    "keywords": [],
+    "tags": [],
+    "links": [],
+    "confidence": 0.6030636732445509,
+    "env_reward_at_write": 0.5,
+    "hit_success": 0,
+    "hit_total": 1,
+    "created_at": 1776187225.5589423,
+    "updated_at": 1776187225.558946,
+    "source": "{'speaker': 'Caroline', 'dia_id': 'D7:19', 'text': 'Love that purple color! For walking or running?'"
+  }
+]

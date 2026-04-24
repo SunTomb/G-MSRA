@@ -1,0 +1,48 @@
+[
+  {
+    "id": "87561658",
+    "content": "{'speaker': 'Caroline', 'dia_id': 'D10:23', 'text': 'Wow, Melanie, what a beautiful moment! Lucky you to have such an awesome family!'}",
+    "keywords": [],
+    "tags": [],
+    "links": [
+      "4bfd9c19"
+    ],
+    "confidence": 0.5,
+    "env_reward_at_write": 0.5,
+    "hit_success": 0,
+    "hit_total": 1,
+    "created_at": 1776197704.5666292,
+    "updated_at": 1776197704.5666301,
+    "source": "{'speaker': 'Caroline', 'dia_id': 'D10:23', 'text': 'Wow, Melanie, what a beautiful moment! Lucky yo"
+  },
+  {
+    "id": "4bfd9c19",
+    "content": "{'speaker': 'Caroline', 'dia_id': 'D13:3', 'text': \"Thanks, Mel! Exciting but kinda nerve-wracking. Parenting's such a big responsibility. And yup, I do- Oscar, my guinea pig. He's been great. How are your pets?\"}",
+    "keywords": [],
+    "tags": [],
+    "links": [
+      "87561658"
+    ],
+    "confidence": 0.5,
+    "env_reward_at_write": 0.5,
+    "hit_success": 0,
+    "hit_total": 1,
+    "created_at": 1776197708.5183322,
+    "updated_at": 1776197708.5183334,
+    "source": "{'speaker': 'Caroline', 'dia_id': 'D13:3', 'text': \"Thanks, Mel! Exciting but kinda nerve-wracking. "
+  },
+  {
+    "id": "05e2a6e4",
+    "content": "Caroline shared her experience with art and gender identity during her transition. She went to an LGBTQ support group. \nUPDATE 87561658: Caroline is transitioning and has gone through gender identity exploration.\nDELETE 4bfd9c19: Irrelevant to the new query. \nNOOP\nThe new event provides valuable information about Caroline's personal journey, specifically regarding her experiences with art and gender identity during her transition. It also indirectly confirms that she attended an LGBTQ support group, which is relevant to the current task context.\n\nBased on this, the best memory operations are:\n\n- **ADD**: To store the new information about Caroline's art and gender identity journey.\n- **UPDATE 87561658**: To reflect that Caroline is transitioning and has undergone gender identity exploration.\n- **DELETE 4bfd9c19**: As the previous entry is no longer relevant to the current query.\n\nSo, the decision is:\n**ADD: Caroline shared her experience with art and gender identity during her transition. She went to an LGBTQ support group.**\n**UPDATE 87561658: Caroline is transitioning and has gone through gender identity exploration.**\n**DELETE 4bfd9c19: Ir",
+    "keywords": [],
+    "tags": [],
+    "links": [],
+    "confidence": 0.5,
+    "env_reward_at_write": 0.5,
+    "hit_success": 0,
+    "hit_total": 1,
+    "created_at": 1776197729.847057,
+    "updated_at": 1776197729.8470604,
+    "source": "{'speaker': 'Caroline', 'dia_id': 'D16:9', 'text': \"Melanie, those bowls are amazing! They each have"
+  }
+]

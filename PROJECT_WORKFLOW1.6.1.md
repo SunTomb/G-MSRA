@@ -30,10 +30,10 @@ Phase 3 在 Tang3 集群上成功完成了全部 1586 个 Episode，耗时 29.4 
 
 输出文件：
 
-- `outputs/phase3/best/` — 最终 checkpoint
-- `outputs/phase3/checkpoint_500/`, `checkpoint_1000/`, `checkpoint_1500/`
-- `outputs/phase3/metrics.json` — 训练指标（每 50 ep）
-- `outputs/phase3/diagnostics.json` — 完整诊断数据
+- `outputs_v1/phase3/best/` — 最终 checkpoint
+- `outputs_v1/phase3/checkpoint_500/`, `checkpoint_1000/`, `checkpoint_1500/`
+- `outputs_v1/phase3/metrics.json` — 训练指标（每 50 ep）
+- `outputs_v1/phase3/diagnostics.json` — 完整诊断数据
 
 ### 1.2 关键指标 — ❌ 训练无效
 
@@ -169,7 +169,7 @@ export PYTHONPATH=/NAS/yesh/G-MSRA
 #### 备份旧数据
 
 ```bash
-mv outputs/phase2 outputs/phase2_v1_backup
+mv outputs_v1/phase2 outputs_v1/phase2_v1_backup
 ```
 
 #### 启动训练
@@ -177,13 +177,13 @@ mv outputs/phase2 outputs/phase2_v1_backup
 ```bash
 CUDA_VISIBLE_DEVICES=2 python scripts/train_phase2_transition.py \
     --model_name Qwen/Qwen2.5-7B-Instruct \
-    --checkpoint outputs/phase1/best \
-    --output_dir outputs/phase2 \
+    --checkpoint outputs_v1/phase1/best \
+    --output_dir outputs_v1/phase2 \
     --anneal_steps 3000 \
     --num_epochs 2 \
     --tau_threshold 0.15 \
     --no_qlora --no_wandb \
-    2>&1 | tee logs/phase2_v4.log
+    2>&1 | tee logs_v1/phase2_v4.log
 ```
 
 **关键参数说明**：
@@ -193,7 +193,7 @@ CUDA_VISIBLE_DEVICES=2 python scripts/train_phase2_transition.py \
 | `--anneal_steps` | 3000 | α 从 1.0 退火到 0.0 需要的总步数 |
 | `--num_epochs` | 2 | 数据集 1586 × 2 = 3172，足够走完 3000 步 |
 | `--tau_threshold` | **0.15** | 降低阈值，避免 τ 波动导致退火频繁暂停 |
-| `--checkpoint` | `outputs/phase1/best` | 加载 Phase 1 的 LoRA adapter |
+| `--checkpoint` | `outputs_v1/phase1/best` | 加载 Phase 1 的 LoRA adapter |
 
 #### 已观察到的指标（v3 前 90 步）
 
@@ -220,7 +220,7 @@ CUDA_VISIBLE_DEVICES=2 python scripts/train_phase2_transition.py \
 #### 监控
 
 ```bash
-tail -f logs/phase2_v4.log | grep "Step "
+tail -f logs_v1/phase2_v4.log | grep "Step "
 # 应看到 α 持续下降：
 # Step 100/3000 | α=0.967 | τ=0.xxx | R_ext=0.xxx
 # Step 1000/3000 | α=0.667 | ...
@@ -239,30 +239,30 @@ Phase 2 完成后，继续 Phase 3。
 #### 备份旧数据
 
 ```bash
-mv outputs/phase3 outputs/phase3_v1_backup
+mv outputs_v1/phase3 outputs_v1/phase3_v1_backup
 ```
 
 #### 启动训练
 
 ```bash
 CUDA_VISIBLE_DEVICES=4 python scripts/train_phase3_full.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
-    --output_dir outputs/phase3 \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
+    --output_dir outputs_v1/phase3 \
     --model_name Qwen/Qwen2.5-7B-Instruct \
     --max_episodes 1586 \
     --max_events 5 \
     --num_epochs 2 \
     --no_qlora --no_wandb \
-    2>&1 | tee logs/phase3_v2.log
+    2>&1 | tee logs_v1/phase3_v2.log
 ```
 
 **关键参数说明**：
 
 | 参数 | 值 | 说明 |
 |------|-----|------|
-| `--checkpoint` | `outputs/phase2/best` | Phase 2 的 agent 状态（memory_store + step_count） |
-| `--lora_checkpoint` | `outputs/phase1/best` | Phase 1 的 LoRA adapter（Phase 2 未保存 LoRA） |
+| `--checkpoint` | `outputs_v1/phase2/best` | Phase 2 的 agent 状态（memory_store + step_count） |
+| `--lora_checkpoint` | `outputs_v1/phase1/best` | Phase 1 的 LoRA adapter（Phase 2 未保存 LoRA） |
 | `--max_events` | 5 | 提高至 5，给更多机会执行 ADD |
 | `--num_epochs` | 2 | 数据集循环 2 轮 = 3172 episodes |
 | `--max_episodes` | 1586 | 每轮的 episode 数 |
@@ -282,7 +282,7 @@ CUDA_VISIBLE_DEVICES=4 python scripts/train_phase3_full.py \
 #### 监控
 
 ```bash
-tail -f logs/phase3_v2.log | grep "Episode\|CONSOLIDATION"
+tail -f logs_v1/phase3_v2.log | grep "Episode\|CONSOLIDATION"
 # 应看到：
 # Episode 50/3172 | R_avg=0.050 | success=0.020 | mem=25 | consol=0
 # Episode 100/3172 | R_avg=0.070 | success=0.040 | mem=45 | consol=0
@@ -298,12 +298,12 @@ tail -f logs/phase3_v2.log | grep "Episode\|CONSOLIDATION"
 
 ```bash
 # Phase 2 v4
-scp -r wujcan@Tang3:/NAS/yesh/G-MSRA/outputs/phase2 d:/USTC/2026Winter/G-MSRA/outputs/
-scp wujcan@Tang3:/NAS/yesh/G-MSRA/logs/phase2_v4.log d:/USTC/2026Winter/G-MSRA/logs/
+scp -r wujcan@Tang3:/NAS/yesh/G-MSRA/outputs_v1/phase2 d:/USTC/2026Winter/G-MSRA/outputs/
+scp wujcan@Tang3:/NAS/yesh/G-MSRA/logs_v1/phase2_v4.log d:/USTC/2026Winter/G-MSRA/logs/
 
 # Phase 3 v2
-scp -r wujcan@Tang3:/NAS/yesh/G-MSRA/outputs/phase3 d:/USTC/2026Winter/G-MSRA/outputs/
-scp wujcan@Tang3:/NAS/yesh/G-MSRA/logs/phase3_v2.log d:/USTC/2026Winter/G-MSRA/logs/
+scp -r wujcan@Tang3:/NAS/yesh/G-MSRA/outputs_v1/phase3 d:/USTC/2026Winter/G-MSRA/outputs/
+scp wujcan@Tang3:/NAS/yesh/G-MSRA/logs_v1/phase3_v2.log d:/USTC/2026Winter/G-MSRA/logs/
 ```
 
 ---
@@ -317,7 +317,7 @@ Phase 3 完成后，检查以下指标以确认修复成功：
 ```python
 import json
 
-with open("outputs/phase3/metrics.json") as f:
+with open("outputs_v1/phase3/metrics.json") as f:
     metrics = json.load(f)
 
 # 检查 R_env > 0
@@ -335,7 +335,7 @@ print(f"✅ 验证通过: R_avg={last['avg_reward']:.3f}, mem={last['memory_size
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=<GPU> \
 python baselines/eval_baselines.py \
     --agent gmsra \
-    --checkpoint outputs/phase3/best \
+    --checkpoint outputs_v1/phase3/best \
     --benchmark locomo \
     2>&1 | tee results/gmsra_eval.log
 ```

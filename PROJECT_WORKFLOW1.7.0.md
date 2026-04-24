@@ -73,10 +73,10 @@ Phase 3 经历了 5 轮迭代，每轮修复了不同的核心问题：
 
 输出文件：
 
-- `outputs/phase3_v5/best/` — 最终 checkpoint
-- `outputs/phase3_v5/checkpoint_500/`, `checkpoint_1000/`, `checkpoint_1500/`
-- `outputs/phase3_v5/metrics.json` — 训练指标（每 25 ep，共 63 条）
-- `outputs/phase3_v5/diagnostics.json` — 完整诊断数据
+- `outputs_v1/phase3_v5/best/` — 最终 checkpoint
+- `outputs_v1/phase3_v5/checkpoint_500/`, `checkpoint_1000/`, `checkpoint_1500/`
+- `outputs_v1/phase3_v5/metrics.json` — 训练指标（每 25 ep，共 63 条）
+- `outputs_v1/phase3_v5/diagnostics.json` — 完整诊断数据
 
 季度统计：
 
@@ -217,17 +217,17 @@ export HF_HUB_OFFLINE=1
 tmux new -s eval_p2
 
 CUDA_VISIBLE_DEVICES=7 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
-    --output_dir results/eval_phase2 \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
+    --output_dir results_v1/eval_phase2 \
     --benchmark locomo \
     --no_qlora \
-    2>&1 | tee logs/eval_phase2_locomo.log
+    2>&1 | tee logs_v1/eval_phase2_locomo.log
 ```
 
 - **显存**: ~15GB（7B bf16 推理 + sentence-transformers encoder）
 - **耗时**: ~15-20min（每个 example: restore(~5ms) + embed events(~20ms) + LLM answer(~2s)）
-- **输出**: `results/eval_phase2/locomo_results.json`
+- **输出**: `results_v1/eval_phase2/locomo_results.json`
 
 #### T2: Phase 3 v5 checkpoint 评测
 
@@ -235,17 +235,17 @@ CUDA_VISIBLE_DEVICES=7 python scripts/eval_locomo.py \
 tmux new -s eval_p3
 
 CUDA_VISIBLE_DEVICES=7 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v5/best \
-    --lora_checkpoint outputs/phase1/best \
-    --output_dir results/eval_phase3v5 \
+    --checkpoint outputs_v1/phase3_v5/best \
+    --lora_checkpoint outputs_v1/phase1/best \
+    --output_dir results_v1/eval_phase3v5 \
     --benchmark locomo \
     --no_qlora \
-    2>&1 | tee logs/eval_phase3v5_locomo.log
+    2>&1 | tee logs_v1/eval_phase3v5_locomo.log
 ```
 
 - **显存**: ~15GB
 - **耗时**: ~15-20min
-- **输出**: `results/eval_phase3v5/locomo_results.json`
+- **输出**: `results_v1/eval_phase3v5/locomo_results.json`
 
 #### T3: LongMemEval 评测
 
@@ -261,26 +261,26 @@ CUDA_VISIBLE_DEVICES=7 python scripts/eval_locomo.py \
 tmux new -s eval_longmem_p2
 
 CUDA_VISIBLE_DEVICES=5 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
-    --output_dir results/eval_phase2 \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
+    --output_dir results_v1/eval_phase2 \
     --benchmark longmemeval \
     --no_qlora \
-    2>&1 | tee logs/eval_phase2_longmemeval.log
+    2>&1 | tee logs_v1/eval_phase2_longmemeval.log
 
 # T3b: Phase 3 v5 checkpoint
 CUDA_VISIBLE_DEVICES=5 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3_v5/best \
-    --lora_checkpoint outputs/phase1/best \
-    --output_dir results/eval_phase3v5 \
+    --checkpoint outputs_v1/phase3_v5/best \
+    --lora_checkpoint outputs_v1/phase1/best \
+    --output_dir results_v1/eval_phase3v5 \
     --benchmark longmemeval \
     --no_qlora \
-    2>&1 | tee logs/eval_phase3v5_longmemeval.log
+    2>&1 | tee logs_v1/eval_phase3v5_longmemeval.log
 ```
 
 - **显存**: ~15GB
 - **耗时**: ~60-80min 每个（500 examples × ~494 events）
-- **输出**: `results/eval_phase2/longmemeval_results.json`, `results/eval_phase3v5/longmemeval_results.json`
+- **输出**: `results_v1/eval_phase2/longmemeval_results.json`, `results_v1/eval_phase3v5/longmemeval_results.json`
 
 #### 预期结果
 
@@ -292,8 +292,8 @@ CUDA_VISIBLE_DEVICES=5 python scripts/eval_locomo.py \
 #### 监控
 
 ```bash
-tail -f logs/eval_phase2_locomo.log | grep "Progress\|RESULTS"
-tail -f logs/eval_phase2_longmemeval.log | grep "Progress\|RESULTS"
+tail -f logs_v1/eval_phase2_locomo.log | grep "Progress\|RESULTS"
+tail -f logs_v1/eval_phase2_longmemeval.log | grep "Progress\|RESULTS"
 ```
 
 完成标志：出现 `RESULTS: locomo` 或 `RESULTS: longmemeval` 及 `F1:  X.XXXX`。
@@ -337,19 +337,19 @@ CUDA_VISIBLE_DEVICES=5 python scripts/run_baselines.py \
       --baselines reflexion,evolver,self_consolidation \
       --model_name Qwen/Qwen2.5-7B-Instruct \
       --max_train_episodes 100 \
-      --output_dir results/baselines_v2 \
-      2>&1 | tee logs/baselines_v2_part1.log
+      --output_dir results_v1/baselines_v2 \
+      2>&1 | tee logs_v1/baselines_v2_part1.log
 
   # GPU 1: 后 2 个
   CUDA_VISIBLE_DEVICES=1 python scripts/run_baselines.py \
       --baselines memory_r1,mem0_memory_r1 \
       --model_name Qwen/Qwen2.5-7B-Instruct \
       --max_train_episodes 100 \
-      --output_dir results/baselines_v2 \
-      2>&1 | tee logs/baselines_v2_part2.log
+      --output_dir results_v1/baselines_v2 \
+      2>&1 | tee logs_v1/baselines_v2_part2.log
   ```
 
-- **输出**: `results/baselines_v2/<baseline_id>/results.json`, `results/baselines_v2/baseline_summary.json`
+- **输出**: `results_v1/baselines_v2/<baseline_id>/results_v1.json`, `results_v1/baselines_v2/baseline_summary.json`
 - **验证**: 检查每个 baseline 的 LoCoMo + LongMemEval F1 是否合理
 
 ---
@@ -371,8 +371,8 @@ CUDA_VISIBLE_DEVICES=5 python scripts/run_baselines.py \
 ```bash
 # A0a: Phase 2 + no memory (LoCoMo)
 CUDA_VISIBLE_DEVICES=2 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --output_dir results/ablation_no_memory \
     --benchmark locomo \
     --no_qlora --no_memory \
@@ -380,8 +380,8 @@ CUDA_VISIBLE_DEVICES=2 python scripts/eval_locomo.py \
 
 # A0b: Phase 2 + no memory (LongMemEval)
 CUDA_VISIBLE_DEVICES=2 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --output_dir results/ablation_no_memory \
     --benchmark longmemeval \
     --no_qlora --no_memory \
@@ -401,7 +401,7 @@ CUDA_VISIBLE_DEVICES=2 python scripts/eval_locomo.py \
 # 使用空 checkpoint：不加载 memory_store.json
 CUDA_VISIBLE_DEVICES=6 python scripts/eval_locomo.py \
     --checkpoint "" \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --output_dir results/ablation_events_only \
     --benchmark locomo \
     --no_qlora \
@@ -445,7 +445,7 @@ tmux new -s ablations
 
 # 先跑高优先级的 3 个 (每个 ~500 episodes ≈ 2-3h)
 CUDA_VISIBLE_DEVICES=1 python scripts/run_ablations.py \
-    --base_checkpoint outputs/phase1/best \
+    --base_checkpoint outputs_v1/phase1/best \
     --ablations A1_no_env_anchor,A2_no_memory_consistency,A6_no_consolidation \
     --num_episodes 500 \
     --output_dir results/ablations \
@@ -453,7 +453,7 @@ CUDA_VISIBLE_DEVICES=1 python scripts/run_ablations.py \
 
 # 再跑其余 4 个
 CUDA_VISIBLE_DEVICES=2 python scripts/run_ablations.py \
-    --base_checkpoint outputs/phase1/best \
+    --base_checkpoint outputs_v1/phase1/best \
     --ablations A3_no_confidence_filter,A4_fixed_trigger,A5_random_distill,A7_no_curriculum \
     --num_episodes 500 \
     --output_dir results/ablations \
@@ -473,7 +473,7 @@ CUDA_VISIBLE_DEVICES=2 python scripts/run_ablations.py \
   # 总时间: ~8h（而非 21h）
   ```
 
-- **输出**: `results/ablations/ablation_summary.json`
+- **输出**: `results_v1/ablations/ablation_summary.json`
 
 #### [已知问题] run_ablations.py 有旧 bug
 
@@ -537,13 +537,13 @@ Step Range | α       | τ (Kendall) | R_ext     | R_self    |
 1500-3000  | 0.5~0.03|  0.4~0.8    | ...       | ...       |
 ```
 
-数据来源: `logs/phase2_v4.log` — 用 grep 提取 Step 行即可。
+数据来源: `logs_v1/phase2_v4.log` — 用 grep 提取 Step 行即可。
 
 #### 图表
 
-1. **Fig 2: Phase 2 α 退火曲线** — 从 `logs/phase2_v4.log` 提取 `α=` 值画折线图
+1. **Fig 2: Phase 2 α 退火曲线** — 从 `logs_v1/phase2_v4.log` 提取 `α=` 值画折线图
 2. **Fig 3: Phase 2 τ vs Step** — 从日志提取 `τ=` 值
-3. **Fig 4: Phase 3 R_avg 曲线** — 从 `outputs/phase3_v5/metrics.json`
+3. **Fig 4: Phase 3 R_avg 曲线** — 从 `outputs_v1/phase3_v5/metrics.json`
 4. **Fig 5: 消融对比柱状图** — 从 ablation results
 
 ---

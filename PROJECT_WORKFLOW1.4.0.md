@@ -213,24 +213,24 @@ print(ds)
 ```bash
 # 1. Phase 0: SFT 热启动 (Tang 节点即可, ~30 min)
 CUDA_VISIBLE_DEVICES=6 python scripts/train_phase0_sft.py
-# 预期输出: outputs/phase0/best/
+# 预期输出: outputs_v1/phase0/best/
 
 # 2. Phase 1: RL + 外部奖励 (Song 节点, 2-3 天)
 #    这是最耗时的步骤
 bash cluster/run_song.sh phase1
-# 预期输出: outputs/phase1/best/
+# 预期输出: outputs_v1/phase1/best/
 
 # 3. Phase 2: 课程退火 (Song 节点, 1-2 天)
 bash cluster/run_song.sh phase2
-# 预期输出: outputs/phase2/best/ + calibration.json
+# 预期输出: outputs_v1/phase2/best/ + calibration.json
 
 # 4. Phase 3: 全闭环 (Song 节点, 3-5 天)
 bash cluster/run_song.sh phase3
-# 预期输出: outputs/phase3/best/ + metrics.json + diagnostics.json
+# 预期输出: outputs_v1/phase3/best/ + metrics.json + diagnostics.json
 
 # 5. 评测
 CUDA_VISIBLE_DEVICES=6 python scripts/eval_locomo.py \
-    --checkpoint outputs/phase3/best --benchmark locomo
+    --checkpoint outputs_v1/phase3/best --benchmark locomo
 ```
 
 ### 2.4 Step 3: 全量 Baseline 评测
@@ -253,7 +253,7 @@ CUDA_VISIBLE_DEVICES=7 nohup bash baselines/run_rl_baselines.sh > results/baseli
 
 ```bash
 CUDA_VISIBLE_DEVICES=6 python scripts/run_ablations.py \
-    --base_checkpoint outputs/phase1/best \
+    --base_checkpoint outputs_v1/phase1/best \
     --num_episodes 1000
 ```
 
@@ -273,13 +273,13 @@ CUDA_VISIBLE_DEVICES=6 python scripts/run_ablations.py \
 
 ### 3.2 结果收集 → 论文填充
 
-所有结果汇总到 `results/` 目录后，填入 `paper/main.tex`：
+所有结果汇总到 `results_v1/` 目录后，填入 `paper/main.tex`：
 
 | 论文表格 | 数据来源 | main.tex 行号 |
 |----------|---------|:------------:|
-| Table 1 (主表) | `results/baselines/` + G-MSRA eval | L266-272 |
+| Table 1 (主表) | `results_v1/baselines/` + G-MSRA eval | L266-272 |
 | Table 2 (ALFWorld) | ALFWorld 评测结果 | L287-292 |
-| Table 3 (消融) | `results/ablations/` | L316-323 |
+| Table 3 (消融) | `results_v1/ablations/` | L316-323 |
 | Fig 3 (Reward Drift) | Phase 2 `calibration.json` | L349-355 |
 | Fig 4 (Trigger 3D) | Phase 3 `diagnostics.json` | L361-366 |
 
@@ -345,11 +345,11 @@ Memory-R1 和 Mem0+R1 仅训练了 3 个 epoch × 44 条 = 132 步。原论文 M
 | 文件 | 作用 | 关键参数 |
 |------|------|---------|
 | `prepare_data.py` | 下载/格式化 4 个数据集 | `--output_dir data` |
-| `train_phase0_sft.py` | SFT 热启动 (115 条) | `--output_dir outputs/phase0` |
+| `train_phase0_sft.py` | SFT 热启动 (115 条) | `--output_dir outputs_v1/phase0` |
 | `train_phase1_rl.py` | RL 训练 (GRPO→PPO→REINFORCE) | `--num_episodes 5000` |
 | `train_phase2_transition.py` | 课程退火 + Kendall τ | `--anneal_steps 3000` |
 | `train_phase3_full.py` | 全闭环 + 巩固 | `--num_episodes 10000` |
-| `eval_locomo.py` | 对话记忆评测 | `--checkpoint outputs/...` |
+| `eval_locomo.py` | 对话记忆评测 | `--checkpoint outputs_v1/...` |
 | `eval_agent_tasks.py` | Agent 任务评测 | `--env alfworld` |
 | `run_ablations.py` | A1-A7 消融 | `--base_checkpoint ...` |
 | `smoke_test.py` | 管线验证 (27/27 ✅) | 直接运行 |

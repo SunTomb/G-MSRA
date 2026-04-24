@@ -219,7 +219,7 @@ python baselines/eval_baselines.py --data_dir data --benchmark locomo
 
 ### 3.3 输出格式
 
-结果保存到 `results/baselines/baseline_results.json`：
+结果保存到 `results_v1/baselines/baseline_results.json`：
 
 ```json
 {
@@ -275,7 +275,7 @@ python baselines/eval_baselines.py --agent evolver --benchmark locomo
 python baselines/eval_baselines.py --agent mem0_memory_r1 --benchmark locomo
 
 # === 消融实验 ===
-python scripts/run_ablations.py --base_checkpoint outputs/phase1/best
+python scripts/run_ablations.py --base_checkpoint outputs_v1/phase1/best
 ```
 
 ### 4.2 需要特别注意的事项
@@ -334,7 +334,7 @@ G-MSRA (Ours)    & \textbf{<F1>} & ...
 
 **Table 2**（ALFWorld，L287-292）：从 `baseline_results.json` 中提取 `success_rate`, `frr`, `avg_token_cost`。
 
-**Table 3**（消融，L316-323）：从 `results/ablations/ablation_summary.json` 提取。
+**Table 3**（消融，L316-323）：从 `results_v1/ablations/ablation_summary.json` 提取。
 
 ### 4.4 Judge 分数的计算
 

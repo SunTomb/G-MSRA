@@ -25,8 +25,8 @@
 
 | Benchmark | F1 | EM | 内存条数 | 日志 |
 |-----------|:---:|:---:|:---:|------|
-| LoCoMo (400) | **0.0962** | 0.0450 | 183 | `logs/eval_phase2_locomo.log` |
-| LongMemEval (500) | **0.2616** | 0.1760 | 183 | `logs/eval_phase2_longmemeval.log` |
+| LoCoMo (400) | **0.0962** | 0.0450 | 183 | `logs_v1/eval_phase2_locomo.log` |
+| LongMemEval (500) | **0.2616** | 0.1760 | 183 | `logs_v1/eval_phase2_longmemeval.log` |
 
 **LongMemEval 分类详情**：
 
@@ -44,19 +44,19 @@
 
 | Benchmark | F1 | EM | 日志 |
 |-----------|:---:|:---:|------|
-| LoCoMo | 0.0272 | 0.0175 | `logs/ablation_no_memory_locomo.log` |
-| LongMemEval | 0.0490 | 0.0140 | `logs/ablation_no_memory_longmemeval.log` |
+| LoCoMo | 0.0272 | 0.0175 | `logs_v1/ablation_no_memory_locomo.log` |
+| LongMemEval | 0.0490 | 0.0140 | `logs_v1/ablation_no_memory_longmemeval.log` |
 
 ---
 
 ### 1.3 消融实验 T5-A0.5（Events Only，无结构化记忆）✅ **[NEW]**
 
-> **设计**：使用空 checkpoint（`outputs/empty_checkpoint`）+ Phase 1 LoRA，跳过记忆构建流程，仅将原始对话事件直接注入上下文窗口（每题最多 250 条 Events）。验证"不经过 Memory Consolidation 的裸 Event 流"能否支撑问答。
+> **设计**：使用空 checkpoint（`outputs_v1/empty_checkpoint`）+ Phase 1 LoRA，跳过记忆构建流程，仅将原始对话事件直接注入上下文窗口（每题最多 250 条 Events）。验证"不经过 Memory Consolidation 的裸 Event 流"能否支撑问答。
 
 | Benchmark | F1 | EM | 耗时 | 日志 |
 |-----------|:---:|:---:|:---:|------|
-| LoCoMo (400) | **0.0970** | 0.0450 | ~89min | `logs/ablation_events_only_locomo.log` |
-| LongMemEval (500) | **0.2621** | 0.1760 | ~64min | `logs/ablation_events_only_longmemeval.log` |
+| LoCoMo (400) | **0.0970** | 0.0450 | ~89min | `logs_v1/ablation_events_only_locomo.log` |
+| LongMemEval (500) | **0.2621** | 0.1760 | ~64min | `logs_v1/ablation_events_only_longmemeval.log` |
 
 **LoCoMo 分类详情**：
 
@@ -78,7 +78,7 @@
 | [2] Multi-session | **0.1384** | 0.1384 | 完全一致 |
 | [5] Abstain | **0.0899** | 0.0869 | ≈ 持平 |
 
-结果文件：`results/ablation_events_only/`
+结果文件：`results_v1/ablation_events_only/`
 
 ---
 
@@ -86,11 +86,11 @@
 
 | Baseline | LoCoMo F1 | LongMem F1 | 状态 | 日志 |
 |----------|:---------:|:----------:|:----:|------|
-| Reflexion | 0.0163 | 0.0408 | ✅ | `logs/baselines_v2_part1.log` |
-| EvolveR | 0.0175 | 0.0413 | ✅ | `logs/baselines_v2_part1.log` |
-| Self-Consolidation | 0.0156 | 0.0374 | ✅ | `logs/baselines_v2_part1.log` |
-| Memory-R1 | **0.0963** | **0.2731** | ✅ | `logs/baselines_v2_part2.log` |
-| Mem0+Memory-R1 | — | — | 🔄 T8 进行中 | `logs/baselines_v2_mem0r1_retry.log` |
+| Reflexion | 0.0163 | 0.0408 | ✅ | `logs_v1/baselines_v2_part1.log` |
+| EvolveR | 0.0175 | 0.0413 | ✅ | `logs_v1/baselines_v2_part1.log` |
+| Self-Consolidation | 0.0156 | 0.0374 | ✅ | `logs_v1/baselines_v2_part1.log` |
+| Memory-R1 | **0.0963** | **0.2731** | ✅ | `logs_v1/baselines_v2_part2.log` |
+| Mem0+Memory-R1 | — | — | 🔄 T8 进行中 | `logs_v1/baselines_v2_mem0r1_retry.log` |
 
 ---
 
@@ -108,7 +108,7 @@
 | A6 | No consolidation (no LoRA distill) | 0.1234 | 0.0605 | 0.0 | 0 | 323 | 0.623 |
 | A7 | No curriculum (skip Phase 1-2) | 0.1236 | 0.0605 | 0.0 | 0 | 254 | 0.644 |
 
-**结果文件**：`results/ablations/ablation_summary.json`（已修复，包含全部 7 个消融）
+**结果文件**：`results_v1/ablations/ablation_summary.json`（已修复，包含全部 7 个消融）
 
 ---
 
@@ -173,7 +173,7 @@ A2 的 `avg_reward = 0.500`（50 个 episode 全部恒定 0.5），`memory_size 
 
 - **启动时间**：2026-04-15 17:11
 - **脚本**：`scripts/eval_ablations_benchmarks.sh`（已修复 `python scripts/eval_locomo.py` 入口 + LoRA fallback）
-- **日志**：`logs/ablation_eval_A1_no_env_anchor.log`
+- **日志**：`logs_v1/ablation_eval_A1_no_env_anchor.log`
 - **进度**：正在处理 LoCoMo 400 examples 的 Event ingestion（已加载约 26K 条 Event）
 - **预计完成**：约 20:00（每个消融 ~3h，7 个串行 → ~21h 全部完成）
 - **评估隔离验证**：日志确认 `per-example isolation` 模式正确执行（每题重置 Agent 记忆快照）
@@ -181,7 +181,7 @@ A2 的 `avg_reward = 0.500`（50 个 episode 全部恒定 0.5），`memory_size 
 ### 3.2 T8: Mem0+Memory-R1 基线恢复评估 🔄 运行中
 
 - **启动时间**：2026-04-15 17:16
-- **日志**：`logs/baselines_v2_mem0r1_retry.log`
+- **日志**：`logs_v1/baselines_v2_mem0r1_retry.log`
 - **修复措施**：独占 GPU + `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True`
 - **当前状态**：正常运行中，未出现 OOM 错误
 - **预计完成**：约 20:15
@@ -213,7 +213,7 @@ A2 的 `avg_reward = 0.500`（50 个 episode 全部恒定 0.5），`memory_size 
 # scripts/eval_ablations_benchmarks.sh — 已部署到服务器
 # 修复要点：
 # 1. 使用 python scripts/eval_locomo.py 而非 python -m gmsra.evaluate
-# 2. LoRA 路径 fallback：若 $CHECKPOINT_DIR/lora 不存在则回退到 outputs/phase1/best
+# 2. LoRA 路径 fallback：若 $CHECKPOINT_DIR/lora 不存在则回退到 outputs_v1/phase1/best
 # 3. 添加 --no_qlora 参数
 ```
 
@@ -314,8 +314,8 @@ T5-A0.5 结果揭示了当前评估规模下 Events Only ≈ G-MSRA 的问题。
 for MAX in 500 1000 2000; do
   # G-MSRA (有结构化记忆)
   python scripts/eval_locomo.py \
-    --checkpoint outputs/phase2/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --benchmark longmemeval \
     --output_dir results/scalability/gmsra_${MAX} \
     --max_events $MAX \
@@ -325,7 +325,7 @@ for MAX in 500 1000 2000; do
   # Events Only (无结构化记忆)
   python scripts/eval_locomo.py \
     --checkpoint outputs/empty_checkpoint \
-    --lora_checkpoint outputs/phase1/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --benchmark longmemeval \
     --output_dir results/scalability/events_only_${MAX} \
     --max_events $MAX \
@@ -386,7 +386,7 @@ done
 
 | 原始叙事 | 风险 | 建议叙事 |
 |---------|------|---------|
-| "RL learns optimal CRUD strategy" | RL 未收敛，NOOP=94% | "We propose a principled framework where RL *can* learn CRUD; current results validate the retrieval pipeline" |
+| "RL learns optimal CRUD strategy" | RL 未收敛，NOOP=94% | "We propose a principled framework where RL *can* learn CRUD; current results_v1 validate the retrieval pipeline" |
 | "Consolidation is essential" | A6 (no consolidation) F1 ≈ Full | "Adaptive triggering prevents premature consolidation noise (A4 evidence)" |
 | "G-MSRA >> Memory-R1" | 两者 F1 几乎相同 | "G-MSRA matches Memory-R1 with the added benefit of self-reward autonomy (no external labels needed)" |
 | **新增：** "Memory structure improves retrieval" | Events Only ≈ G-MSRA @ 250 events | "Structured memory provides **scalable retrieval** (see Fig.X); at small scale, raw events suffice but do not scale" |
@@ -444,21 +444,21 @@ done
 
 | 类型 | 路径 | 说明 |
 |------|------|------|
-| 日志 | `logs/baselines_v2_part1.log` | Reflexion + EvolveR + Self-Consolidation |
-| 日志 | `logs/baselines_v2_part2.log` | Memory-R1 (ok) + Mem0+R1 (OOM) |
-| 日志 | `logs/baselines_v2_mem0r1_retry.log` | T8: Mem0+R1 重跑 (运行中) |
-| 日志 | `logs/ablations_high_v2.log` | A1 + A2 + A6 训练日志 |
-| 日志 | `logs/ablations_low_v2.log` | A3 + A4 + A5 + A7 训练日志 |
-| 日志 | `logs/ablation_eval_A1_no_env_anchor.log` | T7: A1 评估 (运行中) |
-| 日志 | `logs/ablation_no_memory_locomo.log` | T5-A0: No Memory LoCoMo |
-| 日志 | `logs/ablation_no_memory_longmemeval.log` | T5-A0: No Memory LongMemEval |
-| 日志 | `logs/ablation_events_only_locomo.log` | T5-A0.5: Events Only LoCoMo |
-| 日志 | `logs/ablation_events_only_longmemeval.log` | T5-A0.5: Events Only LongMemEval |
-| 结果 | `results/baselines_v2/baseline_summary.json` | Baseline 聚合结果 |
-| 结果 | `results/ablations/ablation_summary.json` | 消融聚合结果（已修复） |
-| 结果 | `results/ablations/A*/results.json` | 各消融独立结果 |
-| 结果 | `results/eval_phase2/` | 主模型评测详细结果 |
-| 结果 | `results/ablation_events_only/` | T5-A0.5 Events Only 结果 |
-| 结果 | `results/ablation_no_memory/` | T5-A0 No Memory 结果 |
+| 日志 | `logs_v1/baselines_v2_part1.log` | Reflexion + EvolveR + Self-Consolidation |
+| 日志 | `logs_v1/baselines_v2_part2.log` | Memory-R1 (ok) + Mem0+R1 (OOM) |
+| 日志 | `logs_v1/baselines_v2_mem0r1_retry.log` | T8: Mem0+R1 重跑 (运行中) |
+| 日志 | `logs_v1/ablations_high_v2.log` | A1 + A2 + A6 训练日志 |
+| 日志 | `logs_v1/ablations_low_v2.log` | A3 + A4 + A5 + A7 训练日志 |
+| 日志 | `logs_v1/ablation_eval_A1_no_env_anchor.log` | T7: A1 评估 (运行中) |
+| 日志 | `logs_v1/ablation_no_memory_locomo.log` | T5-A0: No Memory LoCoMo |
+| 日志 | `logs_v1/ablation_no_memory_longmemeval.log` | T5-A0: No Memory LongMemEval |
+| 日志 | `logs_v1/ablation_events_only_locomo.log` | T5-A0.5: Events Only LoCoMo |
+| 日志 | `logs_v1/ablation_events_only_longmemeval.log` | T5-A0.5: Events Only LongMemEval |
+| 结果 | `results_v1/baselines_v2/baseline_summary.json` | Baseline 聚合结果 |
+| 结果 | `results_v1/ablations/ablation_summary.json` | 消融聚合结果（已修复） |
+| 结果 | `results_v1/ablations/A*/results_v1.json` | 各消融独立结果 |
+| 结果 | `results_v1/eval_phase2/` | 主模型评测详细结果 |
+| 结果 | `results_v1/ablation_events_only/` | T5-A0.5 Events Only 结果 |
+| 结果 | `results_v1/ablation_no_memory/` | T5-A0 No Memory 结果 |
 | 脚本 | `scripts/eval_ablations_benchmarks.sh` | T7 评估脚本（已修复并部署） |
 | 脚本 | `scripts/eval_locomo.py` | LoCoMo/LongMemEval 统一评估入口 |

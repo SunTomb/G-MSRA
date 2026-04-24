@@ -1,0 +1,33 @@
+{
+  "step_count": 500,
+  "episode_count": 0,
+  "trigger_diagnostics": {
+    "total_triggers": 2,
+    "history": [
+      {
+        "step": 50,
+        "conflict": 0.0,
+        "variance": 0.003383999999999999,
+        "growth": 1.0,
+        "score": 0.0,
+        "triggered": true
+      },
+      {
+        "step": 393,
+        "conflict": 0.0,
+        "variance": 0.000863999999999995,
+        "growth": 0.9081248776592101,
+        "score": 0.0,
+        "triggered": true
+      }
+    ],
+    "current_memory_size": 4
+  },
+  "operation_stats": {
+    "ADD": 18,
+    "UPDATE": 4,
+    "DELETE": 0,
+    "NOOP": 478,
+    "total": 500
+  }
+}

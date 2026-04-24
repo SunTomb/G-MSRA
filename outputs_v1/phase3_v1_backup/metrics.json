@@ -1,0 +1,436 @@
+[
+  {
+    "episode": 50,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1794,
+    "memory_size": 11,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 2,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 148,
+      "total": 150
+    }
+  },
+  {
+    "episode": 100,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.19020000000000006,
+    "memory_size": 11,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 2,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 298,
+      "total": 300
+    }
+  },
+  {
+    "episode": 150,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.19920000000000004,
+    "memory_size": 11,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 2,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 448,
+      "total": 450
+    }
+  },
+  {
+    "episode": 200,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.21240000000000006,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 597,
+      "total": 600
+    }
+  },
+  {
+    "episode": 250,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1488,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 747,
+      "total": 750
+    }
+  },
+  {
+    "episode": 300,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1602,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 897,
+      "total": 900
+    }
+  },
+  {
+    "episode": 350,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.22140000000000012,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 1047,
+      "total": 1050
+    }
+  },
+  {
+    "episode": 400,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.23220000000000013,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 1197,
+      "total": 1200
+    }
+  },
+  {
+    "episode": 450,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1998000000000001,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 1347,
+      "total": 1350
+    }
+  },
+  {
+    "episode": 500,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.21360000000000007,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 1497,
+      "total": 1500
+    }
+  },
+  {
+    "episode": 550,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.18,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 1647,
+      "total": 1650
+    }
+  },
+  {
+    "episode": 600,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1698,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 1797,
+      "total": 1800
+    }
+  },
+  {
+    "episode": 650,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.20100000000000004,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 1947,
+      "total": 1950
+    }
+  },
+  {
+    "episode": 700,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.17099999999999999,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 2097,
+      "total": 2100
+    }
+  },
+  {
+    "episode": 750,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.17819999999999997,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 2247,
+      "total": 2250
+    }
+  },
+  {
+    "episode": 800,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.2256000000000001,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 2397,
+      "total": 2400
+    }
+  },
+  {
+    "episode": 850,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.19560000000000002,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 2547,
+      "total": 2550
+    }
+  },
+  {
+    "episode": 900,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.19020000000000004,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 2697,
+      "total": 2700
+    }
+  },
+  {
+    "episode": 950,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.18660000000000004,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 2847,
+      "total": 2850
+    }
+  },
+  {
+    "episode": 1000,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.17579999999999998,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 2997,
+      "total": 3000
+    }
+  },
+  {
+    "episode": 1050,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.21240000000000006,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 3147,
+      "total": 3150
+    }
+  },
+  {
+    "episode": 1100,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1884,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 3297,
+      "total": 3300
+    }
+  },
+  {
+    "episode": 1150,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.17279999999999998,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 3447,
+      "total": 3450
+    }
+  },
+  {
+    "episode": 1200,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.15599999999999997,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 3597,
+      "total": 3600
+    }
+  },
+  {
+    "episode": 1250,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.22260000000000013,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 3747,
+      "total": 3750
+    }
+  },
+  {
+    "episode": 1300,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.17700000000000002,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 3897,
+      "total": 3900
+    }
+  },
+  {
+    "episode": 1350,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.198,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 4047,
+      "total": 4050
+    }
+  },
+  {
+    "episode": 1400,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.16199999999999995,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 4197,
+      "total": 4200
+    }
+  },
+  {
+    "episode": 1450,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1668,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 4347,
+      "total": 4350
+    }
+  },
+  {
+    "episode": 1500,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.174,
+    "memory_size": 12,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 3,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 4497,
+      "total": 4500
+    }
+  },
+  {
+    "episode": 1550,
+    "avg_success_rate": 0.0,
+    "avg_reward": 0.1404,
+    "memory_size": 13,
+    "consolidation_count": 0,
+    "operation_stats": {
+      "ADD": 4,
+      "UPDATE": 0,
+      "DELETE": 0,
+      "NOOP": 4646,
+      "total": 4650
+    }
+  }
+]

@@ -113,14 +113,14 @@ python -c "import ast; ast.parse(open('gmsra/manager/memory_manager.py').read())
 tmux new-session -d -s phase2_v7 "
 export PYTHONPATH=/NAS/yesh/G-MSRA
 CUDA_VISIBLE_DEVICES=1 python scripts/train_phase2_transition.py \
-    --checkpoint outputs/phase1/best \
-    --output_dir outputs/phase2_v7 \
+    --checkpoint outputs_v1/phase1/best \
+    --output_dir outputs_v1/phase2_v7 \
     --anneal_steps 3000 \
     --max_events 8 \
     --epsilon_start 0.3 \
     --epsilon_end 0.05 \
     --no_qlora --no_wandb \
-    2>&1 | tee logs/phase2_v7.log
+    2>&1 | tee logs_v1/phase2_v7.log
 "
 ```
 
@@ -153,12 +153,12 @@ Phase 3 也需要同步应用 F7/F9 的思路（探索+正确梯度），但可�
 
 ```bash
 PYTHONPATH=/NAS/yesh/G-MSRA CUDA_VISIBLE_DEVICES=1 python scripts/train_phase3_full.py \
-    --checkpoint outputs/phase2_v7/best \
-    --lora_checkpoint outputs/phase1/best \
+    --checkpoint outputs_v1/phase2_v7/best \
+    --lora_checkpoint outputs_v1/phase1/best \
     --max_episodes 3000 --max_events 5 --num_epochs 2 \
     --no_qlora --no_wandb \
-    --output_dir outputs/phase3_v7 \
-    2>&1 | tee logs/phase3_v7.log
+    --output_dir outputs_v1/phase3_v7 \
+    2>&1 | tee logs_v1/phase3_v7.log
 ```
 
 ---
